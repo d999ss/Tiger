@@ -1,0 +1,140 @@
+#!/bin/bash
+
+# Function to create page with nav
+create_page() {
+    local filename=$1
+    local title=$2
+    local heading=$3
+    
+    cat > "/Users/donnysmith/Desktop/Tiger CMS/${filename}" << 'EOF'
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TITLE_PLACEHOLDER - Tiger BioSciences™</title>
+<style>
+@font-face{font-family:'LT Superior Mono';src:url('LTSuperiorMono.otf') format('opentype');font-weight:500;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'LT Superior Mono',monospace;font-weight:500;color:#0f0f0f;}
+:root{--p7:#991514;--p8:#D32F2F;--p9:#450a0a;--p5:#fef2f2;--a5:#D8930B;--n2:#e5e5e5;--n6:#525252;--n9:#0a0a0a;}
+.announcement-bar{padding:0.75rem 1.5rem;background:var(--p7);color:#fff;font-size:0.6875rem;letter-spacing:0.1em;text-transform:uppercase;text-align:center;}
+.announcement-bar a{color:#fff;text-decoration:underline;margin-left:0.5rem;}
+.navbar{background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--n2);position:sticky;top:0;z-index:50;}
+.nav-container{display:flex;justify-content:space-between;max-width:90rem;margin:0 auto;padding:1.5rem 3rem;height:4.5rem;align-items:center;}
+.logo{font-size:1.25rem;color:var(--p7);text-decoration:none;}
+.nav-menu{display:flex;gap:2.5rem;list-style:none;}
+.nav-link{font-size:0.9375rem;color:var(--n6);text-decoration:none;}
+.nav-link:hover{color:var(--p7);}
+.page-hero{padding:8rem 1.5rem 5rem;background:linear-gradient(135deg,var(--p9),var(--p8));color:#fff;text-align:center;}
+.page-hero h1{font-size:4.5rem;font-weight:500;margin-bottom:1.5rem;}
+.content{padding:5rem 1.5rem;max-width:56.25rem;margin:0 auto;}
+.content h2{font-size:2.25rem;font-weight:500;color:var(--p7);margin:3rem 0 1.5rem;}
+.content p{font-size:1.0625rem;line-height:1.8;color:var(--n6);margin-bottom:1.25rem;}
+.footer{background:var(--n9);color:#fff;padding:5rem 1.5rem 2.5rem;}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15.625rem,1fr));gap:3rem;max-width:90rem;margin:0 auto 4rem;}
+.footer-title{font-size:0.875rem;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1.25rem;color:var(--a5);}
+.footer-links{list-style:none;}
+.footer-links li{margin-bottom:0.75rem;}
+.footer-links a{font-size:0.875rem;color:rgba(255,255,255,0.7);text-decoration:none;}
+.footer-links a:hover{color:#fff;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:2rem;display:flex;justify-content:space-between;max-width:90rem;margin:0 auto;}
+.footer-bottom p{font-size:0.875rem;color:rgba(255,255,255,0.5);}
+.footer-bottom-links{display:flex;gap:1.5rem;}
+.footer-bottom-links a{font-size:0.875rem;color:rgba(255,255,255,0.5);text-decoration:none;}
+@media(max-width:768px){.nav-menu{display:none;}.page-hero h1{font-size:3rem;}}
+</style>
+</head>
+<body>
+
+<div class="announcement-bar">NOW LIVE: TIGER BIOSCIENCES COMPREHENSIVE SOLUTIONS <a href="index.html#divisions">EXPLORE</a></div>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">TIGER BIOSCIENCES™</a>
+        <ul class="nav-menu">
+            <li><a href="about.html" class="nav-link">Our Story</a></li>
+            <li><a href="products.html" class="nav-link">Products</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="science.html" class="nav-link">Science</a></li>
+            <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="page-hero"><h1>HEADING_PLACEHOLDER</h1></div>
+
+<div class="content">CONTENT_PLACEHOLDER</div>
+
+<footer class="footer">
+    <div class="footer-grid">
+        <div><h5 class="footer-title">MAIN PAGES</h5><ul class="footer-links"><li><a href="index.html">Homepage</a></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="careers.html">Careers</a></li></ul></div>
+        <div><h5 class="footer-title">COMPANY</h5><ul class="footer-links"><li><a href="tiger-way.html">The Tiger Way</a></li><li><a href="facilities.html">Facilities</a></li><li><a href="faq.html">FAQ</a></li><li><a href="privacy.html">Privacy</a></li></ul></div>
+        <div><h5 class="footer-title">CONTACT</h5><ul class="footer-links"><li><a href="contact.html">Contact Us</a></li><li><a href="legal.html">Legal</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+        <div><h5 class="footer-title">REACH US</h5><p style="font-size:0.875rem;line-height:1.6;color:rgba(255,255,255,0.7);">Tiger BioSciences<br>555 E North Ln<br>Conshohocken, PA<br><br>(+1) 888-665-5005</p></div>
+    </div>
+    <div class="footer-bottom">
+        <p>© Tiger BioSciences™ 2025</p>
+        <div class="footer-bottom-links"><a href="legal.html">Legal</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div>
+    </div>
+</footer>
+
+</body>
+</html>
+EOF
+
+    # Replace placeholders
+    sed -i '' "s/TITLE_PLACEHOLDER/$title/g" "/Users/donnysmith/Desktop/Tiger CMS/${filename}"
+    sed -i '' "s/HEADING_PLACEHOLDER/$heading/g" "/Users/donnysmith/Desktop/Tiger CMS/${filename}"
+}
+
+# Create About page with full content
+cat > "/Users/donnysmith/Desktop/Tiger CMS/about.html" << 'EOF'
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - Tiger BioSciences™</title>
+<style>
+@font-face{font-family:'LT Superior Mono';src:url('LTSuperiorMono.otf') format('opentype');font-weight:500;}
+*{margin:0;padding:0;box-sizing:border-box;}body{font-family:'LT Superior Mono',monospace;font-weight:500;color:#0f0f0f;}
+:root{--p7:#991514;--p8:#D32F2F;--p9:#450a0a;--p5:#fef2f2;--a5:#D8930B;--n2:#e5e5e5;--n6:#525252;--n7:#404040;--n9:#0a0a0a;}
+.announcement-bar{padding:0.75rem 1.5rem;background:var(--p7);color:#fff;font-size:0.6875rem;letter-spacing:0.1em;text-transform:uppercase;text-align:center;}
+.announcement-bar a{color:#fff;text-decoration:underline;margin-left:0.5rem;}
+.navbar{background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--n2);position:sticky;top:0;z-index:50;}
+.nav-container{display:flex;justify-content:space-between;max-width:90rem;margin:0 auto;padding:1.5rem 3rem;height:4.5rem;align-items:center;}
+.logo{font-size:1.25rem;color:var(--p7);text-decoration:none;}
+.nav-menu{display:flex;gap:2.5rem;list-style:none;}
+.nav-link{font-size:0.9375rem;color:var(--n7);text-decoration:none;}
+.nav-link:hover{color:var(--p7);}
+.page-hero{padding:8rem 1.5rem 5rem;background:linear-gradient(135deg,var(--p9),var(--p8));color:#fff;text-align:center;}
+.page-hero h1{font-size:4.5rem;font-weight:500;margin-bottom:1.5rem;}
+.content{padding:5rem 1.5rem;max-width:56.25rem;margin:0 auto;}
+.content h2{font-size:2.25rem;font-weight:500;color:var(--p7);margin:3rem 0 1.5rem;}
+.content p{font-size:1.0625rem;line-height:1.8;color:var(--n6);margin-bottom:1.25rem;}
+.footer{background:var(--n9);color:#fff;padding:5rem 1.5rem 2.5rem;}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15.625rem,1fr));gap:3rem;max-width:90rem;margin:0 auto 4rem;}
+.footer-title{font-size:0.875rem;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1.25rem;color:var(--a5);}
+.footer-links{list-style:none;}
+.footer-links li{margin-bottom:0.75rem;}
+.footer-links a{font-size:0.875rem;color:rgba(255,255,255,0.7);text-decoration:none;}
+.footer-links a:hover{color:#fff;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:2rem;display:flex;justify-content:space-between;max-width:90rem;margin:0 auto;}
+.footer-bottom p{font-size:0.875rem;color:rgba(255,255,255,0.5);}
+.footer-bottom-links{display:flex;gap:1.5rem;}
+.footer-bottom-links a{font-size:0.875rem;color:rgba(255,255,255,0.5);text-decoration:none;}
+@media(max-width:768px){.nav-menu{display:none;}.page-hero h1{font-size:3rem;}}
+</style></head><body>
+<div class="announcement-bar">NOW LIVE: TIGER BIOSCIENCES COMPREHENSIVE SOLUTIONS <a href="index.html#divisions">EXPLORE</a></div>
+<nav class="navbar"><div class="nav-container"><a href="index.html" class="logo">TIGER BIOSCIENCES™</a><ul class="nav-menu"><li><a href="about.html" class="nav-link">Our Story</a></li><li><a href="products.html" class="nav-link">Products</a></li><li><a href="contact.html" class="nav-link">Contact</a></li><li><a href="science.html" class="nav-link">Science</a></li><li><a href="faq.html" class="nav-link">FAQ</a></li></ul></div></nav>
+<div class="page-hero"><h1>About Tiger BioSciences</h1><p style="font-size:1.25rem;">The first fully vertically integrated tissue technology company</p></div>
+<div class="content">
+<h2>Our Story</h2>
+<p>Tiger BioSciences represents the future of regenerative medicine. As the first fully vertically integrated tissue company, we control every aspect—from donor screening to distribution.</p>
+<h2>AATB Accreditation</h2>
+<p>Our Conshohocken, PA and San Antonio, TX facilities are AATB-accredited, meeting the highest standards.</p>
+<h2>Global Reach</h2>
+<p>16 specialized divisions across the United States, Germany, and Poland serve clinicians worldwide.</p>
+</div>
+<footer class="footer"><div class="footer-grid"><div><h5 class="footer-title">MAIN</h5><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="careers.html">Careers</a></li></ul></div><div><h5 class="footer-title">COMPANY</h5><ul class="footer-links"><li><a href="tiger-way.html">Tiger Way</a></li><li><a href="facilities.html">Facilities</a></li><li><a href="faq.html">FAQ</a></li><li><a href="privacy.html">Privacy</a></li></ul></div><div><h5 class="footer-title">CONTACT</h5><ul class="footer-links"><li><a href="contact.html">Contact</a></li><li><a href="legal.html">Legal</a></li><li><a href="terms.html">Terms</a></li></ul></div><div><h5 class="footer-title">REACH US</h5><p style="font-size:0.875rem;line-height:1.6;color:rgba(255,255,255,0.7);">Tiger BioSciences<br>555 E North Ln<br>Conshohocken, PA<br><br>(+1) 888-665-5005</p></div></div><div class="footer-bottom"><p>© Tiger BioSciences™ 2025</p><div class="footer-bottom-links"><a href="legal.html">Legal</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div></div></footer>
+</body></html>
+EOF
+}
+
+# Run it
+echo "Creating pages..."

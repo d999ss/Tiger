@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 343.51 330.38"
+   id="svg122"
+   width="343.51001"
+   height="330.38"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <!-- Generator: Adobe Illustrator 29.0.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 186)  -->
+  <defs
+     id="defs3">
+    <style
+       id="style1">
+      .st0 {
+        mask: url(#mask);
+      }
+
+      .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11 {
+        mix-blend-mode: overlay;
+      }
+
+      .st1, .st2, .st5, .st12 {
+        fill: #d7a12a;
+      }
+
+      .st1, .st13, .st6 {
+        opacity: .2;
+      }
+
+      .st2, .st9, .st11 {
+        opacity: .5;
+      }
+
+      .st3 {
+        opacity: .7;
+      }
+
+      .st3, .st4, .st14, .st13, .st15, .st16 {
+        fill: #fff;
+      }
+
+      .st17 {
+        fill: url(#radial-gradient);
+      }
+
+      .st14 {
+        opacity: .1;
+      }
+
+      .st15 {
+        opacity: .3;
+      }
+
+      .st18 {
+        isolation: isolate;
+      }
+
+      .st19 {
+        mask: url(#mask-1);
+      }
+
+      .st6, .st8, .st9 {
+        stroke-width: 3px;
+      }
+
+      .st6, .st8, .st9, .st10, .st11 {
+        fill: none;
+        stroke: #d7a12a;
+        stroke-miterlimit: 10;
+      }
+
+      .st7 {
+        fill: #d79f5c;
+      }
+
+      .st8 {
+        opacity: .53;
+      }
+
+      .st20 {
+        fill: url(#radial-gradient1);
+      }
+    </style>
+    <radialGradient
+       id="radial-gradient"
+       cx="963.87"
+       cy="-364.69"
+       fx="963.87"
+       fy="-364.69"
+       r="105.23"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         id="stop1" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop2" />
+    </radialGradient>
+    <mask
+       id="mask"
+       x="858.64"
+       y="-469.92"
+       width="210.46"
+       height="210.46"
+       maskUnits="userSpaceOnUse">
+      <circle
+         class="st17"
+         cx="963.87"
+         cy="-364.69"
+         r="105.23"
+         id="circle2" />
+    </mask>
+    <radialGradient
+       id="radial-gradient1"
+       cx="1377.95"
+       cy="-282.89999"
+       fx="1377.95"
+       fy="-282.89999"
+       r="91.919998"
+       gradientTransform="rotate(62.5,1377.8632,-282.93543)"
+       xlink:href="#radial-gradient" />
+    <mask
+       id="mask-1"
+       x="1286.03"
+       y="-374.83"
+       width="183.84"
+       height="183.84"
+       maskUnits="userSpaceOnUse">
+      <circle
+         class="st20"
+         cx="1377.95"
+         cy="-282.89999"
+         r="91.919998"
+         transform="rotate(-62.5,1377.8765,-282.84441)"
+         id="circle3" />
+    </mask>
+  </defs>
+  <g
+     class="st18"
+     id="g122"
+     transform="translate(9.34006,18.200005)">
+    <g
+       id="Layer_4">
+      <g
+         id="g103"
+         transform="matrix(-1,0,0,1,-57.71006,6.169995)">
+        <g
+           id="g100">
+          <circle
+             class="st12"
+             cx="-248.62"
+             cy="222.27"
+             r="4.0799999"
+             id="circle92" />
+          <path
+             class="st12"
+             d="m -383.72,142.44 c 0,2.26 -1.83,4.08 -4.08,4.08 -2.25,0 -4.08,-1.83 -4.08,-4.08 0,-2.25 1.83,-4.08 4.08,-4.08 2.25,0 4.08,1.83 4.08,4.08 z"
+             id="path92" />
+          <path
+             class="st12"
+             d="m -171.26,95.57 c 0,2.26 -1.83,4.08 -4.08,4.08 -2.25,0 -4.08,-1.83 -4.08,-4.08 0,-2.25 1.83,-4.08 4.08,-4.08 2.25,0 4.08,1.83 4.08,4.08 z"
+             id="path93" />
+          <polygon
+             class="st1"
+             points="-134.09,231.77 -91.22,207.02 -48.37,231.77 -48.37,281.27 -91.22,306.01 -134.09,281.27 "
+             id="polygon93" />
+          <polygon
+             class="st1"
+             points="-228.65,66.74 -185.79,41.99 -142.93,66.74 -142.93,116.23 -185.79,140.97 -228.65,116.23 "
+             id="polygon94" />
+          <polygon
+             class="st1"
+             points="-228.65,231.77 -185.79,207.02 -142.93,231.77 -142.93,281.27 -185.79,306.01 -228.65,281.27 "
+             id="polygon95" />
+          <polygon
+             class="st1"
+             points="-276.84,149.48 -233.98,124.73 -191.12,149.48 -191.12,198.97 -233.98,223.72 -276.84,198.97 "
+             id="polygon96" />
+          <polygon
+             class="st1"
+             points="-323.21,231.77 -280.35,207.02 -237.5,231.77 -237.5,281.27 -280.35,306.01 -323.21,281.27 "
+             id="polygon97" />
+          <polygon
+             class="st1"
+             points="-371.41,149.48 -328.55,124.73 -285.68,149.48 -285.68,198.97 -328.55,223.72 -371.41,198.97 "
+             id="polygon98" />
+          <polygon
+             class="st2"
+             points="-314.53,15.82 -244.94,-24.37 -175.35,15.82 -175.35,96.17 -244.94,136.34 -314.53,96.17 "
+             id="polygon99" />
+          <polygon
+             class="st2"
+             points="-387.8,142.16 -318.21,101.97 -248.62,142.16 -248.62,222.51 -318.21,262.68 -387.8,222.51 "
+             id="polygon100" />
+        </g>
+        <polygon
+           class="st6"
+           points="-171.52,208.11 -138.24,188.89 -104.94,208.11 -104.94,246.56 -138.24,265.77 -171.52,246.56 "
+           id="polygon101" />
+        <polygon
+           class="st8"
+           points="-355.34,9.27 -322.06,-9.95 -288.76,9.27 -288.76,47.72 -322.06,66.93 -355.34,47.72 "
+           id="polygon102" />
+        <polygon
+           class="st9"
+           points="-335.54,171.6 -276.88,137.72 -218.22,171.6 -218.22,239.33 -276.88,273.19 -335.54,239.33 "
+           id="polygon103" />
+      </g>
+      <g
+         id="g111" />
+    </g>
+  </g>
+</svg>

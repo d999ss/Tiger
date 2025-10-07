@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsroom - Tiger BioSciences™</title>
+    <style>
+        @font-face {
+            font-family: 'LT Superior Mono';
+            src: url('LTSuperiorMono.otf') format('opentype');
+            font-weight: 500;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'LT Superior Mono', monospace; color: #0f0f0f; }
+        
+        :root {
+            --primary-700: #991514;
+            --primary-800: #D32F2F;
+            --primary-950: #450a0a;
+            --accent-500: #D8930B;
+            --neutral-100: #f5f5f5;
+            --neutral-200: #e5e5e5;
+            --neutral-600: #525252;
+            --neutral-950: #0a0a0a;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-950), var(--primary-800));
+            color: #fff;
+            padding: 8rem 1.5rem 4rem;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 4.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .filter-bar {
+            background: var(--neutral-100);
+            padding: 2rem 1.5rem;
+            border-bottom: 1px solid var(--neutral-200);
+        }
+        
+        .filter-content {
+            max-width: 90rem;
+            margin: 0 auto;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: #fff;
+            border: 2px solid var(--neutral-200);
+            border-radius: 624.9375rem;
+            font-family: inherit;
+            font-size: 0.9375rem;
+            cursor: pointer;
+        }
+        
+        .filter-btn.active {
+            background: var(--primary-700);
+            color: #fff;
+            border-color: var(--primary-700);
+        }
+        
+        .content {
+            max-width: 90rem;
+            margin: 0 auto;
+            padding: 5rem 1.5rem;
+        }
+        
+        .news-grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .news-article {
+            background: #fff;
+            border: 1px solid var(--neutral-200);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2rem;
+            transition: all 0.3s;
+        }
+        
+        .news-article:hover {
+            border-color: var(--primary-700);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .news-date {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: var(--neutral-100);
+            border-radius: 0.75rem;
+            padding: 2rem;
+        }
+        
+        .news-date .day {
+            font-size: 3rem;
+            font-weight: 500;
+            color: var(--primary-700);
+            line-height: 1;
+        }
+        
+        .news-date .month-year {
+            font-size: 1rem;
+            color: var(--neutral-600);
+            text-transform: uppercase;
+        }
+        
+        .news-content h3 {
+            font-size: 1.75rem;
+            color: var(--primary-700);
+            margin-bottom: 1rem;
+        }
+        
+        .news-category {
+            display: inline-block;
+            padding: 0.375rem 1rem;
+            background: var(--accent-500);
+            color: #fff;
+            border-radius: 624.9375rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        
+        .news-content p {
+            color: var(--neutral-600);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .news-content a {
+            color: var(--primary-700);
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-header">
+    <h1>Newsroom</h1>
+    <p>Latest press releases and company announcements</p>
+</div>
+
+<div class="filter-bar">
+    <div class="filter-content">
+        <button class="filter-btn active">All News</button>
+        <button class="filter-btn">Product Launches</button>
+        <button class="filter-btn">Clinical Results</button>
+        <button class="filter-btn">Corporate</button>
+        <button class="filter-btn">Awards</button>
+    </div>
+</div>
+
+<div class="content">
+    <div class="news-grid">
+        <article class="news-article">
+            <div class="news-date">
+                <div class="day">08</div>
+                <div class="month-year">Jan 2025</div>
+            </div>
+            <div class="news-content">
+                <span class="news-category">Product Launch</span>
+                <h3>Tiger BioSciences Announces FDA Clearance for Next-Generation CAMPs Technology</h3>
+                <p>
+                    Tiger BioSciences today announced that the U.S. Food and Drug Administration (FDA) has granted 510(k) clearance for caregraFT™ Plus, the company's next-generation cellular, acellular, and matrix-like products (CAMPs) technology featuring enhanced biomechanical properties and extended shelf stability up to 7 years.
+                </p>
+                <a href="#">Read Full Release →</a>
+            </div>
+        </article>
+        
+        <article class="news-article">
+            <div class="news-date">
+                <div class="day">15</div>
+                <div class="month-year">Dec 2024</div>
+            </div>
+            <div class="news-content">
+                <span class="news-category">Clinical Results</span>
+                <h3>Positive Results from Phase III Clinical Trial of alloPLY™ in Diabetic Foot Ulcers</h3>
+                <p>
+                    Tiger BioSciences announced positive topline results from its Phase III randomized controlled trial evaluating alloPLY™ in patients with chronic diabetic foot ulcers. The study met its primary endpoint, demonstrating superior wound closure rates compared to standard of care (p < 0.001).
+                </p>
+                <a href="#">Read Full Release →</a>
+            </div>
+        </article>
+        
+        <article class="news-article">
+            <div class="news-date">
+                <div class="day">03</div>
+                <div class="month-year">Dec 2024</div>
+            </div>
+            <div class="news-content">
+                <span class="news-category">Corporate</span>
+                <h3>Tiger BioSciences Expands Global Footprint with New Processing Facility in Germany</h3>
+                <p>
+                    Tiger BioSciences announced plans to open a new AATB-accredited tissue processing facility in Berlin, Germany, expanding the company's international manufacturing capabilities and strengthening its position as a global leader in regenerative medicine.
+                </p>
+                <a href="#">Read Full Release →</a>
+            </div>
+        </article>
+        
+        <article class="news-article">
+            <div class="news-date">
+                <div class="day">18</div>
+                <div class="month-year">Nov 2024</div>
+            </div>
+            <div class="news-content">
+                <span class="news-category">Awards</span>
+                <h3>Tiger BioSciences Named "Innovator of the Year" by MedTech Breakthrough</h3>
+                <p>
+                    Tiger BioSciences has been awarded the "Regenerative Medicine Innovator of the Year" by MedTech Breakthrough Awards program, recognizing the company's pioneering work in vertically integrated tissue technology and CAMPs innovation.
+                </p>
+                <a href="#">Read Full Release →</a>
+            </div>
+        </article>
+        
+        <article class="news-article">
+            <div class="news-date">
+                <div class="day">25</div>
+                <div class="month-year">Oct 2024</div>
+            </div>
+            <div class="news-content">
+                <span class="news-category">Corporate</span>
+                <h3>Tiger BioSciences Reports Record Q3 2024 Revenue of $487 Million</h3>
+                <p>
+                    Tiger BioSciences today reported financial results for the third quarter ended September 30, 2024, with total revenue of $487 million, representing 34% year-over-year growth driven by strong demand across all product lines and geographic expansion.
+                </p>
+                <a href="#">Read Full Release →</a>
+            </div>
+        </article>
+    </div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger BioSciences™ - Global Leader in Regenerative Medicine</title>
+    <meta name="description" content="Tiger BioSciences is a global leader in medical technology, delivering cutting-edge cellular, acellular, and matrix-like products (CAMPs) for wound care, soft tissue reconstruction, and aesthetics.">
+    
+    <style>
+        /* LT Superior Mono Font */
+        @font-face {
+            font-family: 'LT Superior Mono';
+            src: url('LTSuperiorMono.otf') format('opentype');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+        
+        body {
+            font-family: 'LT Superior Mono', 'Courier New', monospace;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #0f0f0f;
+            background-color: #fff;
+        }
+        
+        :root {
+            --primary-700: #991514;
+            --primary-800: #D32F2F;
+            --primary-950: #450a0a;
+            --primary-50: #fef2f2;
+            --accent-500: #D8930B;
+            --neutral-100: #f5f5f5;
+            --neutral-200: #e5e5e5;
+            --neutral-600: #525252;
+            --neutral-700: #404040;
+            --neutral-950: #0a0a0a;
+        }
+        
+        /* Top Utility Bar - Enterprise Feature */
+        .utility-bar {
+            background-color: var(--neutral-950);
+            color: rgba(255,255,255,0.8);
+            padding: 0.5rem 3rem;
+            font-size: 0.75rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .utility-bar-content {
+            max-width: 90rem;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .utility-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        
+        .utility-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .utility-links a:hover { color: #fff; }
+        
+        .utility-actions {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .language-selector {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+        
+        /* Announcement Bar */
+        .announcement-bar {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-700);
+            color: #fff;
+            font-size: 0.6875rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        
+        .announcement-bar a {
+            color: #fff;
+            text-decoration: underline;
+            margin-left: 0.5rem;
+        }
+        
+        /* Enterprise Navigation with Mega Menu */
+        .navbar {
+            background: #fff;
+            border-bottom: 1px solid var(--neutral-200);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .nav-container {
+            max-width: 90rem;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 5rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--primary-700);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+        
+        .nav-main {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-link {
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--neutral-700);
+            text-decoration: none;
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .nav-link:hover { color: var(--primary-700); }
+        
+        .nav-link svg {
+            width: 0.875rem;
+            height: 0.875rem;
+        }
+        
+        /* Mega Menu Dropdown */
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: -3rem;
+            background: #fff;
+            border: 1px solid var(--neutral-200);
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            padding: 2.5rem;
+            min-width: 50rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+            z-index: 100;
+        }
+        
+        .nav-item:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .mega-menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .mega-menu-section h4 {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--primary-700);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+        
+        .mega-menu-links {
+            list-style: none;
+        }
+        
+        .mega-menu-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .mega-menu-links a {
+            font-size: 0.875rem;
+            color: var(--neutral-700);
+            text-decoration: none;
+            display: block;
+        }
+        
+        .mega-menu-links a:hover {
+            color: var(--primary-700);
+        }
+        
+        /* Search Bar */
+        .nav-actions {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .search-trigger {
+            background: none;
+            border: none;
+            color: var(--neutral-700);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .search-trigger svg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+        
+        .search-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .search-modal.active { display: flex; }
+        
+        .search-box {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 1rem;
+            width: 90%;
+            max-width: 50rem;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            font-size: 1.5rem;
+            border: 2px solid var(--neutral-200);
+            border-radius: 0.5rem;
+            font-family: inherit;
+        }
+        
+        /* Video Hero Section - Enterprise Feature */
+        .hero-video-section {
+            position: relative;
+            height: 85vh;
+            min-height: 40rem;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        
+        .hero-video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(69, 10, 10, 0.85) 0%, rgba(211, 47, 47, 0.75) 50%, rgba(153, 21, 20, 0.7) 100%);
+            z-index: 2;
+        }
+        
+        .hero-video-content {
+            position: relative;
+            z-index: 10;
+            color: #fff;
+            text-align: center;
+            max-width: 56rem;
+            padding: 0 3rem;
+        }
+        
+        .hero-video-label {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 624.9375rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero-video-title {
+            font-size: 5rem;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-video-description {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+        
+        .hero-video-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            border-radius: 624.9375rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+        
+        .btn-primary {
+            background: #fff;
+            color: var(--primary-700);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.7);
+        }
+        
+        .btn-outline:hover {
+            border-color: #fff;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        /* Stats Bar - Enterprise Feature */
+        .stats-bar {
+            background: var(--neutral-950);
+            color: #fff;
+            padding: 3rem 1.5rem;
+        }
+        
+        .stats-grid {
+            max-width: 90rem;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 3rem;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 500;
+            color: var(--accent-500);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+        
+        /* Audience Navigation - Enterprise Feature */
+        .audience-nav {
+            background: var(--neutral-100);
+            padding: 5rem 1.5rem;
+        }
+        
+        .audience-nav-content {
+            max-width: 90rem;
+            margin: 0 auto;
+        }
+        
+        .audience-nav-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-700);
+            margin-bottom: 3rem;
+        }
+        
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .audience-card {
+            background: #fff;
+            border: 2px solid var(--neutral-200);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .audience-card:hover {
+            border-color: var(--primary-700);
+            transform: translateY(-0.5rem);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .audience-icon {
+            width: 4rem;
+            height: 4rem;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-800));
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        
+        .audience-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary-700);
+            margin-bottom: 0.75rem;
+        }
+        
+        .audience-card p {
+            font-size: 0.875rem;
+            color: var(--neutral-600);
+        }
+        
+        /* Quick Links Section */
+        .quick-links {
+            padding: 5rem 1.5rem;
+        }
+        
+        .quick-links-content {
+            max-width: 90rem;
+            margin: 0 auto;
+        }
+        
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .quick-link-card {
+            background: #fff;
+            border: 1px solid var(--neutral-200);
+            border-radius: 0.75rem;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .quick-link-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-0.25rem);
+        }
+        
+        .quick-link-image {
+            width: 100%;
+            height: 15rem;
+            background: linear-gradient(135deg, var(--primary-950), var(--primary-800));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 3rem;
+        }
+        
+        .quick-link-content {
+            padding: 2rem;
+        }
+        
+        .quick-link-label {
+            font-size: 0.75rem;
+            color: var(--accent-500);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .quick-link-content h3 {
+            font-size: 1.5rem;
+            color: var(--primary-700);
+            margin-bottom: 1rem;
+        }
+        
+        .quick-link-content p {
+            font-size: 0.9375rem;
+            color: var(--neutral-600);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .quick-link-content a {
+            color: var(--primary-700);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        /* Newsletter Signup - Enterprise Feature */
+        .newsletter {
+            background: var(--primary-950);
+            color: #fff;
+            padding: 5rem 1.5rem;
+        }
+        
+        .newsletter-content {
+            max-width: 50rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .newsletter h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .newsletter p {
+            font-size: 1.125rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 40rem;
+            margin: 0 auto;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 624.9375rem;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .newsletter-input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .newsletter-submit {
+            padding: 1rem 2.5rem;
+            background: #fff;
+            color: var(--primary-700);
+            border: none;
+            border-radius: 624.9375rem;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        
+        /* Footer - Enterprise */
+        .footer {
+            background: var(--neutral-950);
+            color: #fff;
+            padding: 5rem 1.5rem 2rem;
+        }
+        
+        .footer-main {
+            max-width: 90rem;
+            margin: 0 auto 4rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-brand p {
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-link {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .footer-section h4 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-500);
+            margin-bottom: 1.25rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #fff;
+        }
+        
+        .footer-bottom {
+            max-width: 90rem;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-bottom p {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .footer-legal {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .footer-legal a {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 1024px) {
+            .mega-menu-grid { grid-template-columns: repeat(2, 1fr); }
+            .audience-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-main { display: none; }
+            .hero-video-title { font-size: 3rem; }
+            .audience-grid { grid-template-columns: 1fr; }
+            .quick-links-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-main { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Utility Bar -->
+<div class="utility-bar">
+    <div class="utility-bar-content">
+        <ul class="utility-links">
+            <li><a href="investors.html">Investors</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="news.html">Newsroom</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="utility-actions">
+            <select class="language-selector">
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+                <option value="pl">Polski</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+    NOW LIVE: TIGER BIOSCIENCES COMPREHENSIVE SOLUTIONS
+    <a href="#audiences">EXPLORE</a>
+</div>
+
+<!-- Enterprise Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index-enterprise.html" class="logo">TIGER BIOSCIENCES™</a>
+        
+        <ul class="nav-main">
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    Our Science
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </a>
+                <div class="mega-menu">
+                    <div class="mega-menu-grid">
+                        <div class="mega-menu-section">
+                            <h4>Research Areas</h4>
+                            <ul class="mega-menu-links">
+                                <li><a href="wound-care.html">Wound Care</a></li>
+                                <li><a href="tissue-reconstruction.html">Tissue Reconstruction</a></li>
+                                <li><a href="aesthetics.html">Aesthetic Medicine</a></li>
+                                <li><a href="regenerative-medicine.html">Regenerative Medicine</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-section">
+                            <h4>Innovation</h4>
+                            <ul class="mega-menu-links">
+                                <li><a href="research-pipeline.html">Research Pipeline</a></li>
+                                <li><a href="clinical-trials.html">Clinical Trials</a></li>
+                                <li><a href="publications.html">Publications</a></li>
+                                <li><a href="technology-platform.html">Technology Platform</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-section">
+                            <h4>Our Approach</h4>
+                            <ul class="mega-menu-links">
+                                <li><a href="tiger-way.html">The Tiger Way</a></li>
+                                <li><a href="vertical-integration.html">Vertical Integration</a></li>
+                                <li><a href="quality-assurance.html">Quality & Compliance</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    Products
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </a>
+                <div class="mega-menu">
+                    <div class="mega-menu-grid">
+                        <div class="mega-menu-section">
+                            <h4>CAMPs Products</h4>
+                            <ul class="mega-menu-links">
+                                <li><a href="alloply.html">alloPLY™</a></li>
+                                <li><a href="caregraft.html">caregraFT™</a></li>
+                                <li><a href="acapatch.html">ACAPatch™</a></li>
+                                <li><a href="healpack.html">HealPACK™</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-section">
+                            <h4>Aesthetic Products</h4>
+                            <ul class="mega-menu-links">
+                                <li><a href="aveli.html">Avéli™</a></li>
+                                <li><a href="bellafill.html">Bellafill®</a></li>
+                                <li><a href="breast-products.html">Breast Products</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-section">
+                            <h4>Resources</h4>
+                            <ul class="mega-menu-links">
+                                <li><a href="product-catalog.html">Full Catalog</a></li>
+                                <li><a href="ordering.html">Ordering Information</a></li>
+                                <li><a href="product-training.html">Product Training</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    About Us
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </a>
+                <div class="mega-menu">
+                    <div class="mega-menu-grid">
+                        <div class="mega-menu-section">
+                            <h4>Company</h4>
+                            <ul class="mega-menu-links">
+                                <li><a href="about.html">Our Story</a></li>
+                                <li><a href="leadership.html">Leadership Team</a></li>
+                                <li><a href="facilities.html">Our Facilities</a></li>
+                                <li><a href="certifications.html">Certifications</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-section">
+                            <h4>Responsibility</h4>
+                            <ul class="mega-menu-links">
+                                <li><a href="sustainability.html">Sustainability</a></li>
+                                <li><a href="ethics.html">Ethics & Compliance</a></li>
+                                <li><a href="donor-program.html">Donor Program</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-section">
+                            <h4>News & Media</h4>
+                            <ul class="mega-menu-links">
+                                <li><a href="news.html">Press Releases</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="media-kit.html">Media Kit</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li class="nav-item">
+                <a href="careers.html" class="nav-link">Careers</a>
+            </li>
+        </ul>
+        
+        <div class="nav-actions">
+            <button class="search-trigger" onclick="document.getElementById('searchModal').classList.add('active')">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Search Modal -->
+<div id="searchModal" class="search-modal" onclick="if(event.target===this) this.classList.remove('active')">
+    <div class="search-box">
+        <input type="text" class="search-input" placeholder="Search Tiger BioSciences..." autofocus>
+    </div>
+</div>
+
+<!-- Video Hero Section -->
+<section class="hero-video-section">
+    <!-- In production, this would be a video element -->
+    <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=2400&auto=format&fit=crop" alt="Hero Background" class="hero-video-bg">
+    <div class="hero-video-overlay"></div>
+    <div class="hero-video-content">
+        <div class="hero-video-label">FIRST OF ITS KIND</div>
+        <h1 class="hero-video-title">Transforming Lives Through Innovation</h1>
+        <p class="hero-video-description">
+            The world's first fully vertically integrated tissue company, delivering cutting-edge regenerative medicine solutions globally
+        </p>
+        <div class="hero-video-buttons">
+            <a href="#audiences" class="btn btn-primary">Explore Our Solutions</a>
+            <a href="about.html" class="btn btn-outline">Our Story</a>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Bar -->
+<div class="stats-bar">
+    <div class="stats-grid">
+        <div class="stat-item">
+            <h3>16</h3>
+            <p>Specialized Divisions</p>
+        </div>
+        <div class="stat-item">
+            <h3>21+</h3>
+            <p>Innovative Products</p>
+        </div>
+        <div class="stat-item">
+            <h3>2</h3>
+            <p>AATB-Accredited Facilities</p>
+        </div>
+        <div class="stat-item">
+            <h3>3</h3>
+            <p>Countries</p>
+        </div>
+        <div class="stat-item">
+            <h3>5-Year</h3>
+            <p>Shelf Stability</p>
+        </div>
+    </div>
+</div>
+
+<!-- Audience Navigation -->
+<section class="audience-nav" id="audiences">
+    <div class="audience-nav-content">
+        <h2 class="audience-nav-title">Discover Solutions for Your Needs</h2>
+        <div class="audience-grid">
+            <a href="patients.html" class="audience-card">
+                <div class="audience-icon">🏥</div>
+                <h3>Patients</h3>
+                <p>Learn about treatment options and patient resources</p>
+            </a>
+            
+            <a href="healthcare-professionals.html" class="audience-card">
+                <div class="audience-icon">⚕️</div>
+                <h3>Healthcare Professionals</h3>
+                <p>Clinical data, product information, and training</p>
+            </a>
+            
+            <a href="investors.html" class="audience-card">
+                <div class="audience-icon">📊</div>
+                <h3>Investors</h3>
+                <p>Financial reports, SEC filings, and presentations</p>
+            </a>
+            
+            <a href="careers.html" class="audience-card">
+                <div class="audience-icon">💼</div>
+                <h3>Join Our Team</h3>
+                <p>Explore career opportunities and our culture</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Links Section -->
+<section class="quick-links">
+    <div class="quick-links-content">
+        <div class="quick-links-grid">
+            <div class="quick-link-card">
+                <div class="quick-link-image">🔬</div>
+                <div class="quick-link-content">
+                    <div class="quick-link-label">INNOVATION</div>
+                    <h3>Research Pipeline</h3>
+                    <p>Explore our ongoing clinical trials and next-generation product development initiatives.</p>
+                    <a href="research-pipeline.html">View Pipeline →</a>
+                </div>
+            </div>
+            
+            <div class="quick-link-card">
+                <div class="quick-link-image">📰</div>
+                <div class="quick-link-content">
+                    <div class="quick-link-label">NEWSROOM</div>
+                    <h3>Latest Announcements</h3>
+                    <p>Stay updated with the latest news, press releases, and company announcements.</p>
+                    <a href="news.html">Read News →</a>
+                </div>
+            </div>
+            
+            <div class="quick-link-card">
+                <div class="quick-link-image">🎓</div>
+                <div class="quick-link-content">
+                    <div class="quick-link-label">EDUCATION</div>
+                    <h3>Clinical Resources</h3>
+                    <p>Access clinical studies, case reports, and educational materials for healthcare professionals.</p>
+                    <a href="clinical-resources.html">Access Resources →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter">
+    <div class="newsletter-content">
+        <h2>Stay Informed</h2>
+        <p>Subscribe to receive the latest news, research updates, and product information</p>
+        <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+            <button type="submit" class="newsletter-submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-main">
+        <div class="footer-brand">
+            <h3>TIGER BIOSCIENCES™</h3>
+            <p>
+                The world's first fully vertically integrated tissue company, delivering cutting-edge regenerative medicine solutions globally.
+            </p>
+            <div class="footer-social">
+                <a href="#" class="social-link">𝕏</a>
+                <a href="#" class="social-link">in</a>
+                <a href="#" class="social-link">f</a>
+                <a href="#" class="social-link">▶</a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Company</h4>
+            <ul class="footer-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="news.html">Newsroom</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Solutions</h4>
+            <ul class="footer-links">
+                <li><a href="patients.html">For Patients</a></li>
+                <li><a href="healthcare-professionals.html">For HCPs</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="clinical-trials.html">Clinical Trials</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Investors</h4>
+            <ul class="footer-links">
+                <li><a href="investors.html">Investor Overview</a></li>
+                <li><a href="financial-reports.html">Financial Reports</a></li>
+                <li><a href="sec-filings.html">SEC Filings</a></li>
+                <li><a href="events-presentations.html">Events & Presentations</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <ul class="footer-links">
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="support.html">Customer Support</a></li>
+                <li><a href="media.html">Media Inquiries</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2025 Tiger BioSciences™. All rights reserved.</p>
+        <div class="footer-legal">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="legal.html">Legal</a>
+            <a href="cookies.html">Cookie Settings</a>
+            <a href="accessibility.html">Accessibility</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Simple search modal toggle
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.getElementById('searchModal').classList.remove('active');
+        }
+        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+            e.preventDefault();
+            document.getElementById('searchModal').classList.add('active');
+        }
+    });
+</script>
+
+</body>
+</html>
+

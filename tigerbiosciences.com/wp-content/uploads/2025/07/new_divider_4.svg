@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 400">
+  <defs>
+    <clipPath id="b">
+      <rect y="-808.12" width="1920" height="1274" style="fill: none;"/>
+    </clipPath>
+  </defs>
+  <g style="clip-path: url(#b);">
+    <g id="c" data-name="Back Gray Radius 8000x8000px ">
+      <circle id="d" data-name="Ellipse 2" cx="1455" cy="-3685.12" r="4000" style="fill: #f7f7f5;"/>
+    </g>
+  </g>
+</svg>

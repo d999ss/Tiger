@@ -1,0 +1,593 @@
+@font-face {
+    font-family: 'Avenir Black';
+    src: url('../fonts/Avenir_Black.woff2') format('woff2');
+    src: url('../fonts/Avenir_Black.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;       
+}
+
+@font-face {
+    font-family: 'Avenir Medium';
+    src: url('../fonts/Avenir_Medium.woff2') format('woff2');
+    src: url('../fonts/Avenir_Medium.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;       
+}
+
+@font-face {
+    font-family: 'Avenir Light';
+    src: url('../fonts/Avenir_Light.woff2') format('woff2');
+    src: url('../fonts/Avenir_Light.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;       
+}
+
+:root {
+    --primary-color: #984957;
+    --primary-light-color: #B86F74;
+    --secondary-color: #DEC2AD;
+    --border: #975057;
+}
+
+
+:root {
+    --dark-rose: #984957;
+    --coral-rose: #B86F74;
+    --aveli-beige: #DEC2AD;
+    --dark-gray: #404040;
+}
+
+.page-id-104 .content {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: -10px;
+}
+
+body.page-id-104 {
+    background-color: white !important;
+}
+
+@media screen and (min-width: 1200px){
+    .page-id-104 main {
+        padding-top: 175px !important;
+    }
+
+    .page-id-104 .content {
+        padding-top: 10px !important;
+    }
+
+    .page-id-104 #news-banner-container {
+        top: 0;
+    }
+}
+
+
+/* General layout */
+#scandal-exposed .wp-block-getwid-section__wrapper,
+#truth-about-cellulite .wp-block-getwid-section__wrapper,
+#three-billion .wp-block-getwid-section__wrapper, 
+#success-stories .wp-block-getwid-section__wrapper,
+#truth-about-cellulite .wp-block-getwid-section__inner-content,
+#three-billion .wp-block-getwid-section__inner-content,
+#success-stories .wp-block-getwid-section__inner-content {
+    max-width: unset;
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* Scandal Exposed */
+#scandal-exposed {
+    background-color: var(--dark-gray);
+    color: white;
+    padding: 24px;
+}
+
+@media screen and (min-width: 1200px){
+    #scandal-exposed .heading-1 {
+        text-align: center;
+    }
+}
+/* Truth About Cellulite */
+#truth-about-cellulite .wp-block-columns {
+    gap:0;
+    margin: 0;
+}
+
+#truth-about-cellulite .hero-image-column .wp-block-image {
+    margin: 0;
+}
+
+#truth-about-cellulite .hero-image-column .wp-block-image img {
+    width: 100% !important;
+}
+
+#truth-about-cellulite .heading {
+    color: white;
+    background: var(--dark-rose);
+    padding: 24px;
+}
+
+#truth-about-cellulite .description {
+    margin: 0;
+}
+
+#truth-about-cellulite .aveli-description {
+    background-color: white;
+    color: var(--dark-gray);
+    padding: 24px;
+}
+
+#truth-about-cellulite .wp-block-group {
+    gap: 0;
+}
+
+#truth-about-cellulite #tnt-hero-text {
+    max-width: 850px;
+}
+
+@media screen and (min-width: 782px){
+    #truth-about-cellulite .wp-block-group.is-vertical {
+        height: 100%;
+    }
+
+    #truth-about-cellulite .heading,
+    #truth-about-cellulite .aveli-description{
+        height: 50%; 
+        width: 100%;
+    }
+
+    #truth-about-cellulite .description {
+       height: 100%;
+     }
+
+    #truth-about-cellulite .heading,
+    #truth-about-cellulite .aveli-description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 992px){
+    #truth-about-cellulite .wp-block-getwid-section__wrapper,
+    #truth-about-cellulite .wp-block-getwid-section__inner-wrapper,
+    #truth-about-cellulite .wp-block-getwid-section__content,
+    #truth-about-celllulite .wp-block-columns,
+    #truth-about-cellulite .wp-block-column {
+        min-height: 800px !important;
+    }
+    
+    #truth-about-cellulite .hero-image-column .wp-block-image {
+        display: none;
+    }
+
+    #truth-about-cellulite .wp-block-group.is-vertical {
+        height: 100% !important;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #truth-about-cellulite .wp-block-getwid-section__background {
+        background-position:  center 0px !important;
+    }
+
+    #truth-about-cellulite .heading,
+     #truth-about-cellulite .aveli-description {
+        padding: 40px  80px 40px 156px;
+    }
+
+    .page-id-104 .content p.heading-5 {
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 46px; /* 121.053% */
+    } 
+}
+
+/* Smoother Solution */
+#smoother-solution {
+    background-color: white;
+    border-top: 8px solid;
+    border-image: linear-gradient(90deg, #DEC2AD 0%, #984957 100%) 1 0 0 0;
+    text-align: center;
+    padding: 40px 24px;
+}
+
+#smoother-solution .wp-block-getwid-section__wrapper {
+    padding: 0;
+}
+
+#smoother-solution .wp-block-columns {
+    gap: 24px;
+    margin: 0;
+    flex-direction: column-reverse;
+}
+
+#smoother-solution h2 {
+    margin: 0;
+}
+
+#smoother-solution .wp-block-button {
+    margin-top: 40px;
+}
+
+@media screen and (min-width: 782px){
+    #smoother-solution .wp-block-button {
+        margin: 24px auto 0;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #smoother-solution {
+        padding: 48px;
+    }
+
+    #smoother-solution .wp-block-columns {
+        flex-direction: row;
+        justify-content: space-between; 
+        /* gap: 150px; */
+    }
+
+    #smoother-solution .cta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+        flex-basis: 33%;
+    }
+
+    #smoother-solution img {
+        width: 350px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    #smoother-solution .cta {
+        flex-basis: 18%;
+    }
+
+    #smoother-solution img {
+        width: 432px;
+    }
+}
+
+/* Three Billion */
+#three-billion {
+    background-color: #E6D1C1;
+    border-top: 8px solid var(--dark-gray);
+}
+/* 
+#three-billion .wp-block-getwid-section__inner-content {
+    margin: unset !important;
+    max-width: unset !important;
+} */
+
+#three-billion h2 {
+    padding: 40px 24px;
+    margin:0;
+}
+
+#three-billion .wp-block-columns {
+    gap: 0;
+    margin: 0;
+}
+
+#three-billion .wp-block-column {
+    padding: 40px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#myth-1 {
+   background: var(--shades-aveli-beige-50, #EFE1D6);
+}
+
+#myth-2 {
+    background: var(--shades-aveli-beige-25, #F3EAE2);
+}
+
+#myth-3 {
+    background: var(--shades-aveli-beige-16, #FAF5F2);
+}
+
+#three-billion .graphic-description {
+    gap: 24px;
+}
+
+#three-billion .wp-block-buttons {
+    margin-top: 40px;
+}
+
+#three-billion  .wp-block-button__link.wp-element-button {
+    padding: 14px 30px !important;
+}
+
+#three-billion img {
+    width: 200px;
+}
+
+@media screen and (min-width: 728px){
+    #three-billion .wp-block-column {
+        padding: 40px;
+    }
+
+    #three-billion .graphic-description {
+        margin-top: 28px;
+    }
+
+    #myth-1 img {
+        margin-bottom: 40px;
+    }
+}
+
+/* @media screen and (min-width: 820px){
+    #myth-1 img {
+        margin-top: 24px;
+    }
+} */
+
+@media screen and (min-width: 1134px){
+     #three-billion .graphic-description {
+        margin-top: 4px;
+    }
+
+    #myth-1 .myth-description {
+        max-width: 200px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #three-billion .wp-block-columns {
+        min-height: 968px;
+    }
+
+    #three-billion .graphic-description {
+        margin-top: 36px;
+        margin-bottom: 30px;
+    }
+
+    #three-billion .description {
+        max-width: 340px;
+    }
+
+    #three-billion .wp-block-button {
+        margin-top: 56px;
+    }
+
+    #three-billion img {
+        width: 272px !important;
+    }
+
+    
+    #myth-1 img {
+        margin-bottom: 80px;
+    }
+
+    #myth-1 .myth-description {
+        max-width: 300px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    #three-billion .wp-block-column {
+        padding: 80px;
+    }
+
+    #three-billion .wp-block-button__link.wp-element-button {
+        padding: 14px 34px !important;
+    }
+
+}
+/* Success Stories section */
+
+#success-stories {
+    border-top: 8px solid var(--dark-rose);
+    background-color: #be727a;
+    padding: 40px 24px;
+}
+
+#succss-stories .wp-block-getwid-section__inner-content {
+    margin: unset !important;
+}
+
+#success-stories .heading {
+    margin: 0 40px 0;
+}
+
+#success-stories #ss-grid {
+    color: white;
+}
+
+#ss-grid .wp-block-getwid-section__inner-wrapper{
+    margin: 0 auto;
+}
+
+
+#ss-grid .wp-block-column.patient .wp-block-group,
+#ss-grid .wp-block-column.patient .wp-block-image{
+    width: 100%;
+}
+
+
+#ss-grid .wp-block-column.patient {
+    background: var(--shades-aveli-coral-rose-80, #C68C90);
+    padding: 16px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#ss-grid .wp-block-column.patient {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+#ss-grid .wp-block-column.patient .wp-block-group {
+    gap: 24px;
+}
+
+#ss-grid .wp-block-column.patient img {
+    width: 100%;
+}
+
+#success-stories #patients-grid .wp-block-column p {
+    font-size: 16px;
+}
+
+div#ss-grid-column-container {
+    margin: 0;
+}
+
+#patients-grid .wp-block-columns {
+    gap: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+#patients-grid .wp-block-columns:first-of-type {
+    margin-top: 40px;
+}
+
+#patients-grid .wp-block-columns:last-of-type {
+    margin-bottom: 0;
+}
+
+[id^="watch-"] {
+    display: none;
+}
+
+[id^="watch-"] .wp-block-getwid-section__inner-wrapper {
+    margin: 0 auto;
+}
+
+.close-btn-container {
+    max-width: 850px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+}
+
+[id^="thumbnail-"]:hover{
+    cursor: pointer;
+}
+
+.watch-btn, 
+.close-btn  {
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: 14px;
+}
+
+.watch-btn {
+    font-family: "Avenir Black";
+}
+
+.close-btn {
+    display: none;
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.755);
+    font-family: "Avenir Light"
+}
+
+.close-btn::after {
+    content: 'X';
+    display: inline-block;
+    font-size: 2.25rem;
+    margin-left: .9rem;
+    color: white;
+}
+
+#patients-grid .wp-block-column p {
+    position: relative;
+}
+
+/* video responsiveness fix */
+.video-container {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#success-stories .wp-block-buttons {
+    margin-top: 40px;
+}
+
+@media screen and (min-width: 1200px){
+    #success-stories {
+        padding: 80px 48px;
+    }
+
+    #ss-grid .wp-block-column.patient {
+        min-width: 432px;
+        min-height: 716px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        /* gap: 20px; */
+        padding: 40px;
+    }
+
+    #success-stories #patients-grid .wp-block-column p {
+        font-size: 22px;
+    }
+
+    #ss-grid .wp-block-column.patient .wp-block-group {
+        gap: 24px;
+    }
+
+    #success-stories .heading {
+        gap: 0;
+    }
+
+    #success-stories .heading-2 {
+        max-width: 700px;
+        margin: 0 auto 24px;
+    }
+
+    #success-stories .wp-block-buttons {
+        margin-top: 80px;
+    }
+
+    #success-stories .diana .body-m {
+        margin-top: -62px;
+    }
+}
+
+/* You're in Control of your Confidence section */
+.page-id-104 #real-patients-real-results {
+    margin-top: 0;
+    padding: 40px 24px 60px;
+}
+
+#real-patients-real-results .heading-2 {
+    max-width: unset;
+}
+
+
+@media screen and (min-width: 1200px){
+    .page-id-104 #real-patients-real-results {
+        padding: 80px 24px;
+    }
+
+    #real-patients-real-results .heading-2 {
+        margin-bottom: 80px;
+    }
+}

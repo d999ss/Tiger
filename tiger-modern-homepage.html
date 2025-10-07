@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger BioSciences™ - The First of Its Kind</title>
+    <meta name="description" content="A global leader in medical technology delivering cutting-edge cellular, acellular, and matrix-like products (CAMPs) for wound care, soft tissue reconstruction, and aesthetics.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Tiger Brand Colors - Red Theme */
+            --tiger-red-50: #fef2f2;
+            --tiger-red-100: #fee2e2;
+            --tiger-red-200: #fecaca;
+            --tiger-red-300: #fca5a5;
+            --tiger-red-400: #f87171;
+            --tiger-red-500: #ef4444;
+            --tiger-red-600: #dc2626;
+            --tiger-red-700: #991514;
+            --tiger-red-800: #D32F2F;
+            --tiger-red-900: #7f1d1d;
+            --tiger-red-950: #450a0a;
+            
+            /* Tiger Accent Colors */
+            --tiger-gold: #D8930B;
+            --tiger-gold-light: #F5B841;
+            --tiger-gold-dark: #B8730A;
+            
+            /* Neutral Colors */
+            --background: 0 0% 100%;
+            --foreground: 240 10% 3.9%;
+            --card: 0 0% 100%;
+            --card-foreground: 240 10% 3.9%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 240 10% 3.9%;
+            --primary: 0 72.2% 50.6%;
+            --primary-foreground: 0 85.7% 97.3%;
+            --secondary: 240 4.8% 95.9%;
+            --secondary-foreground: 240 5.9% 10%;
+            --muted: 240 4.8% 95.9%;
+            --muted-foreground: 240 3.8% 46.1%;
+            --accent: 240 4.8% 95.9%;
+            --accent-foreground: 240 5.9% 10%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 240 5.9% 90%;
+            --input: 240 5.9% 90%;
+            --ring: 0 72.2% 50.6%;
+            --radius: 0.5rem;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: hsl(var(--foreground));
+            background: hsl(var(--background));
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Announcement Banner (inspired by for:human) */
+        .announcement {
+            background: var(--tiger-red-700);
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .announcement::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .announcement a {
+            color: white;
+            text-decoration: underline;
+            margin-left: 8px;
+        }
+        
+        /* Navigation (shadcn-inspired) */
+        .nav {
+            border-bottom: 1px solid hsl(var(--border));
+            background: hsl(var(--background));
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(8px);
+        }
+        
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--tiger-red-700);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: hsl(var(--foreground));
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--tiger-red-700);
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: var(--radius);
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: var(--tiger-red-700);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--tiger-red-800);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(153, 21, 20, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--tiger-red-700);
+            border: 1.5px solid var(--tiger-red-700);
+        }
+        
+        .btn-outline:hover {
+            background: var(--tiger-red-50);
+        }
+        
+        /* Hero Section (for:human inspired) */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--tiger-red-950) 0%, var(--tiger-red-800) 50%, var(--tiger-red-700) 100%);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(216, 147, 11, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+            padding: 80px 24px;
+        }
+        
+        .hero-label {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            backdrop-filter: blur(8px);
+        }
+        
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 96px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero-description {
+            font-size: clamp(18px, 2vw, 24px);
+            max-width: 800px;
+            margin: 0 auto 48px;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero .btn {
+            padding: 14px 32px;
+            font-size: 16px;
+        }
+        
+        .hero .btn-primary {
+            background: white;
+            color: var(--tiger-red-700);
+        }
+        
+        .hero .btn-primary:hover {
+            background: var(--tiger-red-50);
+        }
+        
+        .hero .btn-outline {
+            border-color: white;
+            color: white;
+        }
+        
+        .hero .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Badge Section (for:human style) */
+        .badge-section {
+            padding: 40px 24px;
+            background: white;
+            border-bottom: 1px solid hsl(var(--border));
+        }
+        
+        .badge-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        
+        .badge-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: hsl(var(--muted-foreground));
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .badge-icon {
+            width: 20px;
+            height: 20px;
+            color: var(--tiger-red-700);
+        }
+        
+        /* Welcome Section (shadcn card style) */
+        .welcome {
+            padding: 120px 24px;
+            background: hsl(var(--background));
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 80px;
+        }
+        
+        .section-label {
+            display: inline-block;
+            padding: 6px 16px;
+            background: var(--tiger-red-50);
+            color: var(--tiger-red-700);
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--tiger-red-700);
+            letter-spacing: -0.02em;
+        }
+        
+        .section-description {
+            font-size: 18px;
+            line-height: 1.8;
+            color: hsl(var(--muted-foreground));
+            margin-bottom: 16px;
+        }
+        
+        /* Division Cards (shadcn card component style) */
+        .divisions {
+            padding: 120px 24px;
+            background: hsl(var(--muted));
+        }
+        
+        .division-category {
+            margin-bottom: 100px;
+        }
+        
+        .division-category:last-child {
+            margin-bottom: 0;
+        }
+        
+        .category-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        
+        .category-title {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 800;
+            color: var(--tiger-red-700);
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        
+        .category-subtitle {
+            font-size: 20px;
+            color: hsl(var(--muted-foreground));
+            font-weight: 500;
+        }
+        
+        .division-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        
+        /* shadcn Card Component Style */
+        .card {
+            background: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: calc(var(--radius) + 4px);
+            padding: 32px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--tiger-red-700), var(--tiger-gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--tiger-red-200);
+        }
+        
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .card-header {
+            margin-bottom: 16px;
+        }
+        
+        .card-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--tiger-red-700);
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+        }
+        
+        .card-subtitle {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--tiger-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .card-content {
+            color: hsl(var(--muted-foreground));
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--tiger-red-700);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: gap 0.2s;
+        }
+        
+        .card-link:hover {
+            gap: 12px;
+        }
+        
+        .card-link svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        /* Tiger Way Section (for:human inspired) */
+        .tiger-way {
+            padding: 120px 24px;
+            background: white;
+            position: relative;
+        }
+        
+        .tiger-way::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 10% 20%, var(--tiger-red-50) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, var(--tiger-gold-light) 0%, transparent 30%);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        .tiger-way-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 32px 24px;
+            border-radius: calc(var(--radius) + 4px);
+            background: white;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            background: var(--tiger-red-50);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, var(--tiger-red-700), var(--tiger-red-800));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            box-shadow: 0 10px 25px -5px rgba(153, 21, 20, 0.3);
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--tiger-red-700);
+            margin-bottom: 12px;
+        }
+        
+        .feature-description {
+            font-size: 15px;
+            color: hsl(var(--muted-foreground));
+            line-height: 1.6;
+        }
+        
+        /* Stats Section (for:human inspired) */
+        .stats {
+            padding: 80px 24px;
+            background: var(--tiger-red-950);
+            color: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 48px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--tiger-gold);
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        /* CTA Section (shadcn inspired) */
+        .cta {
+            padding: 120px 24px;
+            background: var(--tiger-red-700);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--tiger-gold) 0%, transparent 70%);
+            opacity: 0.1;
+            top: -250px;
+            right: -250px;
+            border-radius: 50%;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .cta h2 {
+            font-size: clamp(36px, 5vw, 52px);
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        
+        .cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .cta .btn {
+            padding: 16px 40px;
+            font-size: 16px;
+        }
+        
+        .cta .btn-primary {
+            background: white;
+            color: var(--tiger-red-700);
+        }
+        
+        /* Footer (shadcn style) */
+        .footer {
+            background: hsl(var(--foreground));
+            color: white;
+            padding: 80px 24px 40px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 48px;
+            margin-bottom: 64px;
+        }
+        
+        .footer-column h5 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--tiger-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .footer-bottom p {
+            font-size: 14px;
+            opacity: 0.6;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .mb-8 { margin-bottom: 32px; }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Announcement Banner -->
+<div class="announcement">
+    Now Live: Tiger BioSciences Comprehensive Solutions
+    <a href="#divisions">Explore Our Divisions</a>
+</div>
+
+<!-- Navigation -->
+<nav class="nav">
+    <div class="container nav-container">
+        <a href="/" class="logo">TIGER BIOSCIENCES™</a>
+        <ul class="nav-links">
+            <li><a href="#divisions">Our Solutions</a></li>
+            <li><a href="/site-page/products">Products</a></li>
+            <li><a href="/site-page/science">Science</a></li>
+            <li><a href="/site-page/about">About</a></li>
+            <li><a href="/site-page/careers">Careers</a></li>
+            <li><a href="/site-page/contact" class="btn btn-primary">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-label">TIGER BIOSCIENCES™</div>
+        <h1>The first of its kind</h1>
+        <p class="hero-description">
+            A global leader in medical technology, dedicated to delivering cutting-edge solutions for clinicians worldwide. Specializing in cellular, acellular, and matrix-like products (CAMPs).
+        </p>
+        <div class="hero-buttons">
+            <a href="#divisions" class="btn btn-primary">Explore Our Divisions</a>
+            <a href="/site-page/contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+    </div>
+</section>
+
+<!-- Badge Section -->
+<section class="badge-section">
+    <div class="container">
+        <div class="badge-grid">
+            <div class="badge-item">
+                <svg class="badge-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                AATB-Accredited Facilities
+            </div>
+            <div class="badge-item">
+                <svg class="badge-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+                Vertically Integrated
+            </div>
+            <div class="badge-item">
+                <svg class="badge-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Global Leader
+            </div>
+            <div class="badge-item">
+                <svg class="badge-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                </svg>
+                Science-Driven Innovation
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Welcome Section -->
+<section class="welcome">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Welcome to Tiger BioSciences</span>
+            <h2 class="section-title">Elevating Medical Technology Through Vertical Integration</h2>
+            <p class="section-description">
+                Tiger BioSciences is a global leader in medical technology, dedicated to delivering cutting-edge solutions for clinicians worldwide. Specializing in cellular, acellular, and matrix-like products (CAMPs), we are advancing wound care, soft tissue reconstruction, and aesthetics.
+            </p>
+            <p class="section-description">
+                Our distinct advantage lies in our fully integrated approach—we oversee every stage of our products, from donor screening and tissue collection to research and development, manufacturing, and distribution. This comprehensive model ensures unparalleled quality, accountability, and confidence for both clinicians and patients.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Divisions Section -->
+<section class="divisions" id="divisions">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Our Solutions</span>
+            <h2 class="section-title">Our Divisions</h2>
+            <p class="section-description">
+                16 specialized divisions working together to deliver comprehensive medical technology solutions across wound care, aesthetics, tissue processing, and international markets.
+            </p>
+        </div>
+        
+        <!-- Category 1: Wound Care -->
+        <div class="division-category">
+            <div class="category-header">
+                <h3 class="category-title">Wound Care & Pain Management</h3>
+                <p class="category-subtitle">Advanced CAMP solutions for complex wounds</p>
+            </div>
+            
+            <div class="division-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Tiger Wound Care</h4>
+                        <div class="card-subtitle">Advanced CAMPs for Wound Healing</div>
+                    </div>
+                    <div class="card-content">
+                        AATB-accredited facilities delivering innovative tissue technologies backed by science. Complete integrated wound care portfolio with alloPLY™, caregraFT™, and ACAPatch™.
+                    </div>
+                    <a href="https://tigerwoundcare.com" target="_blank" class="card-link">
+                        Visit Site
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Extremity Care</h4>
+                        <div class="card-subtitle">Specialized Extremity Solutions</div>
+                    </div>
+                    <div class="card-content">
+                        Advanced tissue technologies for extremity wounds with comprehensive CAMP solutions for podiatric and orthopedic applications.
+                    </div>
+                    <a href="https://extremitycare.com" target="_blank" class="card-link">
+                        Visit Site
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Encore Surgical Dressings</h4>
+                        <div class="card-subtitle">Comprehensive Wound Dressings</div>
+                    </div>
+                    <div class="card-content">
+                        Wide variety of wound dressing products including the HealPACK™ line that promote natural healing processes.
+                    </div>
+                    <a href="https://encoresurgicalsupplies.com" target="_blank" class="card-link">
+                        Visit Site
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category 2: Aesthetics -->
+        <div class="division-category">
+            <div class="category-header">
+                <h3 class="category-title">Soft Tissue Reconstruction & Aesthetics</h3>
+                <p class="category-subtitle">Shaping the future of aesthetic medicine</p>
+            </div>
+            
+            <div class="division-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Tiger Aesthetics</h4>
+                        <div class="card-subtitle">Regenerative Aesthetics</div>
+                    </div>
+                    <div class="card-content">
+                        Cutting-edge solutions across reconstructive, cosmetic, and regenerative domains with personalized technologies for elevated outcomes.
+                    </div>
+                    <a href="https://tiger-aesthetics.com" target="_blank" class="card-link">
+                        Visit Site
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Sientra</h4>
+                        <div class="card-subtitle">Breast Products & Reconstruction</div>
+                    </div>
+                    <div class="card-content">
+                        FDA-approved breast implants, tissue expanders, and scar management solutions for plastic and reconstructive surgery.
+                    </div>
+                    <a href="https://sientra.com" target="_blank" class="card-link">
+                        Visit Site
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Suneva Medical</h4>
+                        <div class="card-subtitle">Aesthetic Innovation</div>
+                    </div>
+                    <div class="card-content">
+                        Groundbreaking Avéli™ cellulite treatment and Bellafill® dermal filler with FDA-cleared, long-lasting results.
+                    </div>
+                    <a href="https://myaveli.com" target="_blank" class="card-link">
+                        Visit Site
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">BioCreations Medical</h4>
+                        <div class="card-subtitle">Regenerative Solutions</div>
+                    </div>
+                    <div class="card-content">
+                        Innovative regenerative aesthetic products leveraging tissue engineering and biomedical science.
+                    </div>
+                    <a href="/division/biocreations" class="card-link">
+                        Learn More
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Revelle Aesthetics</h4>
+                        <div class="card-subtitle">Modern Aesthetic Solutions</div>
+                    </div>
+                    <div class="card-content">
+                        Cutting-edge aesthetic and cosmetic solutions for modern aesthetic medicine practices.
+                    </div>
+                    <a href="/division/revelle-aesthetics" class="card-link">
+                        Learn More
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category 3: Tissue R&D -->
+        <div class="division-category">
+            <div class="category-header">
+                <h3 class="category-title">Tissue R&D, Processing and Recovery</h3>
+                <p class="category-subtitle">Tissue science redefined</p>
+            </div>
+            
+            <div class="division-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">RegenTX</h4>
+                        <div class="card-subtitle">AATB-Accredited Processing</div>
+                    </div>
+                    <div class="card-content">
+                        Rigorous protocols and advanced biotech ensure exceptional tissue quality. State-of-the-art facilities in Conshohocken, PA and San Antonio, TX.
+                    </div>
+                    <a href="https://regentxmed.com" target="_blank" class="card-link">
+                        Visit Site
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">RegenTX Labs</h4>
+                        <div class="card-subtitle">Advanced R&D</div>
+                    </div>
+                    <div class="card-content">
+                        Focused on tissue technology innovation, biomedical research, and next-generation CAMP development with ongoing clinical trials.
+                    </div>
+                    <a href="/division/regentx-labs" class="card-link">
+                        Learn More
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Birth Tissue Recovery</h4>
+                        <div class="card-subtitle">Ethical Tissue Collection</div>
+                    </div>
+                    <div class="card-content">
+                        Manages ethical collection and processing of placental tissue from donor hospitals with rigorous screening standards.
+                    </div>
+                    <a href="https://birthtissuerecovery.com" target="_blank" class="card-link">
+                        Visit Site
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">bioCARE</h4>
+                        <div class="card-subtitle">Recovery Services</div>
+                    </div>
+                    <div class="card-content">
+                        Comprehensive tissue recovery services and donor coordination supporting our vertically integrated operations.
+                    </div>
+                    <a href="/division/biocare" class="card-link">
+                        Learn More
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category 4: International -->
+        <div class="division-category">
+            <div class="category-header">
+                <h3 class="category-title">Tiger International</h3>
+                <p class="category-subtitle">Global access to advanced technologies</p>
+            </div>
+            
+            <div class="division-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Tiger International</h4>
+                        <div class="card-subtitle">Global Distribution</div>
+                    </div>
+                    <div class="card-content">
+                        Manages our global distribution network and international partnerships, bringing advanced medical technologies worldwide.
+                    </div>
+                    <a href="/division/tiger-international" class="card-link">
+                        Learn More
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Lizard Health Technology</h4>
+                        <div class="card-subtitle">Medical Device Engineering (Germany)</div>
+                    </div>
+                    <div class="card-content">
+                        Medical device engineering, 3D printing, and manufacturing solutions for innovative healthcare technologies.
+                    </div>
+                    <a href="https://lizard-health.com" target="_blank" class="card-link">
+                        Visit Site
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Airway Medix S.A.</h4>
+                        <div class="card-subtitle">Airway Management (Poland)</div>
+                    </div>
+                    <div class="card-content">
+                        Specializes in airway management and respiratory care solutions for European and international markets.
+                    </div>
+                    <a href="https://airway-medix.com" target="_blank" class="card-link">
+                        Visit Site
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Tiger Production & Services</h4>
+                        <div class="card-subtitle">Medical Device Engineering</div>
+                    </div>
+                    <div class="card-content">
+                        Handles engineering projects from concept through manufacturing, supporting innovation across all divisions.
+                    </div>
+                    <a href="/division/tiger-production-services" class="card-link">
+                        Learn More
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">16</div>
+                <div class="stat-label">Specialized Divisions</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">21+</div>
+                <div class="stat-label">Innovative Products</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">2</div>
+                <div class="stat-label">AATB-Accredited Facilities</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Countries</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- The Tiger Way Section -->
+<section class="tiger-way">
+    <div class="tiger-way-content">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">The Tiger Way</span>
+                <h2 class="section-title">The Power of Vertical Integration</h2>
+                <p class="section-description">
+                    Vertically integrated from recovery to recipient for unmatched quality
+                </p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏥</div>
+                    <h4 class="feature-title">Tissue Recovery</h4>
+                    <p class="feature-description">
+                        We partner with trusted hospitals and donor programs to collect tissues under rigorous ethical, safety, and regulatory standards. Every donor is carefully screened.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔬</div>
+                    <h4 class="feature-title">Tissue Processing</h4>
+                    <p class="feature-description">
+                        Our AATB-accredited facilities process all tissues using advanced biomedical techniques, ensuring careful preparation and controlled preservation.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🧪</div>
+                    <h4 class="feature-title">Research & Development</h4>
+                    <p class="feature-description">
+                        Multidisciplinary research teams explore innovative materials and processing techniques to develop next-generation solutions for evolving clinical needs.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h4 class="feature-title">Clinical Access & Distribution</h4>
+                    <p class="feature-description">
+                        Fast, precise, and reliable distribution with advanced packaging and expert handling, ensuring products reach clinicians safely and on time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Careers CTA -->
+<section class="cta">
+    <div class="cta-content">
+        <h2>Be at the Forefront of Innovation</h2>
+        <p>Explore career opportunities and help shape the future of biotechnology</p>
+        <a href="/site-page/careers" class="btn btn-primary">Open Positions</a>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="welcome">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">We look forward to telling you more about us!</h2>
+            <p class="section-description">
+                We welcome potential partnership opportunities. For inquiries, please contact us.
+            </p>
+            <div style="margin-top: 32px; padding: 32px; background: var(--tiger-red-50); border-radius: calc(var(--radius) + 4px); border: 1px solid var(--tiger-red-200);">
+                <p style="font-size: 16px; color: hsl(var(--foreground)); margin-bottom: 16px;">
+                    <strong>Tiger BioSciences</strong><br>
+                    555 E North Ln, Ste 5000, Bldg D<br>
+                    Conshohocken, PA 19428
+                </p>
+                <p style="font-size: 16px; color: hsl(var(--foreground)); margin-bottom: 24px;">
+                    Phone: <a href="tel:+18886655005" style="color: var(--tiger-red-700); text-decoration: none; font-weight: 600;">(+1) 888-665-5005</a><br>
+                    Email: <a href="mailto:info@tigerbiosciences.com" style="color: var(--tiger-red-700); text-decoration: none; font-weight: 600;">info@tigerbiosciences.com</a>
+                </p>
+                <a href="/site-page/contact" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h5>About</h5>
+                <ul>
+                    <li><a href="/site-page/about">Our Company</a></li>
+                    <li><a href="/site-page/tiger-way">The Tiger Way</a></li>
+                    <li><a href="/site-page/facilities">Our Facilities</a></li>
+                    <li><a href="/site-page/science">Science & Research</a></li>
+                    <li><a href="/site-page/careers">Careers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h5>Our Solutions</h5>
+                <ul>
+                    <li><a href="/site-page/wound-care">Wound Care & Pain Management</a></li>
+                    <li><a href="/site-page/aesthetics">Soft Tissue Recon & Aesthetics</a></li>
+                    <li><a href="/site-page/tissue-rd">Tissue R&D & Processing</a></li>
+                    <li><a href="/site-page/international">Tiger International</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h5>Products</h5>
+                <ul>
+                    <li><a href="/site-page/camps-technology">CAMPs Technology</a></li>
+                    <li><a href="/product/alloply">alloPLY™</a></li>
+                    <li><a href="/product/caregraft">caregraFT™</a></li>
+                    <li><a href="/product/acapatch">ACAPatch™</a></li>
+                    <li><a href="/site-page/products">View All Products</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h5>Contact</h5>
+                <p style="color: rgba(255, 255, 255, 0.7); font-size: 14px; line-height: 1.8;">
+                    <strong style="color: white;">Tiger BioSciences</strong><br>
+                    555 E North Ln, Ste 5000, Bldg D<br>
+                    Conshohocken, PA 19428<br><br>
+                    Phone: (+1) 888-665-5005<br>
+                    Email: info@tigerbiosciences.com
+                </p>
+                <p style="margin-top: 16px;">
+                    <a href="https://www.linkedin.com/company/tiger-biosciences-llc/" target="_blank" style="color: var(--tiger-gold); font-weight: 600;">LinkedIn →</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 Tiger BioSciences™. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="/site-page/legal-disclaimer">Legal Disclaimer</a>
+                <a href="/site-page/terms-conditions">Terms & Conditions</a>
+                <a href="/site-page/privacy-policy">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+

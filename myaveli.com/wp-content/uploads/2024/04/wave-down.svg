@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 3972.8 595.1">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path id="Trazado_2215" data-name="Trazado 2215" class="cls-1" d="M1986.2,587.2c-550,18.1-855-286.7-1233.7-361.6C373.7,150.8,0,331.7,0,331.7V0h1986.2v587.2Z"/>
+  <g id="Grupo_5504" data-name="Grupo 5504">
+    <path id="Trazado_2211" data-name="Trazado 2211" class="cls-2" d="M0,336.7s373.7-180.9,752.4-106.1c378.7,74.8,683.7,379.7,1233.7,361.6"/>
+    <path id="Trazado_2213" data-name="Trazado 2213" class="cls-2" d="M0,393.4s499.2-169.5,877.9-94.7c378.7,74.8,558.2,313.5,1108.2,295.4"/>
+    <path id="Trazado_2214" data-name="Trazado 2214" class="cls-2" d="M0,468s567.8-198,946.5-123.2c378.7,74.8,489.7,265.5,1039.7,247.3"/>
+  </g>
+  <path id="Trazado_2215-2" data-name="Trazado 2215" class="cls-1" d="M1984.9,0h1986.2v331.7s-373.7-180.9-752.4-106.1-683.7,379.7-1233.7,361.6V0Z"/>
+  <g id="Grupo_5504-2" data-name="Grupo 5504">
+    <path id="Trazado_2211-2" data-name="Trazado 2211" class="cls-2" d="M1986.2,592.2c550,18.1,855-286.7,1233.7-361.6s752.4,106.1,752.4,106.1"/>
+    <path id="Trazado_2213-2" data-name="Trazado 2213" class="cls-2" d="M1986.2,594.2c550,18.1,729.5-220.6,1108.2-295.4,378.7-74.8,877.9,94.7,877.9,94.7"/>
+    <path id="Trazado_2214-2" data-name="Trazado 2214" class="cls-2" d="M1986.2,592.2c550,18.1,661-172.5,1039.7-247.3,378.7-74.8,946.5,123.2,946.5,123.2"/>
+  </g>
+</svg>

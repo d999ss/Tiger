@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Healthcare Professionals - Tiger BioSciences™</title>
+    <style>
+        @font-face {
+            font-family: 'LT Superior Mono';
+            src: url('LTSuperiorMono.otf') format('opentype');
+            font-weight: 500;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'LT Superior Mono', monospace; color: #0f0f0f; }
+        
+        :root {
+            --primary-700: #991514;
+            --primary-800: #D32F2F;
+            --primary-950: #450a0a;
+            --accent-500: #D8930B;
+            --neutral-100: #f5f5f5;
+            --neutral-200: #e5e5e5;
+            --neutral-600: #525252;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-950), var(--primary-800));
+            color: #fff;
+            padding: 8rem 1.5rem 4rem;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 4.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .disclaimer {
+            background: var(--accent-500);
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+        
+        .content {
+            max-width: 90rem;
+            margin: 0 auto;
+            padding: 5rem 1.5rem;
+        }
+        
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+        
+        .resource-card {
+            background: #fff;
+            border: 2px solid var(--neutral-200);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .resource-card:hover {
+            border-color: var(--primary-700);
+            transform: translateY(-0.5rem);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .resource-icon {
+            width: 5rem;
+            height: 5rem;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-800));
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+        
+        .resource-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-700);
+            margin-bottom: 1rem;
+        }
+        
+        .resource-card p {
+            color: var(--neutral-600);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .resource-card a {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: var(--primary-700);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 624.9375rem;
+            font-size: 0.9375rem;
+        }
+        
+        .training-section {
+            background: var(--neutral-100);
+            padding: 4rem;
+            border-radius: 1rem;
+            margin-bottom: 5rem;
+        }
+        
+        .training-section h2 {
+            font-size: 2.5rem;
+            color: var(--primary-700);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .training-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        
+        .training-item {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 0.75rem;
+        }
+        
+        .training-item h4 {
+            font-size: 1.25rem;
+            color: var(--primary-700);
+            margin-bottom: 0.75rem;
+        }
+        
+        .training-item p {
+            color: var(--neutral-600);
+            margin-bottom: 1rem;
+        }
+        
+        .training-item a {
+            color: var(--primary-700);
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-header">
+    <h1>Healthcare Professionals</h1>
+    <p>Clinical resources and educational materials</p>
+</div>
+
+<div class="disclaimer">
+    ⚠️ This section contains information intended for healthcare professionals only
+</div>
+
+<div class="content">
+    <div class="resource-grid">
+        <div class="resource-card">
+            <div class="resource-icon">📚</div>
+            <h3>Clinical Evidence</h3>
+            <p>Access peer-reviewed publications, clinical trial data, and case studies supporting our products.</p>
+            <a href="clinical-evidence.html">View Studies</a>
+        </div>
+        
+        <div class="resource-card">
+            <div class="resource-icon">🎓</div>
+            <h3>Product Training</h3>
+            <p>Comprehensive training modules, videos, and guides for proper product application techniques.</p>
+            <a href="training.html">Start Learning</a>
+        </div>
+        
+        <div class="resource-card">
+            <div class="resource-icon">📋</div>
+            <h3>Product Information</h3>
+            <p>Instructions for use, technical specifications, and safety information for all products.</p>
+            <a href="product-info.html">View Products</a>
+        </div>
+        
+        <div class="resource-card">
+            <div class="resource-icon">💬</div>
+            <h3>Clinical Support</h3>
+            <p>Connect with our clinical specialists for personalized product recommendations and guidance.</p>
+            <a href="clinical-support.html">Contact Support</a>
+        </div>
+        
+        <div class="resource-card">
+            <div class="resource-icon">🔬</div>
+            <h3>CME/CE Courses</h3>
+            <p>Earn continuing education credits through our accredited wound care and regenerative medicine courses.</p>
+            <a href="cme.html">Browse Courses</a>
+        </div>
+        
+        <div class="resource-card">
+            <div class="resource-icon">📦</div>
+            <h3>Order Products</h3>
+            <p>Quick and secure ordering system with dedicated account management and support.</p>
+            <a href="ordering.html">Order Now</a>
+        </div>
+    </div>
+    
+    <div class="training-section">
+        <h2>Featured Educational Content</h2>
+        <div class="training-grid">
+            <div class="training-item">
+                <h4>CAMPs Technology: Mechanism of Action</h4>
+                <p>Comprehensive overview of cellular, acellular, and matrix-like products and their role in wound healing.</p>
+                <a href="#">Watch Video →</a>
+            </div>
+            
+            <div class="training-item">
+                <h4>Application Techniques for caregraFT™</h4>
+                <p>Step-by-step guide to proper application of caregraFT™ for optimal clinical outcomes.</p>
+                <a href="#">View Guide →</a>
+            </div>
+            
+            <div class="training-item">
+                <h4>Diabetic Foot Ulcer Management</h4>
+                <p>Evidence-based protocols for managing chronic diabetic foot ulcers with alloPLY™.</p>
+                <a href="#">Read More →</a>
+            </div>
+            
+            <div class="training-item">
+                <h4>Surgical Wound Reconstruction</h4>
+                <p>Advanced techniques for soft tissue reconstruction using ACAPatch™ technology.</p>
+                <a href="#">Learn More →</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

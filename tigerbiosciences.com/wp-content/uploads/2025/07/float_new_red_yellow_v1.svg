@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 656.13 756.12">
+  <defs>
+    <clipPath id="e">
+      <rect x="59.31" y="212.83" width="440.64" height="424.5" transform="translate(-128.52 121.27) rotate(-20)" style="fill: none;"/>
+    </clipPath>
+    <clipPath id="l">
+      <rect x="301.59" y="51.77" width="318.83" height="252.54" transform="translate(-32.92 194.31) rotate(-23)" style="fill: none;"/>
+    </clipPath>
+    <clipPath id="o">
+      <rect x="278.62" y="16.86" width="310.28" height="326.77" transform="translate(-35.95 183.84) rotate(-23)" style="fill: none;"/>
+    </clipPath>
+  </defs>
+  <g id="b" data-name="TigerElement-Red">
+    <g id="c" data-name="Gruppe 11">
+      <g id="d" data-name="Gruppe 7">
+        <g style="clip-path: url(#e);">
+          <g id="f" data-name="Gruppe 6" style="opacity: .9;">
+            <g id="g" data-name="Gruppe 5">
+              <path id="h" data-name="Pfad 2" d="M261.79,369.11c-42.18-35.16-64.12-128.06-124.05-115.56-92.8,19.34-122.51,164.36-55.8,248.2,78.1,98.15,226.39,168.73,328.12,92.88,71.84-53.57,140.32-165.93,75.31-212.13-51.43-36.55-145.08,52.04-223.58-13.4" style="fill: #c51a1b;"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="i" data-name="Gruppe 8">
+        <path id="j" data-name="Pfad 3" d="M332.57,426.58c-14.29-53.14,21.35-141.92-34.99-166.24-87.24-37.65-195.3,64.08-189,171.26,7.37,125.47,88.2,268.81,215.37,265.3,89.81-2.48,210.8-55.1,184.18-130.43-21.07-59.6-148.97-40.99-175.56-139.88Z" style="fill: none; stroke: #fff; stroke-miterlimit: 4; stroke-width: 3px;"/>
+      </g>
+    </g>
+  </g>
+  <g id="k" data-name="TigerElement-Yellow">
+    <g style="clip-path: url(#l);">
+      <g id="m" data-name="Gruppe 19">
+        <g id="n" data-name="Gruppe 17" style="opacity: .89;">
+          <g style="clip-path: url(#o);">
+            <g id="p" data-name="Gruppe 16">
+              <g id="q" data-name="Gruppe 15">
+                <path id="r" data-name="Pfad 5" d="M409.76,160.75c9.65-30.59-34.86-92.08,36.25-112.74,51.78-15.04,105.44,32.08,104.66,112.57-.7,73.29-43.88,139.34-113.74,151.48-45.99,7.99-132.81-34.99-115.57-78.21,13.64-34.19,70.43-16.16,88.4-73.09" style="fill: #d6930c;"/>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="s" data-name="Gruppe 18">
+          <path id="t" data-name="Pfad 6" d="M453.5,143.74c22.08-26.44,3.1-105.64,82.05-97.18,57.48,6.17,91.4,74.83,57.71,154.43-30.67,72.49-100.49,120.48-174.71,104.06-48.85-10.81-117.35-88.88-82.57-124.76,27.51-28.4,76.43,12.65,117.52-36.55Z" style="fill: none; stroke: #fff; stroke-miterlimit: 4; stroke-width: 3px;"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

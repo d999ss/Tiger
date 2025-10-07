@@ -1,0 +1,15 @@
+# Tiger CMS Visual QA Automation Requirements
+
+# Core dependencies
+terminator>=0.16.0
+
+# Optional: For visual comparison
+Pillow>=10.0.0
+
+# Optional: For asset checking
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Optional: For enhanced reporting
+Jinja2>=3.1.0
+

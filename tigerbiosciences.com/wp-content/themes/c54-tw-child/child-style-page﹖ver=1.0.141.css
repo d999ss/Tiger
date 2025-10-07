@@ -1,0 +1,767 @@
+:root {
+    --theme-page-cols: 12;
+    --theme-page-normal-cols: 10;
+    --theme-page-medium-cols: 8;
+    --theme-page-small-cols: 6;
+    --theme-page-col-width: calc(100vw / var(--theme-page-cols));
+    --theme-video-hero-height: 100vh;
+    --theme-dynamic-height: 100vh;
+}
+
+img, video {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+/*
+section {
+    div.container {
+        padding: 0;
+        margin: 0;
+    }
+}
+*/
+.c54-page-grid {
+    display: grid;
+    row-gap: 0;
+    column-gap: 0;
+    grid-template-columns: repeat(var(--theme-page-cols), var(--theme-page-col-width));
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.c54-sub-grid {
+    display: grid;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.c54-sub-grid.cols-1 {
+    grid-template-columns: 100%;
+}
+
+.c54-sub-grid.cols-2 {
+    grid-template-columns: repeat(2, 50%);
+}
+
+.c54-sub-grid.cols-3 {
+    grid-template-columns: repeat(3, calc(100% / 3));
+}
+
+.c54-sub-grid.cols-4 {
+    grid-template-columns: repeat(4, 25%);
+}
+
+.c54-sub-grid.cols-5 {
+    grid-template-columns: repeat(5, calc(100% / 5));
+}
+
+.c54-sub-grid.cols-6 {
+    grid-template-columns: repeat(6, calc(100% / 6));
+}
+
+.c54-sub-grid.cols-7 {
+    grid-template-columns: repeat(7, calc(100% / 7));
+}
+
+.c54-sub-grid.cols-8 {
+    grid-template-columns: repeat(8, calc(100% / 8));
+}
+.c54-sub-grid.cols-9 {
+    grid-template-columns: repeat(9, calc(100% / 9));
+}
+.c54-sub-grid.cols-10 {
+    grid-template-columns: repeat(10, calc(100% / 10));
+}
+.c54-sub-grid.cols-11 {
+    grid-template-columns: repeat(11, calc(100% / 11));
+}
+.c54-sub-grid.cols-12 {
+    grid-template-columns: repeat(12, calc(100% / 12));
+}
+
+.c54-sub-grid.gap-2 {
+    padding-right: 0.5rem;
+}
+
+.c54-sub-grid.gap-4 {
+    padding-right: 1rem;
+}
+
+.c54-grid {
+    display: grid;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.c54-grid.cols-1 {
+    grid-template-columns: 100%;
+}
+
+.c54-grid.cols-2 {
+    grid-template-columns: repeat(2, 50%);
+}
+
+.c54-grid.cols-3 {
+    grid-template-columns: repeat(3, calc(100% / 3));
+}
+
+.c54-grid.cols-4 {
+    grid-template-columns: repeat(4, 25%);
+}
+
+.c54-grid.cols-5 {
+    grid-template-columns: repeat(5, calc(100% / 5));
+}
+
+.c54-grid.cols-6 {
+    grid-template-columns: repeat(6, calc(100% / 6));
+}
+
+.c54-grid.cols-7 {
+    grid-template-columns: repeat(7, calc(100% / 7));
+}
+
+.c54-grid.cols-8 {
+    grid-template-columns: repeat(8, calc(100% / 8));
+}
+.c54-grid.cols-9 {
+    grid-template-columns: repeat(9, calc(100% / 9));
+}
+.c54-grid.cols-10 {
+    grid-template-columns: repeat(10, calc(100% / 10));
+}
+.c54-grid.cols-11 {
+    grid-template-columns: repeat(11, calc(100% / 11));
+}
+.c54-grid.cols-12 {
+    grid-template-columns: repeat(12, calc(100% / 12));
+}
+
+.c54-grid.gap-2 {
+    padding-right: 0.5rem;
+}
+
+.c54-grid.gap-4 {
+    padding-right: 1rem;
+}
+
+.c54-page-grid-full-row {
+    grid-column-start: 1;
+    grid-column-end: span var(--theme-page-cols);
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-single-col {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-normal-row {
+    grid-column-start: 2;
+    grid-column-end: span var(--theme-page-normal-cols);
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-normal-start {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-normal-end {
+    grid-column-start: 12;
+    grid-column-end: span 1;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-medium-row {
+    grid-column-start: 2;
+    grid-column-end: span calc(var(--theme-page-medium-cols) + 2);
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-medium-start {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-medium-end {
+    grid-column-start: 12;
+    grid-column-end:  span 1;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-small-row {
+    grid-column-start: 4;
+    grid-column-end: span var(--theme-page-small-cols);
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-small-start {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-small-end {
+    grid-column-start: 10;
+    grid-column-end: span 3;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-col-0 {
+    display: none;
+}
+
+.c54-page-grid-col-1 {
+    grid-column-end: span 1;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-col-2 {
+    grid-column-end: span 2;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-col-3 {
+    grid-column-end: span 3;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-col-4 {
+    grid-column-end: span 4;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-col-5 {
+    grid-column-end: span 5;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-col-6 {
+    grid-column-end: span 6;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-col-7 {
+    grid-column-end: span 7;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-col-8 {
+    grid-column-end: span 8;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-col-9 {
+    grid-column-end: span 9;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-col-10 {
+    grid-column-end: span 10;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-col-11 {
+    grid-column-end: span 11;
+    height: auto;
+    display: grid;
+}
+
+.c54-page-grid-col-12 {
+    grid-column-end: span 12;
+    height: auto;
+    display: grid;
+}
+
+.radius-xl {
+    border-radius: 50px;
+}
+
+.c54-career-subtitle {
+    font-weight: 300;
+    font-family: var(--theme-main-font);
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --theme-dynamic-height: 100vh;
+    }
+    .md\:c54-page-grid-col-0 {
+        display: none;
+    }
+    .md\:c54-page-grid-col-1 {
+        grid-column-end: span 1;
+        height: auto;
+        display: grid;
+    }
+
+    .md\:c54-page-grid-col-2 {
+        grid-column-end: span 2;
+        height: auto;
+        display: grid;
+    }
+
+    .md\:c54-page-grid-col-3 {
+        grid-column-end: span 3;
+        height: auto;
+        display: grid;
+    }
+
+    .md\:c54-page-grid-col-4 {
+        grid-column-end: span 4;
+        height: auto;
+        display: grid;
+    }
+
+    .md\:c54-page-grid-col-5 {
+        grid-column-end: span 5;
+        height: auto;
+        display: grid;
+    }
+
+    .md\:c54-page-grid-col-6 {
+        grid-column-end: span 6;
+        height: auto;
+        display: grid;
+    }
+
+    .md\:c54-page-grid-col-7 {
+        grid-column-end: span 7;
+        height: auto;
+        display: grid;
+    }
+
+    .md\:c54-page-grid-col-8 {
+        grid-column-end: span 8;
+        height: auto;
+        display: grid;
+    }
+
+    .md\:c54-page-grid-col-9 {
+        grid-column-end: span 9;
+        height: auto;
+        display: grid;
+    }
+
+    .md\:c54-page-grid-col-10 {
+        grid-column-end: span 10;
+        height: auto;
+        display: grid;
+    }
+
+    .md\:c54-page-grid-col-11 {
+        grid-column-end: span 11;
+        height: auto;
+        display: grid;
+    }
+
+    .md\:c54-page-grid-col-12 {
+        grid-column-end: span 12;
+        height: auto;
+        display: grid;
+    }
+
+    .md\:c54-page-grid-medium-row {
+        grid-column-start: 3;
+        grid-column-end: span var(--theme-page-medium-cols);
+        height: auto;
+        display: grid;
+    }
+
+    .md\:c54-page-grid-medium-start {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        height: auto;
+        display: grid;
+    }
+
+    .md\:c54-page-grid-medium-end {
+        grid-column-start: 11;
+        grid-column-end:  span 2;
+        height: auto;
+        display: grid;
+    }
+    .c54-sub-grid.md\:cols-1 {
+        grid-template-columns: 100%;
+    }
+
+    .c54-sub-grid.md\:cols-2 {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .c54-sub-grid.md\:cols-3 {
+        grid-template-columns: repeat(3, calc(100% / 3));
+    }
+
+    .c54-sub-grid.md\:cols-4 {
+        grid-template-columns: repeat(4, 25%);
+    }
+
+    .c54-sub-grid.md\:cols-5 {
+        grid-template-columns: repeat(5, calc(100% / 5));
+    }
+
+    .c54-sub-grid.md\:cols-5 {
+        grid-template-columns: repeat(6, calc(100% / 6));
+    }
+
+    .c54-sub-grid.md\:cols-7 {
+        grid-template-columns: repeat(7, calc(100% / 7));
+    }
+
+    .c54-sub-grid.md\:cols-8 {
+        grid-template-columns: repeat(8, calc(100% / 8));
+    }
+
+    .c54-sub-grid.md\:cols-9 {
+        grid-template-columns: repeat(9, calc(100% / 9));
+    }
+
+    .c54-sub-grid.md\:cols-10 {
+        grid-template-columns: repeat(10, calc(100% / 10));
+    }
+
+    .c54-sub-grid.md\:gap-2 {
+        padding-right: 0.5rem;
+    }
+
+    .c54-sub-grid.md\:gap-4 {
+        padding-right: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --theme-dynamic-height: 100vh;
+    }
+    .lg\:c54-page-grid-col-0 {
+        display: none;
+    }
+    
+    .lg\:c54-page-grid-col-1 {
+        grid-column-end: span 1;
+        height: auto;
+        display: grid;
+    }
+
+    .lg\:c54-page-grid-col-2 {
+        grid-column-end: span 2;
+        height: auto;
+        display: grid;
+    }
+
+    .lg\:c54-page-grid-col-3 {
+        grid-column-end: span 3;
+        height: auto;
+        display: grid;
+    }
+
+    .lg\:c54-page-grid-col-4 {
+        grid-column-end: span 4;
+        height: auto;
+        display: grid;
+    }
+
+    .lg\:c54-page-grid-col-5 {
+        grid-column-end: span 5;
+        height: auto;
+        display: grid;
+    }
+
+    .lg\:c54-page-grid-col-6 {
+        grid-column-end: span 6;
+        height: auto;
+        display: grid;
+    }
+
+    .lg\:c54-page-grid-col-7 {
+        grid-column-end: span 7;
+        height: auto;
+        display: grid;
+    }
+
+    .lg\:c54-page-grid-col-8 {
+        grid-column-end: span 8;
+        height: auto;
+        display: grid;
+    }
+
+    .lg\:c54-page-grid-col-9 {
+        grid-column-end: span 9;
+        height: auto;
+        display: grid;
+    }
+
+    .lg\:c54-page-grid-col-10 {
+        grid-column-end: span 10;
+        height: auto;
+        display: grid;
+    }
+
+    .lg\:c54-page-grid-col-11 {
+        grid-column-end: span 11;
+        height: auto;
+        display: grid;
+    }
+
+    .lg\:c54-page-grid-col-12 {
+        grid-column-end: span 12;
+        height: auto;
+        display: grid;
+    }
+
+    .c54-sub-grid.lg\:cols-1 {
+        grid-template-columns: 100%;
+    }
+
+    .c54-sub-grid.lg\:cols-2 {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .c54-sub-grid.lg\:cols-3 {
+        grid-template-columns: repeat(3, calc(100% / 3));
+    }
+
+    .c54-sub-grid.lg\:cols-4 {
+        grid-template-columns: repeat(4, 25%);
+    }
+
+    .c54-sub-grid.lg\:cols-5 {
+        grid-template-columns: repeat(5, calc(100% / 5));
+    }
+
+    .c54-sub-grid.lg\:cols-5 {
+        grid-template-columns: repeat(6, calc(100% / 6));
+    }
+
+    .c54-sub-grid.lg\:cols-7 {
+        grid-template-columns: repeat(7, calc(100% / 7));
+    }
+
+    .c54-sub-grid.lg\:cols-8 {
+        grid-template-columns: repeat(8, calc(100% / 8));
+    }
+
+    .c54-sub-grid.lg\:cols-9 {
+        grid-template-columns: repeat(9, calc(100% / 9));
+    }
+
+    .c54-sub-grid.lg\:cols-10 {
+        grid-template-columns: repeat(10, calc(100% / 10));
+    }
+
+    .c54-sub-grid.lg\:gap-2 {
+        padding-right: 0.5rem;
+    }
+
+    .c54-sub-grid.lg\:gap-4 {
+        padding-right: 1rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    :root {
+        --theme-dynamic-height: 120vh;
+    }
+    .xl\:c54-page-grid-col-0 {
+        display: none;
+    }
+
+    .xl\:c54-page-grid-col-1 {
+        grid-column-end: span 1;
+        height: auto;
+        display: grid;
+    }
+
+    .xl\:c54-page-grid-col-2 {
+        grid-column-end: span 2;
+        height: auto;
+        display: grid;
+    }
+
+    .xl\:c54-page-grid-col-3 {
+        grid-column-end: span 3;
+        height: auto;
+        display: grid;
+    }
+
+    .xl\:c54-page-grid-col-4 {
+        grid-column-end: span 4;
+        height: auto;
+        display: grid;
+    }
+
+    .xl\:c54-page-grid-col-5 {
+        grid-column-end: span 5;
+        height: auto;
+        display: grid;
+    }
+
+    .xl\:c54-page-grid-col-6 {
+        grid-column-end: span 6;
+        height: auto;
+        display: grid;
+    }
+
+    .xl\:c54-page-grid-col-7 {
+        grid-column-end: span 7;
+        height: auto;
+        display: grid;
+    }
+
+    .xl\:c54-page-grid-col-8 {
+        grid-column-end: span 8;
+        height: auto;
+        display: grid;
+    }
+
+    .xl\:c54-page-grid-col-9 {
+        grid-column-end: span 9;
+        height: auto;
+        display: grid;
+    }
+
+    .xl\:c54-page-grid-col-10 {
+        grid-column-end: span 10;
+        height: auto;
+        display: grid;
+    }
+
+    .xl\:c54-page-grid-col-11 {
+        grid-column-end: span 11;
+        height: auto;
+        display: grid;
+    }
+
+    .xl\:c54-page-grid-col-12 {
+        grid-column-end: span 12;
+        height: auto;
+        display: grid;
+    }
+
+    .c54-sub-grid.xl\:cols-1 {
+        grid-template-columns: 100%;
+    }
+
+    .c54-sub-grid.xl\:cols-2 {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .c54-sub-grid.xl\:cols-3 {
+        grid-template-columns: repeat(3, calc(100% / 3));
+    }
+
+    .c54-sub-grid.xl\:cols-4 {
+        grid-template-columns: repeat(4, 25%);
+    }
+
+    .c54-sub-grid.xl\:cols-5 {
+        grid-template-columns: repeat(5, calc(100% / 5));
+    }
+
+    .c54-sub-grid.xl\:cols-5 {
+        grid-template-columns: repeat(6, calc(100% / 6));
+    }
+
+    .c54-sub-grid.xl\:cols-7 {
+        grid-template-columns: repeat(7, calc(100% / 7));
+    }
+
+    .c54-sub-grid.xl\:cols-8 {
+        grid-template-columns: repeat(8, calc(100% / 8));
+    }
+
+    .c54-sub-grid.xl\:cols-9 {
+        grid-template-columns: repeat(9, calc(100% / 9));
+    }
+
+    .c54-sub-grid.xl\:cols-10 {
+        grid-template-columns: repeat(10, calc(100% / 10));
+    }
+
+    .c54-sub-grid.xl\:gap-2 {
+        padding-right: 0.5rem;
+    }
+
+    .c54-sub-grid.xl\:gap-4 {
+        padding-right: 1rem;
+    }
+}
+
+
+.c54-hero-video-v2 {
+    position: absolute;
+    height: var(--theme-dynamic-height);
+    min-height: var(--theme-dynamic-height);
+    .c54-hero-video-block-content-wrapper-v2 {
+        .c54-hero-video-block-video-v2 {
+            height: var(--theme-dynamic-height);
+            video {
+                object-fit: cover;
+                height: var(--theme-dynamic-height);
+                top: 0;
+            }
+        }
+    }
+    .bottom-wave-block-v2 {
+        position: absolute;
+        bottom: -2px;
+        height: auto;
+        img {
+            position: relative;
+            bottom: 0;
+        }
+    }
+    .bottom-wave-block-v3 {
+        position: absolute;
+        bottom: -2px;
+        /* bottom: 8vh;*/
+        height: auto;
+        img {
+            position: relative;
+            bottom: 0;
+        }
+    }
+    .bottom-wave-block-v3.home {
+         bottom: 8vh;
+    }
+}
+
+.c54-hero-headline-wrapper {
+    .main-hero-subline {
+        h1 {
+            font-family: var(--theme-main-font);
+        }
+    }
+}

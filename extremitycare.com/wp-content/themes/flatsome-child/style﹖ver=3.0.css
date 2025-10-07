@@ -1,0 +1,61 @@
+/*
+Theme Name: Flatsome Child
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0
+*/
+
+
+/*************** ADD CUSTOM CSS HERE.   **************
+
+see /res/css/style.css
+
+*/
+
+.pro {
+	color: #85be3f;
+}
+
+.pro-second {
+	color: #12202f;
+}
+
+.absolute-right {
+ position: absolute;
+ right: 2rem;
+ top: 9rem;
+ z-index: 15;
+}
+
+/*
+.absolute-bottom-right {
+ position: absolute;
+ z-index: 15;
+ margin-left: calc(100% - 350px);
+ margin-top: -3.5rem;
+}
+*/
+
+.absolute-bottom-right {
+ position: absolute;
+ z-index: 15;
+ margin-left: calc(100% - 500px);
+ margin-top: -4.5rem;
+}
+
+/*
+.absolute-middle {
+ position: relative;
+ z-index: 15;
+ width: 100%;
+ margin-top: -1rem;
+}
+*/
+.absolute-middle {
+    position: relative;
+    z-index: 15;
+    width: 90%;
+    margin-top: -1rem;
+    text-align: center;
+}

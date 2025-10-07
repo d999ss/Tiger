@@ -1,0 +1,23 @@
+{
+  "name": "tiger-cms-qa-automation",
+  "version": "1.0.0",
+  "description": "Visual QA automation for Tiger CMS websites using Terminator",
+  "main": "qa.js",
+  "scripts": {
+    "qa": "node qa.js",
+    "quick": "node quick-screenshot.js",
+    "test": "npm run quick"
+  },
+  "keywords": [
+    "automation",
+    "qa",
+    "visual-testing",
+    "terminator"
+  ],
+  "author": "Tiger CMS Team",
+  "license": "MIT",
+  "dependencies": {
+    "terminator.js": "^0.16.0"
+  }
+}
+

@@ -1,0 +1,1510 @@
+@font-face {
+    font-family: 'Avenir Black';
+    src: url('../fonts/Avenir_Black.woff2') format('woff2');
+    src: url('../fonts/Avenir_Black.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;       
+}
+
+@font-face {
+    font-family: 'Avenir Medium';
+    src: url('../fonts/Avenir_Medium.woff2') format('woff2');
+    src: url('../fonts/Avenir_Medium.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;       
+}
+
+@font-face {
+    font-family: 'Avenir Light';
+    src: url('../fonts/Avenir_Light.woff2') format('woff2');
+    src: url('../fonts/Avenir_Light.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;       
+}
+
+:root {
+    --dark-rose: #984957;
+    --coral-rose: #B86F74;
+    --aveli-beige: #DEC2AD;
+    --dark-gray: #404040;
+}
+
+.text-rose {
+    color: var(--dark-rose);
+}
+
+.text-coral {
+    color: var(--coral-rose);
+}
+
+/* Mobile navigation reskin */
+
+header .container {
+    padding: 16px;
+}
+
+.header-notice {
+    display: none;
+} 
+
+#navbar {
+    margin: 8px;
+}
+
+#navbar .menu-item-main {
+    padding: 0;
+    margin: 0;
+}
+
+#navbar ul li {
+    padding: 24px;
+    margin: 0;
+    font-family: "Avenir Medium";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 28px; /* 150% */
+    transition: all .5s ease-in-out;
+}
+
+#navbar ul li:not(.menu-item-16, .menu-item-59) a {
+    color: var(--dark-gray);
+}
+
+#navbar ul li:not(.menu-item-59, .menu-item-16):hover {
+    background-color: #F3EAE2;
+}
+
+#navbar ul li:not(.menu-item-59):hover a {
+    color: var(--dark-gray);
+}
+
+#navbar ul li.menu-item-59 a {
+    font-family: "Avenir Medium";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 30px; /* 150% */
+}
+
+#navbar ul li.menu-item-59 a:after {
+    margin-left: 12px !important;
+}
+
+#navbar ul li.menu-item-19:hover a,
+#navbar ul li.menu-item-59:hover a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+#navbar ul li.menu-item-59:hover a::after,
+#navbar ul li.menu-item-59 a::after {
+    text-decoration: none !important;
+    display: inline-block;
+}
+
+#navbar ul li.menu-item-16 {
+    padding: 0;
+}
+
+#navbar ul li.menu-item-16 a {
+    font-family: "Avenir Black";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 22px; /* 122.222% */
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: white;
+    background: var(--dark-rose);
+    border: 2px solid var(--dark-rose);
+    border-radius: 24px !important;
+    text-align: center;
+    padding: 14px 24px !important;
+}
+
+
+#navbar ul li.menu-item-16:hover a {
+    background-color: transparent;
+    color: var(--dark-rose);
+}
+
+button.navbar-toggler {
+    padding: 0 !important;
+}
+
+button.navbar-toggler,
+button.navbar-toggler.navbar-toggler-icon-alt,
+button.navbar-toggler.collapsed,
+button.navbar-toggler:focus {
+    border: 0 !important; 
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler .icon-close {
+    display: none;
+}
+.navbar-toggler[aria-expanded="true"] .icon-hamburger {
+    display: none;
+}
+.navbar-toggler[aria-expanded="true"] .icon-close {
+    display: inline;
+}
+
+/* Homepage reskin */
+
+#header.bg-light {
+    background-color: white !important;
+    padding-bottom: 0 !important;
+}
+
+.navbar > .container {
+    box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.08);
+}
+
+.cta-header {
+    display: none !important;
+}
+
+body.home  {
+    background-color: white !important;
+    color: var(--dark-gray) !important;
+}
+
+.home .content {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.home main.container {
+    padding-top: 80px !important;
+}
+
+/* Typography */
+
+strong {
+    font-family: "Avenir Black";
+}
+
+.heading-1 {
+    font-family: "ivypresto-display";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px; /* 100% */
+    text-align: center;
+}
+
+.heading-2 {
+    font-family: "ivypresto-display";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px; /* 133.333% */
+    margin-bottom: 20px;
+}
+
+.heading-3 {
+    font-family: "Avenir Black";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 40px;
+    color: var(--coral-rose);
+}
+
+.heading-4,
+.page-id-104 .content p.heading-4 {
+    font-family: "Avenir Black";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 32px; /* 145.455% */
+}
+
+.heading-5,
+.page-id-104 .content p.heading-5 {
+    font-family: "Avenir Medium";
+    font-size: 20px;
+    font-style: normal;
+    /* font-weight: 800; */
+    line-height: 28px; /* 140% */
+}
+
+.heading-6{
+    font-family: "Avenir Black";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 32px; /* 123.077% */
+    text-transform: uppercase;
+}
+
+.home .footer-body {
+    font-family: "Avenir Medium";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+}
+
+.home .content p,
+.page-id-10 .content p,
+.page-id-104 .content p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+}
+
+.home p.body-m {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.home p.body-xxs {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px; /* 146.154% */
+}
+
+.subhead {
+    font-family: "Avenir Black";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 36px; /* 128.571% */
+    text-transform: uppercase;
+}
+
+.body-m {
+    font-family: "Avenir Medium";
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+}
+
+@media screen and (min-width: 1200px){
+    .heading-1  {
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 96px;
+        word-break: normal;
+        overflow-wrap: normal;
+        white-space: normal;
+        text-align: left;
+    }
+
+    .heading-2 {
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 72px; 
+        margin-bottom: 60px;
+    }
+
+    .heading-3 {
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 56px; 
+        margin-bottom: 0;
+    }
+
+    .heading-4,
+    .page-id-104 .content p.heading-4 {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 44px; /* 137.5% */
+    }
+
+    .heading-5 {
+        font-size: 28px;
+        font-style: normal;
+        /* font-weight: 800; */
+        line-height: 36px; /* 128.571% */
+    }
+
+    .heading-6 {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 64px; /* 133.333% */
+        text-transform: uppercase;
+     }
+
+
+    #home-hero .heading-1,
+    #home-hero p {
+        margin-bottom: 40px;
+    }
+
+    .home .content p,
+    .page-id-10 .content p,
+    .page-id-104 .content p {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px; 
+    }
+
+    .home p.body-m {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px; 
+    }
+
+     .home p.footer-body {  
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; 
+    }
+
+    .subhead {
+        font-size: 40px !important;
+        line-height: 56px; /* 140% */
+
+    }
+
+    .body-m {
+        font-size: 22px !important;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px; /* 145.455% */
+    }
+}
+
+@media screen and (min-width: 1920px){
+    .heading-1 {
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 86px; /* 119.444% */
+    }
+
+    .heading-2 {
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 72px; /* 120% */
+    }
+
+    .heading-3 {
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 72px; /* 120% */
+    }
+
+    .heading-4,
+    .page-id-104 .content p.heading-4 {
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 48px; /* 120% */
+    }
+
+    .heading-5,
+    .page-id-104 .content p.heading-5  {
+        font-size: 27px;
+        font-style: normal;
+        /* font-weight: 800; */
+        line-height: 32px; /* 118.519% */
+    }
+}
+
+/* Homepage */
+
+#home-hero .wp-block-getwid-section__wrapper,
+#home-hero-mobile .wp-block-getwid-section__wrapper,
+#reskin-coral-wave .wp-block-getwid-section__wrapper,
+#reskin-beige-wave .wp-block-getwid-section__wrapper,
+#culprit-cellulite .wp-block-getwid-section__wrapper,
+#cellulite-is-real .wp-block-getwid-section__wrapper, 
+#self-assured .wp-block-getwid-section__wrapper,
+#real-patients-real-results .wp-block-getwid-section__wrapper,
+#reskin-as-seen-in .wp-block-getwid-section__wrapper {
+    max-width: unset;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#news-banner-container {
+    background: linear-gradient(90deg, var(--dark-rose) 0%, var(--coral-rose) 100%);
+    color: white;
+    font-family: "Avenir Medium";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
+    text-transform: uppercase;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 16px 16px 0px;
+/*     top: -3px; */
+}
+
+#news-banner-container a {
+    color: white;
+    text-decoration: none;
+}
+
+.news-banner-text {
+    /* display: inline-block; */
+    white-space: nowrap;
+    animation: slide-banner 17s linear infinite;
+    font-size: 18px !important;
+}
+
+@keyframes slide-banner {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-90%);
+    }
+}
+
+
+#home-hero .wp-block-columns:not(#hero-badge) {
+    gap: 0;
+    flex-direction: column-reverse;
+}
+
+#home-hero {
+    position: relative;
+    background-color: transparent !important;
+    margin-bottom: -70px;
+    display: none;
+}
+
+#home-hero #hero-text-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: transparent;
+}
+
+#home-hero-mobile #hero-group .wp-block-group__inner-container {
+    padding: 40px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 16px;
+}
+
+#home-hero-mobile {
+    margin-bottom: -60px;
+}
+
+#home-hero-mobile #hero-group p {
+   text-align: center;
+}
+
+#home-hero-mobile .wp-block-columns {
+    gap: 0;
+}
+
+#home-hero-mobile .reskin-btn .wp-block-button__link.wp-element-button {
+    margin: 0 auto;
+}
+
+#home-hero-mobile #home-hero-mobile-image {
+    position: relative;
+}
+
+#home-hero-mobile #home-hero-mobile-image p.body-xxs{
+    position: absolute;
+    top: 325px;
+    left: 8%;
+}
+
+#home-hero-mobile #hero-badge {
+    background-color: rgba(255, 255, 255, 0.88);
+    padding: 16px;
+    justify-content: center;
+}
+
+#home-hero-mobile #hero-badge-text {
+    max-width: 400px;
+}
+
+#reskin-coral-wave {
+    position: relative;
+    z-index: 999;
+}
+
+#reskin-coral-wave .wp-block-getwid-section__background,
+#reskin-beige-wave .wp-block-getwid-section__background {
+    background-size: 290%;
+    background-position: left 17% top !important;
+}
+
+#hero-badge-image figure img {
+    max-width: 80px;
+}
+
+#culprit-cellulite,
+#self-assured,
+#reskin-as-seen-in {
+    background-color: #f8f3ef;
+    padding: 24px 24px 48px;
+}
+
+#culprit-cellulite {
+    padding-top: 20px;
+    margin-top: -10px;
+}
+
+#culprit-cellulite .bold {
+    margin-bottom: 24px;
+}
+
+#culprit-cellulite p {
+    max-width: 1206px;
+    margin: 0 auto;
+}
+
+#culprit-cellulite .wp-block-columns {
+    padding: 40px 0 48px;
+    gap: 40px;
+    margin: 0 24px;
+}
+
+#culprit-cellulite .wp-block-columns img {
+    width: 200px;
+}
+
+#culprit-cellulite .wp-block-columns p {
+    margin-top: 16px;
+}
+
+#cellulite-is-real {
+    text-align: center;
+    padding: 0 24px 48px;
+    margin-top: -20px;
+}
+
+#cellulite-is-real .bold {
+    margin: 24px 0;
+}
+
+#cellulite-is-real .wp-block-image img {
+    width: 170px;
+}
+
+#cellulite-is-real .wp-block-columns {
+   margin-bottom: 0;
+}
+
+#self-assured {
+    margin-top: -20px;
+}
+
+#self-assured .bold {
+    margin-bottom: 24px;
+}
+
+#self-assured .wp-block-embed-youtube {
+    margin: 40px auto;
+    max-width: 907px;
+}
+
+#self-assured .wp-block-embed-youtube  iframe{
+    border-radius: 16px !important;
+}
+
+#self-assured .wp-block-button__link {
+    padding: calc(.667em + 2px) calc(.333em + 2px);
+}
+
+#real-patients-real-results .heading-2 {
+    max-width: 260px;
+    margin: 0 auto 16px;
+}
+
+#real-patients-real-results p {
+    text-align: center;
+    margin: 0 0 40px;
+}
+
+#real-patients-real-results {
+    margin-top: -20px;
+    padding: 0 24px;
+}
+
+#real-patients-real-results .wp-block-columns {
+    gap: 32px;
+    margin: 40px 0 64px;
+}
+
+#comparison-container {
+    background-color: #F3EAE2;
+    margin: 0;
+    border-radius: 8px;
+}
+
+#comparison-container .juxtapose {
+    width: 100%;
+}
+
+#comparison-container .jx-slider {
+    border-radius: 8px 8px 0px 0px ;
+}
+
+#comparison-container p {
+    text-align: center;
+    margin: 16px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px; /* 146.154% */
+}
+
+div.jx-image div.jx-label {
+    font-size: 2em !important;
+}
+
+#reskin-as-seen-in {
+    margin: 24px 24px 80px;
+    border-radius: 24px;
+    padding: 40px;
+    max-width: 1360px;
+}
+
+#reskin-as-seen-in .wp-block-columns {
+    padding: 40px 0;
+}
+
+#reskin-as-seen-in figure {
+    margin: 0 auto;
+}
+
+#reskin-coral-wave .wp-block-image,
+#reskin-beige-wave .wp-block-image {
+    margin-bottom: 0;
+}
+
+.reskin-btn-rose.wp-block-button,
+.reskin-btn-gray.wp-block-button  {
+    width: 100%;
+}
+
+.reskin-btn-rose .wp-block-button__link.wp-element-button,
+.reskin-btn-gray .wp-block-button__link.wp-element-button  {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px; 
+    border-radius: 40px;
+    position: relative;
+    text-align: center;
+    font-family: "Avenir Black";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 22px; /* 120% */
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 14px 36px !important;
+}
+
+.reskin-btn-rose .wp-block-button__link.wp-element-button {
+    background: var(--dark-rose);
+    border: 2px solid var(--dark-rose);
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.reskin-btn-gray .wp-block-button__link.wp-element-button {
+    background: var(--dark-gray);
+    border: 2px solid var(--dark-gray);
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.reskin-btn-rose .wp-block-button__link.wp-element-button:hover,
+.reskin-btn-gray .wp-block-button__link.wp-element-button:hover {
+    border: 2px solid var(--dark-gray);
+    background: transparent;
+    color: var(--dark-gray);
+}
+
+.reskin-btn-rose .wp-block-button__link.wp-element-button:focus,
+.reskin-btn-gray .wp-block-button__link.wp-element-button:focus {
+    border: 4px solid var(--dark-gray);
+}
+
+.reskin-btn-rose .wp-block-button__link.wp-element-button:active,
+.reskin-btn-gray .wp-block-button__link.wp-element-button:active {
+    border: 4px solid var(--dark-gray);
+    background-color: white;
+}
+
+
+.reskin-btn-rose.btn-arrow .wp-block-button__link.wp-element-button::after,
+.reskin-btn-gray.btn-arrow .wp-block-button__link.wp-element-button::after {
+    transition: all 0.5s ease-in-out;
+     content: "";
+    display: inline-block;
+    width: 10px;
+    height: 17px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='17' viewBox='0 0 10 17' fill='none'><path d='M2 1.82764L8.3457 8.17358L2 14.5193' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 8px; /* Optional: space before arrow */
+}
+
+
+.reskin-btn-rose.btn-arrow .wp-block-button__link.wp-element-button:hover::after,
+.reskin-btn-rose.btn-arrow .wp-block-button__link.wp-element-button:focus::after,
+.reskin-btn-rose.btn-arrow .wp-block-button__link.wp-element-button:active::after,
+.reskin-btn-gray.btn-arrow .wp-block-button__link.wp-element-button:hover::after,
+.reskin-btn-gray.btn-arrow .wp-block-button__link.wp-element-button:focus::after,
+.reskin-btn-gray.btn-arrow .wp-block-button__link.wp-element-button:active::after {
+    transition: all 0.5s ease-in-out;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='17' viewBox='0 0 10 17' fill='none'><path d='M2 1.82764L8.3457 8.17358L2 14.5193' stroke='%23404040' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>") !important;
+}
+
+/*
+.reskin-btn .wp-block-button__link.wp-element-button:hover::after,
+.reskin-btn .wp-block-button__link.wp-element-button:focus::after,
+.reskin-btn .wp-block-button__link.wp-element-button:active::after {
+    transition: all 0.5s ease-in-out;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='17' viewBox='0 0 10 17' fill='none'><path d='M2 1.82764L8.3457 8.17358L2 14.5193' stroke='%23404040' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+}
+
+.reskin-btn.gray-reskin-btn .wp-block-button__link.wp-element-button::after,
+.reskin-btn.gray-reskin-btn .wp-block-button__link.wp-element-button:hover::after,
+.reskin-btn.gray-reskin-btn .wp-block-button__link.wp-element-button:focus::after,
+.reskin-btn.gray-reskin-btn .wp-block-button__link.wp-element-button:active::after,
+.reskin-btn.rose-no-arrow .wp-block-button__link.wp-element-button::after,
+.reskin-btn.rose-no-arrow .wp-block-button__link.wp-element-button:hover::after,
+.reskin-btn.rose-no-arrow .wp-block-button__link.wp-element-button:focus::after,
+.reskin-btn.rose-no-arrow .wp-block-button__link.wp-element-button:active::after {
+    background-image: none !important;
+    display: none !important;
+}
+
+.reskin-btn .wp-block-button__link.wp-element-button {
+    background: var(--dark-rose);
+    border: 2px solid var(--dark-rose);
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.reskin-btn .wp-block-button__link.wp-element-button::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 17px;
+    margin-left: 8px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='11' height='17' viewBox='0 0 11 17' fill='none'><path d='M2.32715 2.2959L8.67285 8.64185L2.32715 14.9875' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat: no-repeat;
+    background-size: 10px 17px;
+    vertical-align: middle;
+} */
+
+.page-id-10 .article-signup.frm_style_formidable-style.with_frm_style .frm_submit button,
+.home .article-signup.frm_style_formidable-style.with_frm_style .frm_submit button {
+    background: var(--dark-rose);
+    border: 2px solid var(--dark-rose) !important;
+    padding: 15px 24px;
+    color: white;
+    font-family: "Avenir Black" !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 22px; /* 122.222% */
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+.page-id-10 .article-signup.frm_style_formidable-style.with_frm_style .frm_submit button:hover,
+.home .article-signup.frm_style_formidable-style.with_frm_style .frm_submit button:hover {
+    background: transparent;
+    border: 2px solid var(--dark-rose) !important;
+    color: var(--dark-rose);
+}
+
+.page-id-10 .article-signup.frm_style_formidable-style.with_frm_style .frm_submit button:focus,
+.page-id-10 .article-signup.frm_style_formidable-style.with_frm_style .frm_submit button:active
+.home .article-signup.frm_style_formidable-style.with_frm_style .frm_submit button:focus,
+.home .article-signup.frm_style_formidable-style.with_frm_style .frm_submit button:active {
+    background: transparent;
+    border: 4px solid var(--dark-rose) !important;
+    color: var(--dark-rose);
+}
+
+.page-id-10 #article-signup,
+.home #article-signup {
+    background-color: var(--dark-gray);
+    padding: 40px 24px 40px;
+}
+
+.page-id-10 #article-signup #frm_field_77_container,
+.home #article-signup #frm_field_77_container {
+    margin-bottom: 0 ;
+}
+
+.page-id-10 #article-signup-container,
+.page-id-10 #article-signup-container .wp-block-getwid-section__wrapper,
+.page-id-10 #article-signup-container .wp-block-getwid-section__inner-content,
+.home #article-signup-container,
+.home #article-signup-container .wp-block-getwid-section__wrapper,
+.home #article-signup-container .wp-block-getwid-section__inner-content {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.page-id-10 #article-signup-container,
+.home #article-signup-container {
+    background-color: var(--dark-gray) !important;
+}
+
+.page-id-10 #article-signup-container .frm_fields_container,
+.home #article-signup-container .frm_fields_container {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.page-id-10 #article-signup,
+.home #article-signup {
+    border: 0;
+}
+
+@media screen and (min-width: 600px){
+    #reskin-coral-wave .wp-block-getwid-section__background,
+    #reskin-beige-wave .wp-block-getwid-section__background {
+        background-size: 220%;
+        background-position: left 2% top !important;
+    }
+
+    #home-hero-mobile #home-hero-mobile-image .wp-block-getwid-section__wrapper {
+        min-height: 500px !important;
+    }
+
+    #home-hero-mobile #home-hero-mobile-image p.body-xxs{
+        position: absolute;
+        top: 425px;
+        left: 8%;
+    }
+
+    #home-hero-mobile  #home-hero-mobile-image .wp-block-getwid-section__background {
+        background-position: left 0% top 50% !important;
+    }
+
+    #home-hero-mobile {
+        margin-bottom: -70px;
+    }
+}
+
+@media screen and (min-width: 782px){
+    #reskin-coral-wave.top-wave .wp-block-image img {
+        position: relative;
+        top: -10px !important;
+        z-index: 999;
+    }
+
+    #home-hero-mobile .reskin-btn-rose.wp-block-button,
+    #home-hero-mobile .reskin-btn-gray.wp-block-button {
+        margin: 0 auto;
+    }
+
+
+    #home-hero-mobile .wp-block-columns:not(#hero-badge) {
+        flex-direction: column;
+    }
+    
+    #home-hero-mobile #hero-text-column {
+        max-height: fit-content;
+    }
+
+    .reskin-btn-rose.wp-block-button,
+    .reskin-btn-gray.wp-block-button  {
+        width: fit-content;
+    }
+
+    #reskin-coral-wave .wp-block-getwid-section__wrapper {
+        max-height: 207px;
+    }
+
+    #reskin-coral-wave .wp-block-getwid-section__background,
+    #reskin-beige-wave .wp-block-getwid-section__background  {
+        background-image: unset !important;
+    }
+
+    #reskin-coral-wave .wp-block-getwid-section__inner-content,
+    #reskin-beige-wave .wp-block-getwid-section__inner-content {
+        max-width: unset;
+    }
+
+    #reskin-coral-wave .wp-block-image.d-none,
+    #reskin-beige-wave .wp-block-image.d-none {
+        display: block !important;
+    }
+
+    #reskin-coral-wave .wp-block-image img,
+    #reskin-beige-wave .wp-block-image img {
+        width: 100%;
+        max-height: 207px !important;
+    }
+
+    #culprit-cellulite .wp-block-buttons,
+    #self-assured .wp-block-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #culprit-cellulite .wp-block-columns {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    #culprit-cellulite .wp-block-columns img {
+        width: 300px;
+    }
+
+    #self-assured .wp-block-button__link {
+        padding: calc(.667em + 2px) calc(1.333em + 2px);
+    }
+
+    #self-assured .wp-block-embed-youtube {
+        margin: 48px auto;
+    }
+
+    #cellulite-is-real {
+        margin-top: 0;
+    }
+
+    #cellulite-is-real .wp-block-columns p {
+        text-align: left;
+    }
+
+    #cellulite-is-real .wp-block-columns {
+        justify-content: center;
+    }
+
+    #cellulite-is-real .wp-block-image img {
+        width: 300px;
+    }
+
+    #culprit-cellulite .wp-block-columns p {
+        margin-top: 40px;
+    }
+
+    #real-patients-real-results .wp-block-getwid-section__inner-wrapper {
+        margin: 0 auto;
+    }
+
+    #real-patients-real-results .wp-block-columns {
+        gap: 32px;
+        flex-direction: column;
+        margin: 0 auto 0;
+    }
+
+    #real-patients-real-results .wp-block-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+    }
+
+    #comparison-container {
+        margin: 0 auto;
+    }
+
+    div.jx-image div.jx-label {
+        font-size: 2.6em !important; 
+    }
+
+    #reskin-as-seen-in {
+        margin: 24px 24px 60px;     
+        padding: 80px;
+    }
+
+    #reskin-as-seen-in .wp-block-columns {
+        padding: 48px 0;
+    }
+
+    .page-id-10 .article-signup.frm_style_formidable-style.with_frm_style .frm_submit button,
+    .home .article-signup.frm_style_formidable-style.with_frm_style .frm_submit button {
+        width: fit-content;
+    }
+
+    .page-id-10 #article-signup-container h2,
+    .home #article-signup-container h2 {
+        max-width: 330px;
+        margin-bottom: 32px;
+    }
+
+    .page-id-10 #article-signup p.form-description,
+    .home #article-signup p.form-description {
+        font-size: 20px;
+        line-height: 30px; 
+    }
+
+    .page-id-10 #article-signup-container .form-description,
+    .home #article-signup-container .form-description {
+        max-width: 432px;
+    }
+}
+
+@media screen and (min-width: 1130px){
+    #news-banner-container {
+        top: 7px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #news-banner-container {
+        top: 50px;
+    }
+
+    .news-banner-text {
+        margin-bottom: 12px !important;
+        font-size: 22px !important;
+    }
+
+    .reskin-btn .wp-block-button__link.wp-element-button {
+        font-size: 18px;
+        line-height: 24px; 
+    }
+
+    .header-notice {
+        display: block;
+    } 
+
+    .home main.container {
+        padding-top: 127px !important;
+    }
+
+    #header {
+        padding-bottom: 0;
+        padding: 42px 0 0;
+    }
+
+    header .container {
+        padding: 42px 40px;
+    }
+
+    .home .content {
+        padding-top: 60px;
+        padding-bottom: 0;
+    }
+
+    #home-hero {
+        background-color: #FAF5F2 !important;
+        margin-bottom: -85px;
+        display: block;
+        margin-top: -10px;
+    }
+
+    #home-hero-mobile {
+        display: none;
+    }
+
+    #home-hero .wp-block-columns:not(#hero-badge) {
+        flex-direction: row;
+        margin-bottom: 0;
+    }
+
+    #home-hero #hero-text-column .wp-block-columns:not(#hero-badge) p {
+        max-width: 664px;
+    }
+
+    #home-hero .wp-block-getwid-section__inner-content {
+        max-width: unset !important;
+    }
+
+    #home-hero #hero-image-column img {
+        width: 100% !important;
+        max-width: unset !important;
+    }
+
+    #home-hero  p.body-xxs{
+        position: relative;
+        top: 800px;
+        right: -95px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px;
+    }
+
+    #home-hero #hero-text-column {
+        position: relative;
+        flex-basis: 40% !important;
+        right: 100px;
+    }
+
+    .home .heading-1 {
+        max-width: 664px !important;
+    }
+
+    #home-hero #hero-badge {
+        max-width: 600px;
+        position: relative;
+        top: 20px;
+        left: 60px;
+    }
+
+    #home-hero #hero-badge #hero-badge-text {
+        margin-left: -8px;
+    }
+
+
+    #hero-badge.wp-block-columns{
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+    #hero-badge-image figure,
+    #hero-badge-image figure img {
+        max-width: 196px;
+        width: 100%;
+    }
+
+    #culprit-cellulite,
+    #cellulite-is-real,
+    #self-assured {
+        padding: 48px 0 80px;
+    }
+
+    #real-patients-real-results {
+        padding: 48px 0 80px;
+    }
+
+    #real-patients-real-results .heading-2 {
+        max-width: unset;
+        margin: 0 auto 60px;
+    }
+
+    #real-patients-real-results .wp-block-columns {
+        flex-direction: row !important;
+    }
+
+    #real-patients-real-results .wp-block-columns :not(#comparison-container) p {
+        text-align: left;
+    }
+
+    #real-patients-real-results .wp-block-buttons {
+        justify-content: flex-start;    
+    }
+
+    #cellulite-is-real .wp-block-buttons {
+        margin-top: 48px;
+    }
+
+    #culprit-cellulite .wp-block-columns {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 80px 0;
+    }
+
+    #self-assured .wp-block-embed-youtube {
+       margin: 80px auto;
+    }
+
+    #comparison-container {
+        min-width: 667px !important;
+    }
+
+    #comparison-container p {
+        margin: 16px;
+        font-size: 16px;
+        line-height: 24px; 
+}
+
+    #reskin-as-seen-in {
+        margin: 0 auto 80px;     
+    }
+
+    #reskin-as-seen-in .wp-block-columns {
+        max-width: 1128px;
+        margin: 0 auto;
+    }
+
+    #reskin-as-seen-in p {
+        font-size: 18px;
+        line-height: 28px; 
+    }
+     
+    .page-id-10 #article-signup-container,
+    .home #article-signup-container {
+        padding: 120px 24px;
+    }
+
+    .page-id-10 #article-signup,
+    .home #article-signup {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width:1400px){
+     #navbar {
+        margin: 0;
+    }
+
+    .navbar-expand-xxl .navbar-nav {
+        gap: 20px;
+        align-items: center;
+    }
+
+    #navbar ul li:not(.menu-item-59):hover {
+        background-color: transparent;
+    }
+
+    #navbar ul li {
+        padding: 0;
+        font-family: "Avenir Medium";
+        font-size: 18px !important;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 22px;  
+    }
+
+    #navbar ul li:hover a{
+        color: var(--dark-rose)!important;
+    }
+
+    #navbar ul li.menu-item-16 a {
+        padding: 12px 24px !important;
+    }
+
+    #navbar ul li.menu-item-16:hover a {
+        color: var(--dark-rose);
+        background: transparent;
+        border: 2px solid var(--dark-rose);
+    }
+
+    #navbar ul li.menu-item-19:hover a {
+        text-decoration: none;
+    }
+
+    #navbar ul li a {
+        padding: 0;
+     }
+
+    #home-hero  p.body-xxs{
+        left: 12%;
+    }
+}
+
+@media screen and (min-width: 1480px){
+     #navbar ul li {
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (min-width: 1600px){
+    #home-hero #hero-image-column {
+        flex-basis: 55% !important;
+    }
+
+    #home-hero  p.body-xxs{
+        left: 16%;
+    }
+}  
+    
+@media screen and (min-width: 1920px){
+    #home-hero  p.body-xxs{
+        left: 30%;
+    }
+}
+
+/* Locator page */
+
+body.page-id-10 {
+   background-color: var(--Background-Cream-Background, #F8F3EF) !important;
+}
+
+.page-id-10 main {
+    padding-top: 80px !important;
+}
+
+#post-10.content {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#wpgmza_map_section .wp-block-getwid-section__inner-wrapper {
+    margin: 0 auto;    
+}
+
+.award-winner-logo {
+    width: 160px !important;
+}
+
+#wpgmza_map_header {
+    margin: 40px 16px;
+}
+
+#wpgmza_map_header .wp-block-getwid-section__wrapper,
+#wpgmza_map_section .wp-block-getwid-section__wrapper {
+    padding: 0;
+    margin: 0;
+}
+
+#wpgmza_map_header {
+    text-align: center;
+}
+
+#wpgmza_map_header .wp-block-columns {
+    gap: 30px;
+}
+
+#wpgmza_map_header .heading-1 {
+    margin-bottom: 16px;
+}
+
+#wpgmza_map_header .named-best {
+    max-width: 250px;
+    line-height: 24px !important;
+}
+
+#wpgmza_map_header .wp-block-group {
+    gap: 16px;
+}
+
+#wpgmza_map_section {
+    margin: 100px 16px 0 !important;
+}
+
+
+@media screen and (min-width: 782px){
+    #wpgmza_map_header, 
+    #wpgmza_map_header .heading-1{
+        text-align: left;
+    }
+
+    #wpgmza_map_header .heading-1 {
+        max-width: 700px !important;
+        margin-bottom: 24px;
+    }
+
+    #wpgmza_map_header .subhead {
+        margin-bottom: 16px;
+    }
+
+    #wpgmza_map_header p {
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .page-id-10 main {
+        padding-top: 178px !important;
+    }
+
+    .page-id-10 #news-banner-container {
+        top: 0;
+    }
+
+    #wpgmza_map_header .wp-block-getwid-section__wrapper,
+    #wpgmza_map_section .wp-block-getwid-section__wrapper {
+        margin: 0 auto;
+    }
+
+    #wpgmza_map_header {
+        margin: 80px 16px 120px;
+    }
+
+    #wpgmza_map_header.heading-1 {
+        max-width: 650px !important;
+    }
+
+     #wpgmza_map_header p {
+        max-width: 500px;
+    }
+
+    #wpgmza_map_header .wp-block-columns {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 0;
+    }
+
+    .award-winner-logo {
+        width: 240px !important;
+    }
+
+    #wpgmza_map_header .wp-block-group {
+        gap: 40px;
+    }
+
+    #wpgmza_map_section {
+        margin: 100px 16px 120px !important;
+    }
+
+    .wpgmza-pagination>.paginationjs {
+        margin-top: 24px;
+    }
+}
+
+/* News Banner on Other Pages */
+
+.page-id-2 .content,
+.page-id-3 .content,
+.page-id-4 .content, 
+.page-id-8 .content,
+.page-id-9 .content,
+.page-id-11 .content,
+.page-id-12 .content,
+.page-id-13 .content,
+.page-id-55 .content,
+.page-id-56 .content {
+    padding-top: 20px;
+}
+
+@media screen and (min-width: 1200px){
+    .page-id-2 main,
+    .page-id-3 main,
+    .page-id-4 main,
+    .page-id-8 main,
+    .page-id-9 main,
+    .page-id-11 main,
+    .page-id-12 main,
+    .page-id-13 main,
+    .page-id-55 main,
+    .page-id-56 main {
+        padding-top: 127px !important;
+    }
+
+    .page-id-2 .content,
+    .page-id-3 .content,
+    .page-id-4 .content,
+    .page-id-8 .content,
+    .page-id-9 .content,
+    .page-id-11 .content,
+    .page-id-12 .content,
+    .page-id-13 .content,
+    .page-id-55 .content,
+    .page-id-56 .content {
+        padding-top: 110px;
+    }
+
+}
+
+.site-credits {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 16px;
+}
+
+@media screen and (min-width: 1200px){
+    .site-credits {
+        padding: 12px 40px;
+    }
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Pipeline - Tiger BioSciences™</title>
+    <style>
+        @font-face {
+            font-family: 'LT Superior Mono';
+            src: url('LTSuperiorMono.otf') format('opentype');
+            font-weight: 500;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'LT Superior Mono', monospace; color: #0f0f0f; }
+        
+        :root {
+            --primary-700: #991514;
+            --primary-800: #D32F2F;
+            --primary-950: #450a0a;
+            --accent-500: #D8930B;
+            --neutral-100: #f5f5f5;
+            --neutral-200: #e5e5e5;
+            --neutral-600: #525252;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-950), var(--primary-800));
+            color: #fff;
+            padding: 8rem 1.5rem 4rem;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 4.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .content {
+            max-width: 90rem;
+            margin: 0 auto;
+            padding: 5rem 1.5rem;
+        }
+        
+        .phase-section {
+            margin-bottom: 5rem;
+        }
+        
+        .phase-header {
+            background: var(--neutral-100);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .phase-header h2 {
+            font-size: 2rem;
+            color: var(--primary-700);
+            margin-bottom: 0.5rem;
+        }
+        
+        .phase-header p {
+            color: var(--neutral-600);
+        }
+        
+        .pipeline-grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .pipeline-card {
+            background: #fff;
+            border: 2px solid var(--neutral-200);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2rem;
+        }
+        
+        .pipeline-info h3 {
+            font-size: 1.75rem;
+            color: var(--primary-700);
+            margin-bottom: 0.5rem;
+        }
+        
+        .pipeline-indication {
+            display: inline-block;
+            padding: 0.375rem 1rem;
+            background: var(--accent-500);
+            color: #fff;
+            border-radius: 624.9375rem;
+            font-size: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .pipeline-info p {
+            color: var(--neutral-600);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pipeline-status {
+            text-align: center;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-700);
+            color: #fff;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline {
+            font-size: 0.875rem;
+            color: var(--neutral-600);
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 0.5rem;
+            background: var(--neutral-200);
+            border-radius: 1rem;
+            margin-top: 1rem;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: var(--primary-700);
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-header">
+    <h1>Research Pipeline</h1>
+    <p>Advancing the future of regenerative medicine</p>
+</div>
+
+<div class="content">
+    <div class="phase-section">
+        <div class="phase-header">
+            <h2>Phase III Clinical Trials</h2>
+            <p>Late-stage development - Pivotal trials for regulatory approval</p>
+        </div>
+        
+        <div class="pipeline-grid">
+            <div class="pipeline-card">
+                <div class="pipeline-info">
+                    <h3>caregraFT™ Plus</h3>
+                    <span class="pipeline-indication">Venous Leg Ulcers</span>
+                    <p>
+                        Multicenter, randomized, controlled trial evaluating caregraFT™ Plus in patients with chronic venous leg ulcers. Primary endpoint: complete wound closure at 12 weeks.
+                    </p>
+                    <strong>Status:</strong> Enrollment Complete - Data Expected Q2 2025
+                </div>
+                <div class="pipeline-status">
+                    <div class="status-badge">Phase III</div>
+                    <div class="timeline">Completion: Jun 2025</div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+                </div>
+            </div>
+            
+            <div class="pipeline-card">
+                <div class="pipeline-info">
+                    <h3>ACAPatch™ Advanced</h3>
+                    <span class="pipeline-indication">Surgical Wounds</span>
+                    <p>
+                        Phase III trial assessing ACAPatch™ Advanced for surgical wound healing following abdominoplasty procedures. Evaluating time to complete epithelialization and complication rates.
+                    </p>
+                    <strong>Status:</strong> Active Enrollment
+                </div>
+                <div class="pipeline-status">
+                    <div class="status-badge">Phase III</div>
+                    <div class="timeline">Completion: Dec 2025</div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 45%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="phase-section">
+        <div class="phase-header">
+            <h2>Phase II Clinical Trials</h2>
+            <p>Mid-stage development - Evaluating efficacy and optimal dosing</p>
+        </div>
+        
+        <div class="pipeline-grid">
+            <div class="pipeline-card">
+                <div class="pipeline-info">
+                    <h3>TigerCAMP-1</h3>
+                    <span class="pipeline-indication">Pressure Injuries</span>
+                    <p>
+                        Novel CAMPs formulation with enhanced growth factor retention for treatment of stage III and IV pressure injuries. Dose-ranging study to determine optimal treatment protocol.
+                    </p>
+                    <strong>Status:</strong> Active - Interim Analysis Complete
+                </div>
+                <div class="pipeline-status">
+                    <div class="status-badge">Phase II</div>
+                    <div class="timeline">Completion: Sep 2025</div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 60%;"></div></div>
+                </div>
+            </div>
+            
+            <div class="pipeline-card">
+                <div class="pipeline-info">
+                    <h3>TigerDerm</h3>
+                    <span class="pipeline-indication">Burns</span>
+                    <p>
+                        Advanced dermal matrix incorporating novel processing techniques for treatment of second and third-degree burns. Phase II trial evaluating safety, engraftment, and functional outcomes.
+                    </p>
+                    <strong>Status:</strong> Enrolling Patients
+                </div>
+                <div class="pipeline-status">
+                    <div class="status-badge">Phase II</div>
+                    <div class="timeline">Completion: Mar 2026</div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 30%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="phase-section">
+        <div class="phase-header">
+            <h2>Phase I & Preclinical</h2>
+            <p>Early-stage development and safety evaluation</p>
+        </div>
+        
+        <div class="pipeline-grid">
+            <div class="pipeline-card">
+                <div class="pipeline-info">
+                    <h3>TigerCAMP-2</h3>
+                    <span class="pipeline-indication">Orthopedic Soft Tissue</span>
+                    <p>
+                        Next-generation CAMPs technology incorporating bioactive molecules for enhanced tendon and ligament repair. First-in-human safety and feasibility study.
+                    </p>
+                    <strong>Status:</strong> Phase I Initiated
+                </div>
+                <div class="pipeline-status">
+                    <div class="status-badge">Phase I</div>
+                    <div class="timeline">Completion: Q4 2025</div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 20%;"></div></div>
+                </div>
+            </div>
+            
+            <div class="pipeline-card">
+                <div class="pipeline-info">
+                    <h3>Neural Regeneration Platform</h3>
+                    <span class="pipeline-indication">Peripheral Nerve Repair</span>
+                    <p>
+                        Proprietary tissue-engineered nerve conduits for peripheral nerve regeneration. Currently in preclinical development with promising animal model data.
+                    </p>
+                    <strong>Status:</strong> Preclinical - IND-Enabling Studies
+                </div>
+                <div class="pipeline-status">
+                    <div class="status-badge">Preclinical</div>
+                    <div class="timeline">Phase I: 2026</div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 15%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

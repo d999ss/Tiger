@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tiger Way - Vertical Integration Excellence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --tiger-red-50: #fef2f2;
+            --tiger-red-700: #991514;
+            --tiger-red-800: #D32F2F;
+            --tiger-red-950: #450a0a;
+            --tiger-gold: #D8930B;
+            --foreground: 240 10% 3.9%;
+            --muted-foreground: 240 3.8% 46.1%;
+            --radius: 0.5rem;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: hsl(var(--foreground));
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .page-header {
+            padding: 120px 24px 80px;
+            background: linear-gradient(135deg, var(--tiger-red-950) 0%, var(--tiger-red-800) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: clamp(48px, 6vw, 72px);
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+        
+        .page-header p {
+            font-size: 24px;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 500;
+        }
+        
+        .content {
+            padding: 80px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin: 60px 0;
+        }
+        
+        .process-card {
+            background: white;
+            border: 2px solid var(--tiger-red-700);
+            border-radius: calc(var(--radius) + 4px);
+            padding: 40px;
+            position: relative;
+        }
+        
+        .process-number {
+            position: absolute;
+            top: -20px;
+            left: 40px;
+            width: 48px;
+            height: 48px;
+            background: var(--tiger-red-700);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+            box-shadow: 0 4px 12px rgba(153, 21, 20, 0.3);
+        }
+        
+        .process-card h3 {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--tiger-red-700);
+            margin-bottom: 16px;
+        }
+        
+        .process-card p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: hsl(var(--muted-foreground));
+            margin-bottom: 16px;
+        }
+        
+        .process-card ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .process-card li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            font-size: 15px;
+            color: hsl(var(--muted-foreground));
+        }
+        
+        .process-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--tiger-red-700);
+            font-weight: 700;
+        }
+        
+        .intro {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: hsl(var(--muted-foreground));
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-header">
+    <div class="container">
+        <h1>The Tiger Way</h1>
+        <p>The Power of Vertical Integration</p>
+    </div>
+</div>
+
+<div class="content">
+    <p class="intro">
+        Tiger BioSciences is unique in the tissue technology industry. We are the only company that maintains complete control over every stage of the product lifecycle—ensuring unmatched quality from recovery to recipient.
+    </p>
+    
+    <div class="process-grid">
+        <div class="process-card">
+            <div class="process-number">1</div>
+            <h3>Tissue Recovery</h3>
+            <p>We partner with trusted hospitals and donor programs to collect tissues under rigorous ethical, safety, and regulatory standards.</p>
+            <ul>
+                <li><strong>Birth Tissue Recovery:</strong> Ethical placental tissue collection</li>
+                <li><strong>bioCARE:</strong> Comprehensive recovery services and donor coordination</li>
+                <li><strong>Hospital Partnerships:</strong> Trusted relationships nationwide</li>
+                <li><strong>Donor Screening:</strong> Rigorous eligibility criteria</li>
+            </ul>
+        </div>
+        
+        <div class="process-card">
+            <div class="process-number">2</div>
+            <h3>Tissue Processing</h3>
+            <p>Our AATB-accredited facilities process all tissues using advanced biomedical techniques that preserve natural ECM and growth factors.</p>
+            <ul>
+                <li><strong>RegenTX Conshohocken:</strong> Primary processing facility</li>
+                <li><strong>RegenTX San Antonio:</strong> Large-scale operations</li>
+                <li><strong>ISO Cleanrooms:</strong> Class 5/7 environments</li>
+                <li><strong>cGMP Compliance:</strong> Quality manufacturing practices</li>
+            </ul>
+        </div>
+        
+        <div class="process-card">
+            <div class="process-number">3</div>
+            <h3>Research & Development</h3>
+            <p>Multidisciplinary research teams explore innovative materials and processing techniques to develop next-generation solutions.</p>
+            <ul>
+                <li><strong>RegenTX Labs:</strong> Advanced R&D facility</li>
+                <li><strong>Clinical Trials:</strong> Ongoing RCTs for validation</li>
+                <li><strong>Product Development:</strong> Next-gen CAMP technologies</li>
+                <li><strong>Scientific Publications:</strong> Contributing to the field</li>
+            </ul>
+        </div>
+        
+        <div class="process-card">
+            <div class="process-number">4</div>
+            <h3>Clinical Access & Distribution</h3>
+            <p>Fast, precise, and reliable distribution with advanced packaging and expert handling ensures products reach clinicians safely.</p>
+            <ul>
+                <li><strong>Tiger Wound Care:</strong> Advanced CAMPs for healing</li>
+                <li><strong>Tiger Aesthetics:</strong> Reconstructive solutions</li>
+                <li><strong>Extremity Care:</strong> Specialized applications</li>
+                <li><strong>Tiger International:</strong> Global distribution</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 60px;">
+        <a href="/site-page/contact" style="display: inline-block; padding: 16px 40px; background: var(--tiger-red-700); color: white; text-decoration: none; border-radius: var(--radius); font-weight: 600; font-size: 16px;">Learn More About Our Process</a>
+    </div>
+</div>
+
+</body>
+</html>
+

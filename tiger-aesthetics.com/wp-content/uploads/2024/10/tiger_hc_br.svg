@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 320.52251 279.65029"
+   id="svg122"
+   sodipodi:docname="tiger_hc_br.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   width="320.52252"
+   height="279.6503"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview122"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1148117"
+     inkscape:cx="141.72797"
+     inkscape:cy="113.47208"
+     inkscape:window-width="1296"
+     inkscape:window-height="622"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg122" />
+  <!-- Generator: Adobe Illustrator 29.0.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 186)  -->
+  <defs
+     id="defs3">
+    <style
+       id="style1">
+      .st0 {
+        mask: url(#mask);
+      }
+
+      .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11 {
+        mix-blend-mode: overlay;
+      }
+
+      .st1, .st2, .st5, .st12 {
+        fill: #d7a12a;
+      }
+
+      .st1, .st13, .st6 {
+        opacity: .2;
+      }
+
+      .st2, .st9, .st11 {
+        opacity: .5;
+      }
+
+      .st3 {
+        opacity: .7;
+      }
+
+      .st3, .st4, .st14, .st13, .st15, .st16 {
+        fill: #fff;
+      }
+
+      .st17 {
+        fill: url(#radial-gradient);
+      }
+
+      .st14 {
+        opacity: .1;
+      }
+
+      .st15 {
+        opacity: .3;
+      }
+
+      .st18 {
+        isolation: isolate;
+      }
+
+      .st19 {
+        mask: url(#mask-1);
+      }
+
+      .st6, .st8, .st9 {
+        stroke-width: 3px;
+      }
+
+      .st6, .st8, .st9, .st10, .st11 {
+        fill: none;
+        stroke: #d7a12a;
+        stroke-miterlimit: 10;
+      }
+
+      .st7 {
+        fill: #d79f5c;
+      }
+
+      .st8 {
+        opacity: .53;
+      }
+
+      .st20 {
+        fill: url(#radial-gradient1);
+      }
+    </style>
+    <radialGradient
+       id="radial-gradient"
+       cx="963.87"
+       cy="-364.69"
+       fx="963.87"
+       fy="-364.69"
+       r="105.23"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         id="stop1" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop2" />
+    </radialGradient>
+    <mask
+       id="mask"
+       x="858.64"
+       y="-469.92"
+       width="210.46"
+       height="210.46"
+       maskUnits="userSpaceOnUse">
+      <circle
+         class="st17"
+         cx="963.87"
+         cy="-364.69"
+         r="105.23"
+         id="circle2" />
+    </mask>
+    <radialGradient
+       id="radial-gradient1"
+       cx="1377.95"
+       cy="-282.89999"
+       fx="1377.95"
+       fy="-282.89999"
+       r="91.919998"
+       gradientTransform="rotate(62.5,1377.8632,-282.93543)"
+       xlink:href="#radial-gradient" />
+    <mask
+       id="mask-1"
+       x="1286.03"
+       y="-374.83"
+       width="183.84"
+       height="183.84"
+       maskUnits="userSpaceOnUse">
+      <circle
+         class="st20"
+         cx="1377.95"
+         cy="-282.89999"
+         r="91.919998"
+         transform="rotate(-62.5,1377.8765,-282.84441)"
+         id="circle3" />
+    </mask>
+  </defs>
+  <g
+     class="st18"
+     id="g122"
+     transform="rotate(59.964782,178.48515,116.32777)">
+    <g
+       id="Layer_4">
+      <g
+         id="g111"
+         transform="matrix(-1,0,0,1,326.04,0)">
+        <g
+           id="g108">
+          <circle
+             class="st12"
+             cx="167.61"
+             cy="190.78999"
+             r="4.0799999"
+             id="circle103" />
+          <path
+             class="st12"
+             d="m 32.51,110.96 c 0,2.26 -1.83,4.08 -4.08,4.08 -2.25,0 -4.08,-1.83 -4.08,-4.08 0,-2.25 1.83,-4.08 4.08,-4.08 2.25,0 4.08,1.83 4.08,4.08 z"
+             id="path103" />
+          <polygon
+             class="st1"
+             points="230.44,175.54 273.31,200.29 273.31,249.79 230.44,274.53 187.59,249.79 187.59,200.29 "
+             id="polygon104" />
+          <polygon
+             class="st1"
+             points="182.25,93.25 225.11,118 225.11,167.49 182.25,192.24 139.39,167.49 139.39,118 "
+             id="polygon105" />
+          <polygon
+             class="st1"
+             points="135.88,175.54 178.73,200.29 178.73,249.79 135.88,274.53 93.02,249.79 93.02,200.29 "
+             id="polygon106" />
+          <polygon
+             class="st1"
+             points="87.68,93.25 130.55,118 130.55,167.49 87.68,192.24 44.82,167.49 44.82,118 "
+             id="polygon107" />
+          <polygon
+             class="st2"
+             points="98.02,70.49 167.61,110.68 167.61,191.03 98.02,231.2 28.43,191.03 28.43,110.68 "
+             id="polygon108" />
+        </g>
+        <polygon
+           class="st6"
+           points="48.5,11.29 81.8,30.51 81.8,68.96 48.5,88.18 15.21,68.96 15.21,30.51 "
+           id="polygon109" />
+        <polygon
+           class="st8"
+           points="277.53,150.56 310.83,169.78 310.83,208.23 277.53,227.44 244.25,208.23 244.25,169.78 "
+           id="polygon110" />
+        <polygon
+           class="st9"
+           points="78.87,117.31 137.53,151.18 137.53,218.91 78.87,252.77 20.21,218.91 20.21,151.18 "
+           id="polygon111" />
+      </g>
+    </g>
+  </g>
+</svg>

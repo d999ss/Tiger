@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="262px" height="260px" viewBox="0 0 262 260" version="1.1">
+    <title>platelet concentration icon</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="platelet-concentration-icon" transform="translate(9.1621, 9)">
+            <circle id="Oval" fill="#D69516" cx="122.337901" cy="121.5" r="22.5"/>
+            <g id="left-arrow" transform="translate(209.442, 121.442) rotate(90) translate(-209.442, -121.442)translate(177.4929, 87)" stroke="#D69516" stroke-linecap="square" stroke-width="18">
+                <line x1="31.8449696" y1="0.5" x2="31.8449696" y2="60.5" id="Line-3"/>
+                <line x1="15.794717" y1="30.4289322" x2="16.5018238" y2="73.863961" id="Line-3" transform="translate(16.0018, 52.364) rotate(-44) translate(-16.0018, -52.364)"/>
+                <line x1="47.1881153" y1="29.5294373" x2="47.8952221" y2="72.9644661" id="Line-3" transform="translate(47.3952, 51.4645) rotate(-134.0673) translate(-47.3952, -51.4645)"/>
+            </g>
+            <g id="right-arrow" transform="translate(34.442, 121.442) rotate(-90) translate(-34.442, -121.442)translate(2.4929, 87)" stroke="#D69516" stroke-linecap="square" stroke-width="18">
+                <line x1="31.8449696" y1="0.5" x2="31.8449696" y2="60.5" id="Line-3"/>
+                <line x1="15.794717" y1="30.4289322" x2="16.5018238" y2="73.863961" id="Line-3" transform="translate(16.0018, 52.364) rotate(-44) translate(-16.0018, -52.364)"/>
+                <line x1="47.1881153" y1="29.5294373" x2="47.8952221" y2="72.9644661" id="Line-3" transform="translate(47.3952, 51.4645) rotate(-134.0673) translate(-47.3952, -51.4645)"/>
+            </g>
+            <g id="up-arrow" transform="translate(122.442, 207.442) rotate(180) translate(-122.442, -207.442)translate(90.4929, 173)" stroke="#D69516" stroke-linecap="square" stroke-width="18">
+                <line x1="31.8449696" y1="0.5" x2="31.8449696" y2="60.5" id="Line-3"/>
+                <line x1="15.794717" y1="30.4289322" x2="16.5018238" y2="73.863961" id="Line-3" transform="translate(16.0018, 52.364) rotate(-44) translate(-16.0018, -52.364)"/>
+                <line x1="47.1881153" y1="29.5294373" x2="47.8952221" y2="72.9644661" id="Line-3" transform="translate(47.3952, 51.4645) rotate(-134.0673) translate(-47.3952, -51.4645)"/>
+            </g>
+            <g id="down-arrow" transform="translate(90.4929, 0)" stroke="#D69516" stroke-linecap="square" stroke-width="18">
+                <line x1="31.8449696" y1="0.5" x2="31.8449696" y2="60.5" id="Line-3"/>
+                <line x1="15.794717" y1="30.4289322" x2="16.5018238" y2="73.863961" id="Line-3" transform="translate(16.0018, 52.364) rotate(-44) translate(-16.0018, -52.364)"/>
+                <line x1="47.1881153" y1="29.5294373" x2="47.8952221" y2="72.9644661" id="Line-3" transform="translate(47.3952, 51.4645) rotate(-134.0673) translate(-47.3952, -51.4645)"/>
+            </g>
+        </g>
+    </g>
+</svg>

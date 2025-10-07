@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="188px" height="141px" viewBox="0 0 188 141" version="1.1">
+    <title>rbc removal icon</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="rbc-removal-icon" fill="#D69516">
+            <g id="triangle">
+                <polygon id="Triangle" transform="translate(35, 65) scale(1, -1) translate(-35, -65)" points="35 47 70 83 0 83"/>
+                <rect id="Rectangle" x="23" y="0" width="23" height="60"/>
+            </g>
+            <g id="triangle" transform="translate(59, 58)">
+                <polygon id="Triangle" transform="translate(35, 65) scale(1, -1) translate(-35, -65)" points="35 47 70 83 0 83"/>
+                <rect id="Rectangle" x="23" y="0" width="23" height="60"/>
+            </g>
+            <g id="triangle" transform="translate(118, 0)">
+                <polygon id="Triangle" transform="translate(35, 65) scale(1, -1) translate(-35, -65)" points="35 47 70 83 0 83"/>
+                <rect id="Rectangle" x="23" y="0" width="23" height="60"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 400">
+  <defs>
+    <clipPath id="b">
+      <rect x="-1" y="18.26" width="1920" height="1768" style="fill: none;"/>
+    </clipPath>
+  </defs>
+  <g style="clip-path: url(#b);">
+    <g id="c" data-name="Gruppe maskieren 3">
+      <circle id="d" data-name="Ellipse 3" cx="1264" cy="4064.26" r="4000" style="fill: #f7f7f5;"/>
+    </g>
+  </g>
+</svg>

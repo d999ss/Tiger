@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Relations - Tiger BioSciences™</title>
+    <link rel="stylesheet" href="enterprise-styles.css">
+    <style>
+        @font-face {
+            font-family: 'LT Superior Mono';
+            src: url('LTSuperiorMono.otf') format('opentype');
+            font-weight: 500;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'LT Superior Mono', monospace; color: #0f0f0f; }
+        
+        :root {
+            --primary-700: #991514;
+            --primary-800: #D32F2F;
+            --primary-950: #450a0a;
+            --accent-500: #D8930B;
+            --neutral-100: #f5f5f5;
+            --neutral-200: #e5e5e5;
+            --neutral-600: #525252;
+            --neutral-950: #0a0a0a;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-950), var(--primary-800));
+            color: #fff;
+            padding: 8rem 1.5rem 4rem;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 4.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+        
+        .stock-ticker {
+            background: var(--neutral-950);
+            color: #fff;
+            padding: 2rem 1.5rem;
+        }
+        
+        .stock-ticker-content {
+            max-width: 90rem;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stock-item h3 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--accent-500);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stock-item p {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        
+        .stock-change {
+            font-size: 1rem;
+            color: #4ade80;
+        }
+        
+        .content {
+            max-width: 90rem;
+            margin: 0 auto;
+            padding: 5rem 1.5rem;
+        }
+        
+        .ir-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+        
+        .ir-card {
+            background: #fff;
+            border: 2px solid var(--neutral-200);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            transition: all 0.3s;
+        }
+        
+        .ir-card:hover {
+            border-color: var(--primary-700);
+            transform: translateY(-0.5rem);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .ir-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-700);
+            margin-bottom: 1rem;
+        }
+        
+        .ir-card ul {
+            list-style: none;
+        }
+        
+        .ir-card li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--neutral-200);
+        }
+        
+        .ir-card li:last-child {
+            border-bottom: none;
+        }
+        
+        .ir-card a {
+            color: var(--neutral-600);
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .ir-card a:hover {
+            color: var(--primary-700);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-700);
+            margin-bottom: 2rem;
+        }
+        
+        .events-list {
+            background: var(--neutral-100);
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+        
+        .event-item {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            margin-bottom: 1.5rem;
+            display: grid;
+            grid-template-columns: 120px 1fr auto;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .event-date {
+            text-align: center;
+        }
+        
+        .event-date .day {
+            font-size: 3rem;
+            font-weight: 500;
+            color: var(--primary-700);
+            line-height: 1;
+        }
+        
+        .event-date .month {
+            font-size: 1rem;
+            color: var(--neutral-600);
+            text-transform: uppercase;
+        }
+        
+        .event-info h4 {
+            font-size: 1.25rem;
+            color: var(--primary-700);
+            margin-bottom: 0.5rem;
+        }
+        
+        .event-info p {
+            color: var(--neutral-600);
+        }
+        
+        .event-action {
+            text-align: right;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: var(--primary-700);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 624.9375rem;
+            font-size: 0.9375rem;
+            font-weight: 500;
+        }
+        
+        .btn:hover {
+            background: var(--primary-800);
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-header">
+    <h1>Investor Relations</h1>
+    <p>Financial transparency and stakeholder value</p>
+</div>
+
+<div class="stock-ticker">
+    <div class="stock-ticker-content">
+        <div class="stock-item">
+            <h3>Stock Price</h3>
+            <p>$87.42</p>
+            <span class="stock-change">+2.4% ↑</span>
+        </div>
+        <div class="stock-item">
+            <h3>Market Cap</h3>
+            <p>$12.3B</p>
+        </div>
+        <div class="stock-item">
+            <h3>52-Week High</h3>
+            <p>$94.28</p>
+        </div>
+        <div class="stock-item">
+            <h3>52-Week Low</h3>
+            <p>$68.15</p>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="ir-grid">
+        <div class="ir-card">
+            <h3>Financial Reports</h3>
+            <ul>
+                <li><a href="#">Q4 2024 Earnings <span>→</span></a></li>
+                <li><a href="#">Annual Report 2024 <span>→</span></a></li>
+                <li><a href="#">Q3 2024 Earnings <span>→</span></a></li>
+                <li><a href="#">Q2 2024 Earnings <span>→</span></a></li>
+                <li><a href="#">View All Reports <span>→</span></a></li>
+            </ul>
+        </div>
+        
+        <div class="ir-card">
+            <h3>SEC Filings</h3>
+            <ul>
+                <li><a href="#">Form 10-K (Annual) <span>→</span></a></li>
+                <li><a href="#">Form 10-Q (Quarterly) <span>→</span></a></li>
+                <li><a href="#">Form 8-K (Current) <span>→</span></a></li>
+                <li><a href="#">Proxy Statements <span>→</span></a></li>
+                <li><a href="#">All SEC Filings <span>→</span></a></li>
+            </ul>
+        </div>
+        
+        <div class="ir-card">
+            <h3>Presentations</h3>
+            <ul>
+                <li><a href="#">Investor Day 2024 <span>→</span></a></li>
+                <li><a href="#">Q4 2024 Webcast <span>→</span></a></li>
+                <li><a href="#">Corporate Overview <span>→</span></a></li>
+                <li><a href="#">ESG Report 2024 <span>→</span></a></li>
+                <li><a href="#">View All <span>→</span></a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <h2 class="section-title">Upcoming Events & Presentations</h2>
+    <div class="events-list">
+        <div class="event-item">
+            <div class="event-date">
+                <div class="day">15</div>
+                <div class="month">Mar 2025</div>
+            </div>
+            <div class="event-info">
+                <h4>Q1 2025 Earnings Call</h4>
+                <p>Join our leadership team for quarterly financial results and business update</p>
+            </div>
+            <div class="event-action">
+                <a href="#" class="btn">Register</a>
+            </div>
+        </div>
+        
+        <div class="event-item">
+            <div class="event-date">
+                <div class="day">22</div>
+                <div class="month">Apr 2025</div>
+            </div>
+            <div class="event-info">
+                <h4>Annual Shareholder Meeting</h4>
+                <p>2025 Annual Meeting of Shareholders - Virtual attendance available</p>
+            </div>
+            <div class="event-action">
+                <a href="#" class="btn">Register</a>
+            </div>
+        </div>
+        
+        <div class="event-item">
+            <div class="event-date">
+                <div class="day">10</div>
+                <div class="month">May 2025</div>
+            </div>
+            <div class="event-info">
+                <h4>JPMorgan Healthcare Conference</h4>
+                <p>Tiger BioSciences presentation at annual healthcare conference</p>
+            </div>
+            <div class="event-action">
+                <a href="#" class="btn">Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

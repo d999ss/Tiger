@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="245px" height="245px" viewBox="0 0 245 245" version="1.1">
+    <title>platelet yield icon</title>
+    <defs>
+        <circle id="path-1" cx="122.5" cy="122.5" r="122.5"/>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="platelet-yield-icon">
+            <g id="Polygon">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"/>
+                </mask>
+                <circle stroke="#D69516" stroke-width="27" cx="122.5" cy="122.5" r="109"/>
+                <polygon fill="#DBDFE1" mask="url(#mask-2)" points="195.621824 1.32871492e-11 256.551058 78.9900332 204.322403 95.2534298 122.5 46.1698024 122.5 5.31130695e-12 136.450573 -22.7912181"/>
+            </g>
+            <circle id="Oval" fill="#FFFFFF" cx="122.5" cy="122.5" r="95.5"/>
+        </g>
+    </g>
+</svg>
