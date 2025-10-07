@@ -304,7 +304,7 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="hero" role="banner" aria-label="Hero section" id="main-content">
+<section class="hero hero-gradient" role="banner" aria-label="Hero section" id="main-content">
     <div class="hero-content">
         <div class="hero-badge" role="text" aria-label="Company tagline">The First of Its Kind</div>
         <h1 class="hero-title">Tiger BioSciences</h1>
@@ -405,7 +405,35 @@
             </a>
             </div>
         <div class="image-content-image">
-            <div style="color: white; font-size: 3rem;">🧬</div>
+            <svg class="dna-visual" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="dnaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#991514;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#7f1d1d;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <!-- DNA Helix representation -->
+                <path d="M40,20 Q100,40 160,20" stroke="url(#dnaGradient)" stroke-width="3" fill="none" opacity="0.8"/>
+                <path d="M40,60 Q100,80 160,60" stroke="url(#dnaGradient)" stroke-width="3" fill="none" opacity="0.8"/>
+                <path d="M40,100 Q100,120 160,100" stroke="url(#dnaGradient)" stroke-width="3" fill="none" opacity="0.8"/>
+                <path d="M40,140 Q100,160 160,140" stroke="url(#dnaGradient)" stroke-width="3" fill="none" opacity="0.8"/>
+                <path d="M40,180 Q100,200 160,180" stroke="url(#dnaGradient)" stroke-width="3" fill="none" opacity="0.8"/>
+                <circle cx="40" cy="20" r="4" fill="#991514"/>
+                <circle cx="160" cy="20" r="4" fill="#991514"/>
+                <circle cx="40" cy="60" r="4" fill="#991514"/>
+                <circle cx="160" cy="60" r="4" fill="#991514"/>
+                <circle cx="40" cy="100" r="4" fill="#991514"/>
+                <circle cx="160" cy="100" r="4" fill="#991514"/>
+                <circle cx="40" cy="140" r="4" fill="#991514"/>
+                <circle cx="160" cy="140" r="4" fill="#991514"/>
+                <circle cx="40" cy="180" r="4" fill="#991514"/>
+                <circle cx="160" cy="180" r="4" fill="#991514"/>
+                <!-- Connecting lines -->
+                <line x1="40" y1="40" x2="160" y2="40" stroke="#e5e5e5" stroke-width="2" opacity="0.6"/>
+                <line x1="40" y1="80" x2="160" y2="80" stroke="#e5e5e5" stroke-width="2" opacity="0.6"/>
+                <line x1="40" y1="120" x2="160" y2="120" stroke="#e5e5e5" stroke-width="2" opacity="0.6"/>
+                <line x1="40" y1="160" x2="160" y2="160" stroke="#e5e5e5" stroke-width="2" opacity="0.6"/>
+            </svg>
         </div>
     </div>
 </section>
@@ -414,20 +442,20 @@
 <section class="stats" aria-label="Company statistics">
     <div class="stats-grid" role="list">
         <div class="stat-item">
-            <div class="stat-number">360°</div>
-            <div class="stat-label">Vertical Integration</div>
+            <div class="stat-number" data-target="15">0</div>
+            <div class="stat-label">Years of Innovation</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">CAMPs</div>
-            <div class="stat-label">Advanced Technology</div>
+            <div class="stat-number" data-target="50">0</div>
+            <div class="stat-label">Product Solutions</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">Global</div>
-            <div class="stat-label">Distribution Network</div>
+            <div class="stat-number" data-target="100">0</div>
+            <div class="stat-label">Countries Served</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">Best</div>
-            <div class="stat-label">Quality Standards</div>
+            <div class="stat-number" data-target="500">0</div>
+            <div class="stat-label">Healthcare Partners</div>
         </div>
     </div>
 </section>
@@ -469,21 +497,49 @@
             <h2>Our Core Capabilities</h2>
             <p>Understanding the Tiger BioSciences advantage</p>
         </div>
-        <div class="faq-item">
-            <h4>What are Cellular, Acellular, and Matrix-like Products (CAMPs)?</h4>
-            <p>CAMPs are advanced biomaterial solutions that support tissue regeneration and wound healing. Our CAMP-based innovations leverage rigorous protocols and advanced biotech to ensure exceptional tissue quality and consistency for clinical applications.</p>
+        <div class="faq-item" data-faq>
+            <button class="faq-question" aria-expanded="false">
+                <h4>What are Cellular, Acellular, and Matrix-like Products (CAMPs)?</h4>
+                <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+            </button>
+            <div class="faq-answer">
+                <p>CAMPs are advanced biomaterial solutions that support tissue regeneration and wound healing. Our CAMP-based innovations leverage rigorous protocols and advanced biotech to ensure exceptional tissue quality and consistency for clinical applications.</p>
+            </div>
         </div>
-        <div class="faq-item">
-            <h4>What makes vertical integration important?</h4>
-            <p>Our fully integrated approach means we oversee every stage—from donor screening and tissue collection to R&D, manufacturing, and distribution. This comprehensive model ensures unparalleled quality, accountability, and confidence for both clinicians and patients.</p>
+        <div class="faq-item" data-faq>
+            <button class="faq-question" aria-expanded="false">
+                <h4>What makes vertical integration important?</h4>
+                <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+            </button>
+            <div class="faq-answer">
+                <p>Our fully integrated approach means we oversee every stage—from donor screening and tissue collection to R&D, manufacturing, and distribution. This comprehensive model ensures unparalleled quality, accountability, and confidence for both clinicians and patients.</p>
+            </div>
         </div>
-        <div class="faq-item">
-            <h4>How do you ensure product quality?</h4>
-            <p>Every donor is carefully screened, and every tissue is handled with respect and precision under rigorous ethical, safety, and regulatory standards. Our processing pipeline is built on precision and accountability, with all work managed under one roof.</p>
+        <div class="faq-item" data-faq>
+            <button class="faq-question" aria-expanded="false">
+                <h4>How do you ensure product quality?</h4>
+                <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+            </button>
+            <div class="faq-answer">
+                <p>Every donor is carefully screened, and every tissue is handled with respect and precision under rigorous ethical, safety, and regulatory standards. Our processing pipeline is built on precision and accountability, with all work managed under one roof.</p>
+            </div>
         </div>
-        <div class="faq-item">
-            <h4>How can I access Tiger BioSciences products?</h4>
-            <p>Experience fast, precise, and reliable distribution through our advanced nationwide network. Contact us at 1-888-665-5005 or visit our contact page to learn more about accessing our products and solutions.</p>
+        <div class="faq-item" data-faq>
+            <button class="faq-question" aria-expanded="false">
+                <h4>How can I access Tiger BioSciences products?</h4>
+                <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+            </button>
+            <div class="faq-answer">
+                <p>Experience fast, precise, and reliable distribution through our advanced nationwide network. Contact us at 1-888-665-5005 or visit our contact page to learn more about accessing our products and solutions.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -493,8 +549,8 @@
     <div class="cta-title">Be at the Forefront of Innovation</div>
     <p class="cta-description">We look forward to telling you more about us. We welcome potential partnership opportunities and career inquiries. Explore how you can help shape the future of biotechnology.</p>
     <div class="hero-buttons">
-        <a href="contact.html" class="btn btn-primary" style="background: white; color: var(--red-primary);">Let's Get Together</a>
-        <a href="careers.html" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: white;">Open Positions</a>
+        <a href="contact.html" class="btn btn-primary btn-cta-light">Let's Get Together</a>
+        <a href="careers.html" class="btn btn-outline btn-cta-outline">Open Positions</a>
     </div>
 </section>
 
@@ -712,6 +768,91 @@ if ('PerformanceObserver' in window) {
         
         stat.addEventListener('mouseleave', function() {
             this.style.transform = 'scale(1)';
+        });
+    });
+    
+    // Animated counter for stats
+    const animateCounter = (element, target, suffix = '') => {
+        const duration = 2000;
+        const start = 0;
+        const increment = target / (duration / 16);
+        let current = start;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = target + suffix;
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(current) + suffix;
+            }
+        }, 16);
+    };
+    
+    // Trigger counter animation when stats section is visible
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.target.textContent === '0') {
+                const target = parseInt(entry.target.dataset.target);
+                const suffix = target >= 100 ? '+' : '';
+                animateCounter(entry.target, target, suffix);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    document.querySelectorAll('.stat-number[data-target]').forEach(stat => {
+        statsObserver.observe(stat);
+    });
+    
+    // FAQ Accordion functionality
+    document.querySelectorAll('[data-faq]').forEach(faqItem => {
+        const question = faqItem.querySelector('.faq-question');
+        const answer = faqItem.querySelector('.faq-answer');
+        const icon = faqItem.querySelector('.faq-icon');
+        
+        // Set initial state
+        answer.style.maxHeight = '0';
+        answer.style.overflow = 'hidden';
+        answer.style.transition = 'max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease';
+        answer.style.opacity = '0';
+        
+        question.addEventListener('click', () => {
+            const isExpanded = question.getAttribute('aria-expanded') === 'true';
+            
+            // Close all other FAQs
+            document.querySelectorAll('[data-faq]').forEach(item => {
+                if (item !== faqItem) {
+                    const otherQuestion = item.querySelector('.faq-question');
+                    const otherAnswer = item.querySelector('.faq-answer');
+                    const otherIcon = item.querySelector('.faq-icon');
+                    
+                    otherQuestion.setAttribute('aria-expanded', 'false');
+                    otherAnswer.style.maxHeight = '0';
+                    otherAnswer.style.opacity = '0';
+                    otherIcon.style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current FAQ
+            if (isExpanded) {
+                question.setAttribute('aria-expanded', 'false');
+                answer.style.maxHeight = '0';
+                answer.style.opacity = '0';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                question.setAttribute('aria-expanded', 'true');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                answer.style.opacity = '1';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        });
+        
+        // Keyboard accessibility
+        question.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                question.click();
+            }
         });
     });
     
