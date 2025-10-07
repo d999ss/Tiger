@@ -1,30 +1,41 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""
+Tiger BioSciences - Comprehensive Page Generator
+Generates all 52 pages with proper content, SEO, and navigation
+"""
+
+import json
+import os
+from pathlib import Path
+
+# Page template with full structure
+PAGE_TEMPLATE = '''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
     <!-- Primary Meta Tags -->
-    <title>Contact Us - Tiger BioSciences™</title>
-    <meta name="title" content="Contact Us - Tiger BioSciences™">
-    <meta name="description" content="Get in touch with Tiger BioSciences. Call 1-888-665-5005 or contact us for product information, clinical support, and partnership opportunities.">
-    <meta name="keywords" content="Tiger BioSciences, contact, CAMPs, tissue technology, regenerative medicine">
+    <title>{title}</title>
+    <meta name="title" content="{title}">
+    <meta name="description" content="{meta_description}">
+    <meta name="keywords" content="{keywords}">
     <meta name="author" content="Tiger BioSciences">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tigerbiosciences.com/contact.html">
-    <meta property="og:title" content="Contact Us - Tiger BioSciences™">
-    <meta property="og:description" content="Get in touch with Tiger BioSciences. Call 1-888-665-5005 or contact us for product information, clinical support, and partnership opportunities.">
-    <meta property="og:image" content="https://tigerbiosciences.com/assets/images/og-contact.jpg">
+    <meta property="og:url" content="https://tigerbiosciences.com/{filename}">
+    <meta property="og:title" content="{title}">
+    <meta property="og:description" content="{meta_description}">
+    <meta property="og:image" content="https://tigerbiosciences.com/assets/images/og-{slug}.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tigerbiosciences.com/contact.html">
-    <meta property="twitter:title" content="Contact Us - Tiger BioSciences™">
-    <meta property="twitter:description" content="Get in touch with Tiger BioSciences. Call 1-888-665-5005 or contact us for product information, clinical support, and partnership opportunities.">
-    <meta property="twitter:image" content="https://tigerbiosciences.com/assets/images/twitter-contact.jpg">
+    <meta property="twitter:url" content="https://tigerbiosciences.com/{filename}">
+    <meta property="twitter:title" content="{title}">
+    <meta property="twitter:description" content="{meta_description}">
+    <meta property="twitter:image" content="https://tigerbiosciences.com/assets/images/twitter-{slug}.jpg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -40,13 +51,13 @@
     
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
+    {{
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Contact Us - Tiger BioSciences™",
-      "description": "Get in touch with Tiger BioSciences. Call 1-888-665-5005 or contact us for product information, clinical support, and partnership opportunities.",
-      "url": "https://tigerbiosciences.com/contact.html"
-    }
+      "name": "{title}",
+      "description": "{meta_description}",
+      "url": "https://tigerbiosciences.com/{filename}"
+    }}
     </script>
 </head>
 <body>
@@ -61,7 +72,57 @@
 </div>
 
 <!-- Navigation -->
-<nav class="navbar" id="mainNav" role="navigation" aria-label="Main navigation">
+{navigation}
+
+<!-- Hero Section -->
+<section class="hero hero-gradient" role="banner" aria-label="Page hero" id="main-content">
+    <div class="hero-content">
+        <div class="hero-badge">{badge}</div>
+        <h1 class="hero-title">{hero_title}</h1>
+        <p class="hero-subtitle">{hero_subtitle}</p>
+        <div class="hero-buttons">
+            <a href="contact.html" class="btn btn-primary">{cta_primary}</a>
+            <a href="{cta_secondary_link}" class="btn btn-outline">{cta_secondary}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+{main_content}
+
+<!-- CTA Section -->
+<section class="cta">
+    <div class="cta-title">{cta_title}</div>
+    <p class="cta-description">{cta_description}</p>
+    <div class="hero-buttons">
+        <a href="contact.html" class="btn btn-primary btn-cta-light">Contact Us</a>
+        <a href="products.html" class="btn btn-outline btn-cta-outline">View Products</a>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter">
+    <div class="newsletter-container">
+        <h3 class="newsletter-title">Connect With Us</h3>
+        <p class="newsletter-description">Ready to learn more? Get in touch with our team today.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="tel:+18886655005" class="btn btn-primary">Call: 1-888-665-5005</a>
+            <a href="contact.html" class="btn btn-outline">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+{footer}
+
+<!-- Sanity CMS Content -->
+<script src="assets/js/sanity-client.js" defer></script>
+
+</body>
+</html>'''
+
+# Navigation component (copied from index.html)
+NAVIGATION = '''<nav class="navbar" id="mainNav" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
         <a href="index.html" class="logo" aria-label="Tiger BioSciences Home">TIGER BIOSCIENCES™</a>
         
@@ -284,55 +345,10 @@
             </li>
         </ul>
     </div>
-</nav>
+</nav>'''
 
-<!-- Hero Section -->
-<section class="hero hero-gradient" role="banner" aria-label="Page hero" id="main-content">
-    <div class="hero-content">
-        <div class="hero-badge">Tiger BioSciences</div>
-        <h1 class="hero-title">Contact Tiger BioSciences</h1>
-        <p class="hero-subtitle">We're here to help. Whether you need product information, clinical support, or partnership opportunities, our team is ready to assist.</p>
-        <div class="hero-buttons">
-            <a href="contact.html" class="btn btn-primary">Contact Us</a>
-            <a href="about.html" class="btn btn-outline">Learn More</a>
-        </div>
-    </div>
-</section>
-
-<!-- Main Content -->
-<section class="section">
-    <div class="section-container">
-        <div class="section-header">
-            <h2 class="section-title">Excellence in Healthcare</h2>
-            <p class="section-description">Comprehensive information and resources.</p>
-        </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="cta">
-    <div class="cta-title">Get In Touch</div>
-    <p class="cta-description">Contact our team to learn more about Tiger BioSciences and our comprehensive solutions.</p>
-    <div class="hero-buttons">
-        <a href="contact.html" class="btn btn-primary btn-cta-light">Contact Us</a>
-        <a href="products.html" class="btn btn-outline btn-cta-outline">View Products</a>
-    </div>
-</section>
-
-<!-- Newsletter Section -->
-<section class="newsletter">
-    <div class="newsletter-container">
-        <h3 class="newsletter-title">Connect With Us</h3>
-        <p class="newsletter-description">Ready to learn more? Get in touch with our team today.</p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="tel:+18886655005" class="btn btn-primary">Call: 1-888-665-5005</a>
-            <a href="contact.html" class="btn btn-outline">Contact Us</a>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer" role="contentinfo" aria-label="Site footer">
+# Footer component
+FOOTER = '''<footer class="footer" role="contentinfo" aria-label="Site footer">
     <div class="footer-content">
         <div class="footer-brand">
             <h3>Tiger BioSciences™</h3>
@@ -381,10 +397,177 @@
             <a href="terms.html">Terms & Conditions</a>
         </div>
     </div>
-</footer>
+</footer>'''
 
-<!-- Sanity CMS Content -->
-<script src="assets/js/sanity-client.js" defer></script>
+def generate_main_content(page_type, data):
+    """Generate main content based on page type"""
+    
+    if page_type == "product":
+        return '''<section class="section">
+    <div class="section-container">
+        <div class="section-header">
+            <div class="section-label">Product Overview</div>
+            <h2 class="section-title">Advanced Technology for Better Outcomes</h2>
+            <p class="section-description">Clinically proven solutions designed for optimal patient outcomes.</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔬</div>
+                <h3 class="feature-title">Clinically Proven</h3>
+                <p class="feature-description">Backed by rigorous clinical studies and peer-reviewed research.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">✓</div>
+                <h3 class="feature-title">FDA Compliant</h3>
+                <p class="feature-description">Meets all FDA regulations and quality standards.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">Evidence Based</h3>
+                <p class="feature-description">Demonstrated efficacy in clinical applications.</p>
+            </div>
+        </div>
+    </div>
+</section>'''
+    
+    elif page_type == "science":
+        return '''<section class="section">
+    <div class="section-container">
+        <div class="section-header">
+            <div class="section-label">Research Excellence</div>
+            <h2 class="section-title">Advancing the Science of Healing</h2>
+            <p class="section-description">Our research teams combine decades of expertise with cutting-edge technology.</p>
+        </div>
+    </div>
+</section>'''
+    
+    elif page_type == "solution":
+        return '''<section class="section">
+    <div class="section-container">
+        <div class="section-header">
+            <div class="section-label">Comprehensive Solutions</div>
+            <h2 class="section-title">Supporting Healthcare Excellence</h2>
+            <p class="section-description">End-to-end support for healthcare professionals and institutions.</p>
+        </div>
+    </div>
+</section>'''
+    
+    else:
+        return '''<section class="section">
+    <div class="section-container">
+        <div class="section-header">
+            <h2 class="section-title">Excellence in Healthcare</h2>
+            <p class="section-description">Comprehensive information and resources.</p>
+        </div>
+    </div>
+</section>'''
 
-</body>
-</html>
+def generate_page(filename, data):
+    """Generate a complete HTML page"""
+    
+    # Extract slug from filename
+    slug = filename.replace('.html', '')
+    
+    # Determine page type for content generation
+    product_pages = ['healpack', 'caregraft', 'alloply', 'acapatch', 'bellafill', 'aveli', 'breast']
+    science_pages = ['wound-care', 'tissue-reconstruction', 'aesthetic-medicine', 'regenerative-medicine', 
+                     'orthopedic', 'research-pipeline', 'clinical-trials', 'publications', 'camps-technology', 'patents']
+    solution_pages = ['hospitals', 'wound-centers', 'facilities', 'healthcare-professionals', 
+                      'training', 'clinical-support', 'reimbursement', 'ordering']
+    
+    if slug in product_pages:
+        page_type = "product"
+        badge = "Product"
+        cta_title = "Experience the Difference"
+        cta_description = "Contact us to learn more about this product and how it can benefit your patients."
+    elif slug in science_pages:
+        page_type = "science"
+        badge = "Research"
+        cta_title = "Partner With Us"
+        cta_description = "Join us in advancing the future of regenerative medicine through collaboration and innovation."
+    elif slug in solution_pages:
+        page_type = "solution"
+        badge = "Solutions"
+        cta_title = "Let's Work Together"
+        cta_description = "Discover how Tiger BioSciences can support your healthcare organization's success."
+    else:
+        page_type = "general"
+        badge = "Tiger BioSciences"
+        cta_title = "Get In Touch"
+        cta_description = "Contact our team to learn more about Tiger BioSciences and our comprehensive solutions."
+    
+    # Generate main content
+    main_content = generate_main_content(page_type, data)
+    
+    # Default values
+    defaults = {
+        'title': data.get('title', f'{slug.title()} - Tiger BioSciences™'),
+        'meta_description': data.get('meta_description', 'Tiger BioSciences - Advanced tissue technology and CAMPs solutions.'),
+        'keywords': f'Tiger BioSciences, {slug}, CAMPs, tissue technology, regenerative medicine',
+        'filename': filename,
+        'slug': slug,
+        'navigation': NAVIGATION,
+        'badge': badge,
+        'hero_title': data.get('hero_title', slug.replace('-', ' ').title()),
+        'hero_subtitle': data.get('hero_subtitle', 'Advanced solutions for better patient outcomes.'),
+        'cta_primary': 'Contact Us',
+        'cta_secondary': 'Learn More',
+        'cta_secondary_link': 'about.html',
+        'main_content': main_content,
+        'cta_title': cta_title,
+        'cta_description': cta_description,
+        'footer': FOOTER
+    }
+    
+    # Merge with page data
+    page_data = {**defaults, **data}
+    
+    # Generate HTML
+    html = PAGE_TEMPLATE.format(**page_data)
+    
+    return html
+
+def main():
+    """Main execution function"""
+    print("🚀 Tiger BioSciences Page Generator")
+    print("=" * 60)
+    
+    # Load content data
+    try:
+        with open('page-content-data.json', 'r') as f:
+            content_data = json.load(f)
+            pages = content_data.get('pages', {})
+    except FileNotFoundError:
+        print("❌ Error: page-content-data.json not found")
+        return
+    
+    # Generate all pages
+    generated_count = 0
+    for filename, data in pages.items():
+        try:
+            html = generate_page(filename, data)
+            
+            # Write to file
+            with open(filename, 'w', encoding='utf-8') as f:
+                f.write(html)
+            
+            generated_count += 1
+            print(f"✓ Generated: {filename}")
+            
+        except Exception as e:
+            print(f"❌ Error generating {filename}: {str(e)}")
+    
+    print("=" * 60)
+    print(f"✅ Successfully generated {generated_count} pages")
+    print("\n📋 Next Steps:")
+    print("1. Review generated pages")
+    print("2. Verify navigation links")
+    print("3. Test on localhost")
+    print("4. Deploy to Vercel")
+
+if __name__ == "__main__":
+    main()
+
