@@ -565,14 +565,21 @@
         observer.observe(el);
     });
     
-    // Parallax effect for hero
+    // Smooth parallax effect for hero (optimized)
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        if (hero && scrolled < window.innerHeight) {
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.hero');
+                if (hero && scrolled < window.innerHeight) {
+                    hero.style.transform = `translate3d(0, ${scrolled * 0.3}px, 0)`;
+                }
+                ticking = false;
+            });
+            ticking = true;
         }
-    });
+    }, { passive: true });
     
     // Add loading animation
     window.addEventListener('load', () => {
