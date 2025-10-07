@@ -1,0 +1,117 @@
+# Auto-labeling configuration for Pull Requests
+
+# Documentation changes
+documentation:
+  - '**/*.md'
+  - 'docs/**/*'
+
+# QA and Testing
+qa-automation:
+  - 'qa-automation/**/*'
+  - '**/*test*.py'
+  - '**/*test*.js'
+
+# Vibetest
+vibetest:
+  - 'vibetest-use/**/*'
+  - '**/vibetest*'
+
+# Company Websites
+tiger-biosciences:
+  - 'tigerbiosciences.com/**/*'
+
+tiger-aesthetics:
+  - 'tiger-aesthetics.com/**/*'
+
+tiger-wound-care:
+  - 'tigerwoundcare.com/**/*'
+
+sientra:
+  - 'sientra.com/**/*'
+
+aveli:
+  - 'myaveli.com/**/*'
+
+airway-medix:
+  - 'airway-medix.com/**/*'
+
+extremity-care:
+  - 'extremitycare.com/**/*'
+
+lizard-health:
+  - 'lizard-health.com/**/*'
+
+bellafill:
+  - 'bellafill.com/**/*'
+
+birth-tissue-recovery:
+  - 'birthtissuerecovery.com/**/*'
+
+encore-surgical:
+  - 'encoresurgicalsupplies.com/**/*'
+
+# File Type Labels
+html:
+  - '**/*.html'
+
+css:
+  - '**/*.css'
+
+javascript:
+  - '**/*.js'
+
+python:
+  - '**/*.py'
+
+shell-scripts:
+  - '**/*.sh'
+
+# Asset Types
+images:
+  - '**/*.png'
+  - '**/*.jpg'
+  - '**/*.jpeg'
+  - '**/*.webp'
+  - '**/*.svg'
+  - '**/*.gif'
+
+documents:
+  - '**/*.pdf'
+
+fonts:
+  - '**/*.ttf'
+  - '**/*.woff'
+  - '**/*.woff2'
+  - '**/*.eot'
+  - '**/*.otf'
+
+# WordPress
+wordpress:
+  - '**/wp-content/**/*'
+  - '**/wp-includes/**/*'
+  - '**/wp-json/**/*'
+
+# Configuration
+configuration:
+  - '**/*.json'
+  - '**/*.yml'
+  - '**/*.yaml'
+  - '**/*.xml'
+  - '.github/**/*'
+  - '.gitignore'
+
+# Build and Deploy
+build:
+  - '**/*build*.sh'
+  - '**/*create*.sh'
+  - '**/*update*.sh'
+
+# Root level pages
+root-pages:
+  - 'index*.html'
+  - 'about*.html'
+  - 'contact*.html'
+  - 'products*.html'
+  - 'careers*.html'
+  - 'news*.html'
+
