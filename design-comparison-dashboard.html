@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger CMS - Design Comparison Dashboard</title>
+    <link rel="stylesheet" href="assets/css/modern-tiger.css">
+    <style>
+        .dashboard {
+            min-height: 100vh;
+            background: var(--color-gray-100);
+            padding: 3rem 0;
+        }
+        
+        .header-dash {
+            background: white;
+            padding: 2rem 0;
+            margin-bottom: 3rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        .comparison-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .comparison-header {
+            padding: 2rem;
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+        
+        .comparison-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        
+        .comparison-side {
+            padding: 2rem;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .comparison-side.before {
+            background: var(--color-gray-50);
+            border-right: 2px solid var(--color-gray-200);
+        }
+        
+        .comparison-side.after {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+        
+        .badge-old {
+            background: var(--color-gray-300);
+            color: var(--color-gray-700);
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            font-size: var(--text-sm);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        .badge-new {
+            background: var(--color-success);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            font-size: var(--text-sm);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-success);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--color-gray-700);
+            font-size: var(--text-sm);
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+    <div class="header-dash">
+        <div class="container">
+            <div style="text-align: center;">
+                <h1 style="margin-bottom: 1rem;">🐅 Tiger CMS Design Comparison</h1>
+                <p style="font-size: var(--text-lg); color: var(--color-gray-700);">
+                    Modern redesigns inspired by for:human™ Webflow template
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Progress Stats -->
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-value">3</div>
+                <div class="stat-label">Modern Demos Created</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">8</div>
+                <div class="stat-label">Sites Remaining</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">72px</div>
+                <div class="stat-label">New Headline Size</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">+150%</div>
+                <div class="stat-label">More White Space</div>
+            </div>
+        </div>
+
+        <!-- Sientra Comparison -->
+        <div class="comparison-card">
+            <div class="comparison-header">
+                <h2 style="margin-bottom: 0.5rem;">Sientra - Breast Aesthetics</h2>
+                <p style="color: var(--color-gray-700);">Premium medical implants and aesthetic solutions</p>
+            </div>
+            <div class="comparison-body">
+                <div class="comparison-side before">
+                    <div class="badge-old">Current Design</div>
+                    <h3 style="margin-bottom: 1rem;">Original</h3>
+                    <ul style="text-align: left; color: var(--color-gray-700); list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.75rem;">❌ Small text (14-16px)</li>
+                        <li style="margin-bottom: 0.75rem;">❌ Tight spacing</li>
+                        <li style="margin-bottom: 0.75rem;">❌ Dense layout</li>
+                        <li style="margin-bottom: 0.75rem;">❌ Basic buttons</li>
+                        <li style="margin-bottom: 0.75rem;">❌ Dated feel</li>
+                    </ul>
+                    <a href="file:///Users/donnysmith/Desktop/Tiger CMS/sientra.com/index.html" class="btn btn-secondary btn-small" style="margin-top: 1.5rem;" target="_blank">View Original</a>
+                </div>
+                <div class="comparison-side after">
+                    <div class="badge-new">✨ Modern Design</div>
+                    <h3 style="margin-bottom: 1rem;">Redesigned</h3>
+                    <ul style="text-align: left; color: var(--color-gray-800); list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.75rem;">✅ Large text (18-72px)</li>
+                        <li style="margin-bottom: 0.75rem;">✅ Generous spacing</li>
+                        <li style="margin-bottom: 0.75rem;">✅ Breathable layout</li>
+                        <li style="margin-bottom: 0.75rem;">✅ Modern buttons + hover</li>
+                        <li style="margin-bottom: 0.75rem;">✅ Contemporary feel</li>
+                    </ul>
+                    <a href="file:///Users/donnysmith/Desktop/Tiger CMS/sientra-modern-demo.html" class="btn btn-primary btn-small" style="margin-top: 1.5rem;" target="_blank">View Modern Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tiger Aesthetics Comparison -->
+        <div class="comparison-card">
+            <div class="comparison-header">
+                <h2 style="margin-bottom: 0.5rem;">Tiger Aesthetics Medical - Regenerative Solutions</h2>
+                <p style="color: var(--color-gray-700);">Advanced biotechnology and human tissue science</p>
+            </div>
+            <div class="comparison-body">
+                <div class="comparison-side before">
+                    <div class="badge-old">Current Design</div>
+                    <h3 style="margin-bottom: 1rem;">Original</h3>
+                    <ul style="text-align: left; color: var(--color-gray-700); list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.75rem;">❌ Traditional medical site</li>
+                        <li style="margin-bottom: 0.75rem;">❌ Limited visual hierarchy</li>
+                        <li style="margin-bottom: 0.75rem;">❌ Dense information</li>
+                        <li style="margin-bottom: 0.75rem;">❌ Basic branding</li>
+                        <li style="margin-bottom: 0.75rem;">❌ Lacks premium feel</li>
+                    </ul>
+                    <a href="file:///Users/donnysmith/Desktop/Tiger CMS/tiger-aesthetics.com/index.html" class="btn btn-secondary btn-small" style="margin-top: 1.5rem;" target="_blank">View Original</a>
+                </div>
+                <div class="comparison-side after">
+                    <div class="badge-new">✨ Modern Design</div>
+                    <h3 style="margin-bottom: 1rem;">Redesigned</h3>
+                    <ul style="text-align: left; color: var(--color-gray-800); list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.75rem;">✅ Premium positioning</li>
+                        <li style="margin-bottom: 0.75rem;">✅ Clear visual hierarchy</li>
+                        <li style="margin-bottom: 0.75rem;">✅ Focused messaging</li>
+                        <li style="margin-bottom: 0.75rem;">✅ Strong brand identity</li>
+                        <li style="margin-bottom: 0.75rem;">✅ Sophisticated aesthetic</li>
+                    </ul>
+                    <a href="file:///Users/donnysmith/Desktop/Tiger CMS/tiger-aesthetics-modern-demo.html" class="btn btn-primary btn-small" style="margin-top: 1.5rem;" target="_blank">View Modern Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- MyAveli Comparison -->
+        <div class="comparison-card">
+            <div class="comparison-header">
+                <h2 style="margin-bottom: 0.5rem;">Avéli - Cellulite Treatment</h2>
+                <p style="color: var(--color-gray-700);">FDA-cleared minimally invasive treatment</p>
+            </div>
+            <div class="comparison-body">
+                <div class="comparison-side before">
+                    <div class="badge-old">Current Design</div>
+                    <h3 style="margin-bottom: 1rem;">Original</h3>
+                    <ul style="text-align: left; color: var(--color-gray-700); list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.75rem;">❌ Consumer site, dated look</li>
+                        <li style="margin-bottom: 0.75rem;">❌ Cluttered presentation</li>
+                        <li style="margin-bottom: 0.75rem;">❌ Weak calls-to-action</li>
+                        <li style="margin-bottom: 0.75rem;">❌ Limited engagement</li>
+                        <li style="margin-bottom: 0.75rem;">❌ Needs refresh</li>
+                    </ul>
+                    <a href="file:///Users/donnysmith/Desktop/Tiger CMS/myaveli.com/index.html" class="btn btn-secondary btn-small" style="margin-top: 1.5rem;" target="_blank">View Original</a>
+                </div>
+                <div class="comparison-side after">
+                    <div class="badge-new">✨ Modern Design</div>
+                    <h3 style="margin-bottom: 1rem;">Redesigned</h3>
+                    <ul style="text-align: left; color: var(--color-gray-800); list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.75rem;">✅ Modern consumer appeal</li>
+                        <li style="margin-bottom: 0.75rem;">✅ Clean, focused layout</li>
+                        <li style="margin-bottom: 0.75rem;">✅ Strong, clear CTAs</li>
+                        <li style="margin-bottom: 0.75rem;">✅ High engagement design</li>
+                        <li style="margin-bottom: 0.75rem;">✅ Contemporary aesthetic</li>
+                    </ul>
+                    <a href="file:///Users/donnysmith/Desktop/Tiger CMS/myaveli-modern-demo.html" class="btn btn-primary btn-small" style="margin-top: 1.5rem;" target="_blank">View Modern Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Improvements -->
+        <div class="comparison-card">
+            <div class="comparison-header">
+                <h2>Key Improvements Across All Sites</h2>
+            </div>
+            <div style="padding: 2rem;">
+                <div class="grid-3">
+                    <div>
+                        <h3 style="margin-bottom: 1rem; color: var(--color-success);">Typography</h3>
+                        <p style="color: var(--color-gray-700); margin-bottom: 0.5rem;"><strong>Before:</strong> 14-16px body, 24-32px headlines</p>
+                        <p style="color: var(--color-gray-700);"><strong>After:</strong> 18-20px body, 48-72px headlines</p>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 1rem; color: var(--color-success);">Spacing</h3>
+                        <p style="color: var(--color-gray-700); margin-bottom: 0.5rem;"><strong>Before:</strong> Tight, inconsistent</p>
+                        <p style="color: var(--color-gray-700);"><strong>After:</strong> 8px base system, generous</p>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 1rem; color: var(--color-success);">Components</h3>
+                        <p style="color: var(--color-gray-700); margin-bottom: 0.5rem;"><strong>Before:</strong> Basic, flat</p>
+                        <p style="color: var(--color-gray-700);"><strong>After:</strong> Modern, interactive</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Next Sites -->
+        <div class="comparison-card">
+            <div class="comparison-header">
+                <h2>Coming Next - Sites in Queue</h2>
+            </div>
+            <div style="padding: 2rem;">
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 style="margin-bottom: 1rem;">Quick Wins</h3>
+                        <ul style="color: var(--color-gray-700); list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;">🎯 <strong>Bellafill</strong> - Already clean, minor updates</li>
+                            <li style="margin-bottom: 0.75rem;">🎯 <strong>Lizard Health</strong> - Lean codebase</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 style="margin-bottom: 1rem;">High Priority</h3>
+                        <ul style="color: var(--color-gray-700); list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem;">🔥 <strong>Airway Medix</strong> - Flagship medical device</li>
+                            <li style="margin-bottom: 0.75rem;">🔥 <strong>Tiger Biosciences</strong> - Corporate parent</li>
+                            <li style="margin-bottom: 0.75rem;">🔥 <strong>Extremity Care</strong> - Professional focus</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="margin-top: 2rem; text-align: center;">
+                    <a href="#" class="btn btn-primary">Create Next Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resources -->
+        <div class="comparison-card">
+            <div class="comparison-header">
+                <h2>📚 Resources Available</h2>
+            </div>
+            <div style="padding: 2rem;">
+                <div class="grid-3">
+                    <div>
+                        <h4 style="margin-bottom: 1rem;">Design System</h4>
+                        <ul style="color: var(--color-gray-700); list-style: none; padding: 0; font-size: var(--text-sm);">
+                            <li style="margin-bottom: 0.5rem;">✅ modern-tiger.css</li>
+                            <li style="margin-bottom: 0.5rem;">✅ Design guide</li>
+                            <li style="margin-bottom: 0.5rem;">✅ Color palettes</li>
+                            <li style="margin-bottom: 0.5rem;">✅ Typography system</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 1rem;">Demos Created</h4>
+                        <ul style="color: var(--color-gray-700); list-style: none; padding: 0; font-size: var(--text-sm);">
+                            <li style="margin-bottom: 0.5rem;">✅ Sientra</li>
+                            <li style="margin-bottom: 0.5rem;">✅ Tiger Aesthetics</li>
+                            <li style="margin-bottom: 0.5rem;">✅ MyAveli</li>
+                            <li style="margin-bottom: 0.5rem;">⏳ 8 more to go</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 1rem;">Documentation</h4>
+                        <ul style="color: var(--color-gray-700); list-style: none; padding: 0; font-size: var(--text-sm);">
+                            <li style="margin-bottom: 0.5rem;">✅ Modernization guide</li>
+                            <li style="margin-bottom: 0.5rem;">✅ Site analysis</li>
+                            <li style="margin-bottom: 0.5rem;">✅ QA automation</li>
+                            <li style="margin-bottom: 0.5rem;">✅ Progress tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
+

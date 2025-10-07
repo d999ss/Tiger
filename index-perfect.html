@@ -6,16 +6,10 @@
     <title>Tiger BioSciences™ - Elevate healthcare with a human touch</title>
     
     <style>
-        /* Fonts: Neuropa for headlines, Inter Tight for body */
-        @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap');
+        /* Import modern sans-serif */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
         
-        @font-face {
-            font-family: 'Neuropa';
-            src: url('Neuropa-Medium.otf') format('opentype');
-            font-weight: 500;
-            font-display: swap;
-        }
-        
+        /* LT Superior Mono - Used SPARINGLY for special elements */
         @font-face {
             font-family: 'LT Superior Mono';
             src: url('LTSuperiorMono.otf') format('opentype');
@@ -23,7 +17,11 @@
             font-display: swap;
         }
         
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
         html {
             font-size: 16px;
@@ -32,25 +30,11 @@
         }
         
         body {
-            font-family: 'Inter Tight', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             font-weight: 400;
             color: #1a1a1a;
             background: #ffffff;
             line-height: 1.6;
-        }
-        
-        /* Headlines use Neuropa */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Neuropa', sans-serif;
-            font-weight: 500;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-        }
-        
-        /* Monospace only for special elements */
-        .mono {
-            font-family: 'LT Superior Mono', 'Courier New', monospace;
-            font-weight: 500;
         }
         
         :root {
@@ -61,10 +45,17 @@
             --neutral-100: #f5f5f5;
             --neutral-200: #e5e5e5;
             --neutral-300: #d4d4d4;
+            --neutral-400: #a3a3a3;
             --neutral-600: #525252;
             --neutral-700: #404040;
             --neutral-800: #262626;
             --neutral-900: #171717;
+        }
+        
+        /* Monospace class - Use ONLY for special elements */
+        .mono {
+            font-family: 'LT Superior Mono', 'Courier New', monospace;
+            font-weight: 500;
         }
         
         /* Announcement Bar */
@@ -81,10 +72,9 @@
             color: #fff;
             text-decoration: underline;
             margin-left: 0.75rem;
-            text-underline-offset: 0.25rem;
         }
         
-        /* Navigation */
+        /* Navigation with Mega Menu */
         .navbar {
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
@@ -92,21 +82,27 @@
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid var(--neutral-200);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            transition: box-shadow 0.3s;
+        }
+        
+        .navbar.scrolled {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
         
         .nav-container {
             max-width: 90rem;
             margin: 0 auto;
-            padding: 1.75rem 3rem;
+            padding: 0 3rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 5rem;
         }
         
         .logo {
-            font-family: 'Neuropa', sans-serif;
             font-size: 1.125rem;
-            font-weight: 500;
+            font-weight: 600;
             color: var(--red-primary);
             text-decoration: none;
             letter-spacing: -0.01em;
@@ -114,7 +110,7 @@
         
         .nav-menu {
             display: flex;
-            gap: 2.5rem;
+            gap: 0.5rem;
             list-style: none;
             align-items: center;
             height: 100%;
@@ -129,21 +125,39 @@
             display: flex;
             align-items: center;
             gap: 0.375rem;
-            padding: 0.5rem 0;
+            height: 100%;
+            padding: 0 1.25rem;
             font-size: 0.9375rem;
             font-weight: 500;
             color: var(--neutral-800);
             text-decoration: none;
-            transition: color 0.2s;
+            transition: all 0.2s;
+            position: relative;
         }
         
-        .nav-link:hover {
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--red-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+        
+        .nav-item:hover .nav-link {
             color: var(--red-primary);
         }
         
+        .nav-item:hover .nav-link::after {
+            transform: scaleX(1);
+        }
+        
         .nav-link svg {
-            width: 0.75rem;
-            height: 0.75rem;
+            width: 0.875rem;
+            height: 0.875rem;
             transition: transform 0.3s;
         }
         
@@ -151,7 +165,7 @@
             transform: rotate(180deg);
         }
         
-        /* Mega Menu */
+        /* Mega Menu - Clean Design */
         .mega-menu {
             position: absolute;
             top: 100%;
@@ -160,13 +174,13 @@
             background: #fff;
             border: 1px solid var(--neutral-200);
             border-radius: 1rem;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
             padding: 3rem;
-            min-width: 58rem;
+            min-width: 62rem;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            margin-top: 0.5rem;
+            z-index: 100;
         }
         
         .nav-item:hover .mega-menu {
@@ -188,9 +202,8 @@
         }
         
         .mega-menu-section h4 {
-            font-family: 'LT Superior Mono', monospace;
             font-size: 0.6875rem;
-            font-weight: 500;
+            font-weight: 600;
             color: var(--red-primary);
             text-transform: uppercase;
             letter-spacing: 0.15em;
@@ -203,10 +216,13 @@
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 0.25rem;
+            gap: 0.375rem;
         }
         
         .mega-menu-links a {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
             padding: 0.75rem 1rem;
             font-size: 0.875rem;
             font-weight: 500;
@@ -214,16 +230,29 @@
             text-decoration: none;
             border-radius: 0.5rem;
             transition: all 0.2s;
-            display: block;
+        }
+        
+        .mega-menu-links a::before {
+            content: '→';
+            font-size: 0.875rem;
+            color: var(--red-primary);
+            opacity: 0;
+            transform: translateX(-5px);
+            transition: all 0.2s;
         }
         
         .mega-menu-links a:hover {
             background: var(--neutral-50);
             color: var(--red-primary);
-            padding-left: 1.5rem;
+            padding-left: 1.25rem;
         }
         
-        /* Featured Card in Mega Menu */
+        .mega-menu-links a:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Featured Section in Mega Menu */
         .mega-menu-featured {
             background: linear-gradient(135deg, var(--red-dark), var(--red-primary));
             border-radius: 0.75rem;
@@ -236,14 +265,13 @@
         }
         
         .featured-badge {
-            font-family: 'LT Superior Mono', monospace;
             display: inline-block;
             padding: 0.5rem 1rem;
             background: rgba(255,255,255,0.2);
             border: 1px solid rgba(255,255,255,0.3);
             border-radius: 624.9375rem;
             font-size: 0.625rem;
-            font-weight: 500;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             backdrop-filter: blur(10px);
@@ -259,12 +287,10 @@
         }
         
         .mega-menu-featured p {
-            font-family: 'Inter Tight', sans-serif;
             font-size: 0.875rem;
             line-height: 1.6;
             opacity: 0.95;
             margin-bottom: 2rem;
-            font-weight: 400;
         }
         
         .featured-link {
@@ -292,6 +318,39 @@
             height: 1rem;
         }
         
+        /* Nav Actions */
+        .nav-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .search-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            padding: 0.625rem 1.25rem;
+            background: var(--neutral-50);
+            border: 1px solid var(--neutral-200);
+            border-radius: 624.9375rem;
+            color: var(--neutral-600);
+            font-size: 0.875rem;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .search-btn:hover {
+            background: var(--neutral-100);
+            border-color: var(--neutral-300);
+        }
+        
+        .search-btn svg {
+            width: 1rem;
+            height: 1rem;
+        }
+        
         .btn-nav {
             padding: 0.625rem 1.5rem;
             background: var(--red-primary);
@@ -308,13 +367,13 @@
             transform: translateY(-1px);
         }
         
-        /* Hero Section */
+        /* Hero - Light & Airy */
         .hero {
             position: relative;
-            min-height: 92vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #fef2f2 0%, #ffffff 50%, #fafafa 100%);
+            background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%);
             overflow: hidden;
         }
         
@@ -323,10 +382,10 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 55%;
+            width: 50%;
             height: 100%;
             background: url('https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=2400') center/cover;
-            opacity: 0.1;
+            opacity: 0.12;
             z-index: 1;
         }
         
@@ -339,8 +398,8 @@
             width: 100%;
         }
         
+        /* Badge - Uses MONO font */
         .hero-badge {
-            font-family: 'LT Superior Mono', monospace;
             display: inline-block;
             padding: 0.5rem 1.25rem;
             background: var(--red-light);
@@ -354,20 +413,18 @@
         }
         
         .hero-title {
-            font-family: 'Neuropa', sans-serif;
-            font-size: 6.5rem;
-            font-weight: 500;
-            line-height: 1.05;
+            font-size: 6rem;
+            font-weight: 600;
+            line-height: 1.1;
             color: var(--neutral-900);
             letter-spacing: -0.03em;
             margin-bottom: 1.5rem;
-            max-width: 52rem;
+            max-width: 50rem;
         }
         
         .hero-subtitle {
-            font-family: 'Inter Tight', sans-serif;
             font-size: 1.375rem;
-            line-height: 1.65;
+            line-height: 1.6;
             color: var(--neutral-700);
             margin-bottom: 3rem;
             max-width: 42rem;
@@ -383,13 +440,13 @@
             display: inline-flex;
             align-items: center;
             gap: 0.625rem;
-            padding: 1.125rem 2.75rem;
+            padding: 1rem 2.5rem;
             font-size: 0.9375rem;
             font-weight: 500;
             border-radius: 624.9375rem;
             text-decoration: none;
             font-family: inherit;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s;
             border: none;
             cursor: pointer;
         }
@@ -402,7 +459,7 @@
         .btn-primary:hover {
             background: var(--red-dark);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(153, 21, 20, 0.3);
+            box-shadow: 0 8px 24px rgba(153, 21, 20, 0.25);
         }
         
         .btn-outline {
@@ -412,52 +469,11 @@
         }
         
         .btn-outline:hover {
-            border-color: var(--neutral-900);
+            border-color: var(--neutral-800);
             transform: translateY(-2px);
         }
         
-        /* Endorsed Section */
-        .endorsed {
-            padding: 5rem 3rem;
-            background: #fff;
-        }
-        
-        .endorsed-container {
-            max-width: 90rem;
-            margin: 0 auto;
-        }
-        
-        .endorsed-label {
-            font-family: 'LT Superior Mono', monospace;
-            font-size: 0.6875rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--neutral-600);
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .endorsed-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-            text-align: center;
-        }
-        
-        .endorsed-item h4 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--neutral-900);
-            margin-bottom: 0.5rem;
-        }
-        
-        .endorsed-item p {
-            font-size: 0.9375rem;
-            color: var(--neutral-600);
-        }
-        
-        /* Section */
+        /* Section Spacing */
         .section {
             padding: 8rem 3rem;
         }
@@ -473,12 +489,12 @@
         
         .section-header {
             text-align: center;
-            max-width: 58rem;
+            max-width: 56rem;
             margin: 0 auto 5rem;
         }
         
+        /* Label - Uses MONO font */
         .section-label {
-            font-family: 'LT Superior Mono', monospace;
             display: inline-block;
             padding: 0.5rem 1.25rem;
             background: var(--red-light);
@@ -492,11 +508,11 @@
         }
         
         .section-title {
-            font-size: 3.75rem;
+            font-size: 3.5rem;
             font-weight: 600;
-            line-height: 1.15;
+            line-height: 1.2;
             color: var(--neutral-900);
-            letter-spacing: -0.025em;
+            letter-spacing: -0.02em;
             margin-bottom: 1.5rem;
         }
         
@@ -520,19 +536,17 @@
             background: #fff;
             border-radius: 1rem;
             border: 1px solid var(--neutral-200);
-            transition: all 0.3s ease;
+            transition: all 0.3s;
         }
         
         .feature-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-            border-color: var(--red-primary);
         }
         
         .feature-icon {
             font-size: 3rem;
             margin-bottom: 1.5rem;
-            line-height: 1;
         }
         
         .feature-title {
@@ -540,7 +554,6 @@
             font-weight: 600;
             color: var(--neutral-900);
             margin-bottom: 1rem;
-            letter-spacing: -0.01em;
         }
         
         .feature-description {
@@ -550,67 +563,7 @@
             font-weight: 400;
         }
         
-        /* Image Content Section */
-        .image-content-section {
-            padding: 8rem 3rem;
-        }
-        
-        .image-content-grid {
-            max-width: 90rem;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-        
-        .image-content-image {
-            width: 100%;
-            height: 35rem;
-            background: linear-gradient(135deg, var(--red-dark), var(--red-primary));
-            border-radius: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-        }
-        
-        .image-content-text h2 {
-            font-size: 3rem;
-            font-weight: 600;
-            color: var(--neutral-900);
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-        }
-        
-        .image-content-text p {
-            font-size: 1.125rem;
-            line-height: 1.8;
-            color: var(--neutral-700);
-            margin-bottom: 2rem;
-        }
-        
-        .learn-more {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--red-primary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            transition: gap 0.2s;
-        }
-        
-        .learn-more:hover {
-            gap: 0.875rem;
-        }
-        
-        .learn-more svg {
-            width: 1.25rem;
-            height: 1.25rem;
-        }
-        
-        /* Stats Section */
+        /* Stats - Uses MONO font for numbers */
         .stats {
             background: var(--neutral-900);
             color: #fff;
@@ -627,7 +580,6 @@
         }
         
         .stat-number {
-            font-family: 'LT Superior Mono', monospace;
             font-size: 4rem;
             font-weight: 500;
             color: var(--red-primary);
@@ -641,118 +593,6 @@
             opacity: 0.85;
         }
         
-        /* Testimonials */
-        .testimonials {
-            padding: 8rem 3rem;
-            background: var(--neutral-50);
-        }
-        
-        .testimonials-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .testimonials-header h2 {
-            font-size: 3rem;
-            font-weight: 600;
-            color: var(--neutral-900);
-            margin-bottom: 1rem;
-        }
-        
-        .testimonials-grid {
-            max-width: 90rem;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2.5rem;
-        }
-        
-        .testimonial-card {
-            background: #fff;
-            border: 1px solid var(--neutral-200);
-            border-radius: 1rem;
-            padding: 2.5rem;
-        }
-        
-        .testimonial-quote {
-            font-size: 1.125rem;
-            line-height: 1.7;
-            color: var(--neutral-800);
-            margin-bottom: 2rem;
-            font-style: italic;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .author-avatar {
-            width: 3rem;
-            height: 3rem;
-            background: linear-gradient(135deg, var(--red-primary), var(--red-dark));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 1.25rem;
-        }
-        
-        .author-info h5 {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--neutral-900);
-            margin-bottom: 0.25rem;
-        }
-        
-        .author-info p {
-            font-size: 0.875rem;
-            color: var(--neutral-600);
-        }
-        
-        /* FAQ Section */
-        .faq {
-            padding: 8rem 3rem;
-        }
-        
-        .faq-container {
-            max-width: 56rem;
-            margin: 0 auto;
-        }
-        
-        .faq-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .faq-header h2 {
-            font-size: 3rem;
-            font-weight: 600;
-            color: var(--neutral-900);
-            margin-bottom: 1rem;
-        }
-        
-        .faq-item {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--neutral-200);
-        }
-        
-        .faq-item h4 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--neutral-900);
-            margin-bottom: 1rem;
-        }
-        
-        .faq-item p {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: var(--neutral-700);
-        }
-        
         /* CTA Section */
         .cta {
             background: linear-gradient(135deg, var(--red-dark), var(--red-primary));
@@ -762,83 +602,19 @@
         }
         
         .cta-title {
-            font-size: 3.75rem;
+            font-size: 3.5rem;
             font-weight: 600;
             line-height: 1.2;
             margin-bottom: 2rem;
-            letter-spacing: -0.02em;
         }
         
         .cta-description {
             font-size: 1.25rem;
             line-height: 1.7;
-            opacity: 0.95;
+            opacity: 0.9;
             max-width: 42rem;
             margin: 0 auto 3rem;
             font-weight: 400;
-        }
-        
-        /* Newsletter */
-        .newsletter {
-            background: var(--neutral-50);
-            padding: 6rem 3rem;
-            text-align: center;
-        }
-        
-        .newsletter-container {
-            max-width: 42rem;
-            margin: 0 auto;
-        }
-        
-        .newsletter-title {
-            font-size: 2rem;
-            font-weight: 600;
-            color: var(--neutral-900);
-            margin-bottom: 1rem;
-        }
-        
-        .newsletter-description {
-            font-size: 1.125rem;
-            color: var(--neutral-700);
-            margin-bottom: 2.5rem;
-            font-weight: 400;
-        }
-        
-        .newsletter-form {
-            display: flex;
-            gap: 0.75rem;
-        }
-        
-        .newsletter-input {
-            flex: 1;
-            padding: 0.875rem 1.5rem;
-            border: 1.5px solid var(--neutral-300);
-            border-radius: 624.9375rem;
-            font-size: 0.9375rem;
-            font-family: inherit;
-            transition: border-color 0.2s;
-        }
-        
-        .newsletter-input:focus {
-            outline: none;
-            border-color: var(--red-primary);
-        }
-        
-        .newsletter-submit {
-            padding: 0.875rem 2rem;
-            background: var(--red-primary);
-            color: #fff;
-            border: none;
-            border-radius: 624.9375rem;
-            font-size: 0.9375rem;
-            font-weight: 500;
-            font-family: inherit;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .newsletter-submit:hover {
-            background: var(--red-dark);
         }
         
         /* Footer */
@@ -858,9 +634,8 @@
         }
         
         .footer-brand h3 {
-            font-family: 'Neuropa', sans-serif;
             font-size: 1.25rem;
-            font-weight: 500;
+            font-weight: 600;
             margin-bottom: 1rem;
             color: var(--red-primary);
         }
@@ -873,8 +648,7 @@
         }
         
         .footer-section h4 {
-            font-family: 'LT Superior Mono', monospace;
-            font-size: 0.75rem;
+            font-size: 0.875rem;
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.1em;
@@ -930,14 +704,31 @@
             opacity: 1;
         }
         
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 0.375rem;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+        
+        .mobile-menu-btn span {
+            width: 1.5rem;
+            height: 2px;
+            background: var(--neutral-700);
+            transition: all 0.3s;
+        }
+        
         /* Responsive */
         @media (max-width: 1024px) {
-            .hero-title { font-size: 4.5rem; }
-            .section-title { font-size: 2.75rem; }
+            .nav-menu { display: none; }
+            .mobile-menu-btn { display: flex; }
+            .hero-title { font-size: 4rem; }
+            .section-title { font-size: 2.5rem; }
             .features-grid { grid-template-columns: 1fr; }
-            .endorsed-grid { grid-template-columns: 1fr; }
-            .testimonials-grid { grid-template-columns: 1fr; }
-            .image-content-grid { grid-template-columns: 1fr; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-content { grid-template-columns: 1fr; }
             .mega-menu { min-width: 90vw; }
@@ -946,11 +737,9 @@
         }
         
         @media (max-width: 768px) {
-            .nav-menu { display: none; }
             .hero-title { font-size: 3rem; }
             .section { padding: 4rem 1.5rem; }
             .hero-buttons { flex-direction: column; }
-            .newsletter-form { flex-direction: column; }
         }
     </style>
 </head>
@@ -965,7 +754,7 @@
 <!-- Navigation with Mega Menu -->
 <nav class="navbar" id="mainNav">
     <div class="nav-container">
-        <a href="index.html" class="logo">TIGER BIOSCIENCES™</a>
+        <a href="index-perfect.html" class="logo">TIGER BIOSCIENCES™</a>
         
         <ul class="nav-menu">
             <!-- Our Science Mega Menu -->
@@ -980,7 +769,7 @@
                     <div class="mega-menu-content">
                         <div class="mega-menu-left">
                             <div class="mega-menu-section">
-                                <h4>Research Areas</h4>
+                                <h4 class="mono">Research Areas</h4>
                                 <ul class="mega-menu-links">
                                     <li><a href="wound-care.html">Wound Care</a></li>
                                     <li><a href="tissue-reconstruction.html">Tissue Reconstruction</a></li>
@@ -991,7 +780,7 @@
                             </div>
                             
                             <div class="mega-menu-section">
-                                <h4>Innovation</h4>
+                                <h4 class="mono">Innovation</h4>
                                 <ul class="mega-menu-links">
                                     <li><a href="research-pipeline.html">Research Pipeline</a></li>
                                     <li><a href="clinical-trials.html">Clinical Trials</a></li>
@@ -1002,7 +791,7 @@
                             </div>
                             
                             <div class="mega-menu-section">
-                                <h4>Quality</h4>
+                                <h4 class="mono">Quality</h4>
                                 <ul class="mega-menu-links">
                                     <li><a href="tiger-way.html">The Tiger Way</a></li>
                                     <li><a href="vertical-integration.html">Vertical Integration</a></li>
@@ -1012,7 +801,7 @@
                             </div>
                             
                             <div class="mega-menu-section">
-                                <h4>Collaborations</h4>
+                                <h4 class="mono">Collaborations</h4>
                                 <ul class="mega-menu-links">
                                     <li><a href="partnerships.html">Academic Partnerships</a></li>
                                     <li><a href="grants.html">Research Grants</a></li>
@@ -1023,12 +812,12 @@
                         
                         <div class="mega-menu-featured">
                             <div>
-                                <span class="featured-badge">Latest Breakthrough</span>
-                                <h5>Phase III Results</h5>
-                                <p>caregraFT™ Plus demonstrated 87% complete wound closure at 12 weeks in chronic venous leg ulcers.</p>
+                                <span class="featured-badge mono">Latest Breakthrough</span>
+                                <h5>Phase III Results Exceed Expectations</h5>
+                                <p>Our caregraFT™ Plus technology demonstrated 87% complete wound closure at 12 weeks in chronic venous leg ulcers.</p>
                             </div>
                             <a href="research-pipeline.html" class="featured-link">
-                                View Results
+                                View Full Results
                                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                                 </svg>
@@ -1050,7 +839,7 @@
                     <div class="mega-menu-content">
                         <div class="mega-menu-left">
                             <div class="mega-menu-section">
-                                <h4>CAMPs Products</h4>
+                                <h4 class="mono">CAMPs Products</h4>
                                 <ul class="mega-menu-links">
                                     <li><a href="alloply.html">alloPLY™ - Dual Layer</a></li>
                                     <li><a href="caregraft.html">caregraFT™ - Full Thickness</a></li>
@@ -1060,7 +849,7 @@
                             </div>
                             
                             <div class="mega-menu-section">
-                                <h4>Aesthetic</h4>
+                                <h4 class="mono">Aesthetic Products</h4>
                                 <ul class="mega-menu-links">
                                     <li><a href="aveli.html">Avéli™ - Cellulite</a></li>
                                     <li><a href="bellafill.html">Bellafill® - Filler</a></li>
@@ -1069,7 +858,7 @@
                             </div>
                             
                             <div class="mega-menu-section">
-                                <h4>By Specialty</h4>
+                                <h4 class="mono">By Specialty</h4>
                                 <ul class="mega-menu-links">
                                     <li><a href="podiatry.html">Podiatry</a></li>
                                     <li><a href="plastic-surgery.html">Plastic Surgery</a></li>
@@ -1079,10 +868,10 @@
                             </div>
                             
                             <div class="mega-menu-section">
-                                <h4>Resources</h4>
+                                <h4 class="mono">Resources</h4>
                                 <ul class="mega-menu-links">
                                     <li><a href="catalog.html">Product Catalog</a></li>
-                                    <li><a href="ordering.html">Ordering</a></li>
+                                    <li><a href="ordering.html">Ordering Info</a></li>
                                     <li><a href="training.html">Training</a></li>
                                     <li><a href="reimbursement.html">Reimbursement</a></li>
                                 </ul>
@@ -1091,9 +880,9 @@
                         
                         <div class="mega-menu-featured">
                             <div>
-                                <span class="featured-badge">Product Highlight</span>
-                                <h5>caregraFT™ Plus</h5>
-                                <p>FDA-cleared CAMPs with 7-year shelf stability and enhanced biomechanical properties.</p>
+                                <span class="featured-badge mono">Product Highlight</span>
+                                <h5>caregraFT™ Plus Now Available</h5>
+                                <p>FDA-cleared next-generation CAMPs with 7-year shelf stability and enhanced biomechanical properties.</p>
                             </div>
                             <a href="caregraft.html" class="featured-link">
                                 Learn More
@@ -1106,24 +895,40 @@
                 </div>
             </li>
             
-            <!-- Simple Links -->
+            <!-- About -->
             <li class="nav-item">
                 <a href="about.html" class="nav-link">About</a>
             </li>
             
+            <!-- Contact -->
             <li class="nav-item">
                 <a href="contact.html" class="nav-link">Contact</a>
             </li>
         </ul>
         
-        <a href="contact.html" class="btn-nav">Get In Touch</a>
+        <div class="nav-actions">
+            <button class="search-btn">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <span>Search</span>
+            </button>
+            
+            <a href="contact.html" class="btn-nav">Get In Touch</a>
+            
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </div>
 </nav>
 
 <!-- Hero Section -->
 <section class="hero">
     <div class="hero-content">
-        <div class="hero-badge">TIGER BIOSCIENCES™</div>
+        <div class="hero-badge mono">TIGER BIOSCIENCES™</div>
         <h1 class="hero-title">Elevate healthcare with a human touch</h1>
         <p class="hero-subtitle">
             A fully integrated approach to regenerative medicine, built to deliver life-changing cellular, acellular, and matrix-like products for better patient outcomes.
@@ -1135,32 +940,11 @@
     </div>
 </section>
 
-<!-- Endorsed By Section -->
-<section class="endorsed">
-    <div class="endorsed-container">
-        <div class="endorsed-label mono">Endorsed by Visionary Innovators</div>
-        <div class="endorsed-grid">
-            <div class="endorsed-item">
-                <h4>AATB-Accredited</h4>
-                <p>Meeting highest tissue banking standards</p>
-            </div>
-            <div class="endorsed-item">
-                <h4>FDA-Cleared</h4>
-                <p>Rigorously tested and approved</p>
-            </div>
-            <div class="endorsed-item">
-                <h4>Vertically Integrated</h4>
-                <p>Complete quality control</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Why Tiger Section -->
-<section class="section section-light">
+<!-- Features Section -->
+<section class="section">
     <div class="section-container">
         <div class="section-header">
-            <span class="section-label">Why Tiger BioSciences</span>
+            <span class="section-label mono">Why Tiger BioSciences</span>
             <h2 class="section-title">Make healthcare great again</h2>
             <p class="section-description">
                 Transform patient care with innovative tissue technologies backed by science, driven by compassion.
@@ -1170,96 +954,26 @@
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">🔬</div>
-                <h3 class="feature-title">Transform your identity</h3>
+                <h3 class="feature-title">Science-Driven</h3>
                 <p class="feature-description">
-                    Create superior patient outcomes with intuitive product solutions and clinical support.
+                    Built on rigorous research and clinical evidence, ensuring measurable results.
                 </p>
             </div>
             
             <div class="feature-card">
-                <div class="feature-icon">⚡</div>
-                <h3 class="feature-title">State-of-the-Art Platform</h3>
+                <div class="feature-icon">🏥</div>
+                <h3 class="feature-title">Vertically Integrated</h3>
                 <p class="feature-description">
-                    Built on advanced CAMPs technology, ensuring fast healing and optimal performance.
+                    Control every step from tissue recovery to distribution for unmatched quality.
                 </p>
             </div>
             
             <div class="feature-card">
-                <div class="feature-icon">✓</div>
-                <h3 class="feature-title">Proven Excellence</h3>
+                <div class="feature-icon">🌍</div>
+                <h3 class="feature-title">Global Reach</h3>
                 <p class="feature-description">
-                    Backed by clinical evidence and peer-reviewed research for professional confidence.
+                    16 specialized divisions across three continents serving clinicians worldwide.
                 </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Image Content Section -->
-<section class="image-content-section">
-    <div class="image-content-grid">
-        <div class="image-content-image">🏥</div>
-        <div class="image-content-text">
-            <h2>Elevate Your Brand with a Tiger Touch</h2>
-            <p>
-                Create transformative patient experiences with our vertically integrated approach—from donor screening and tissue recovery to processing, R&D, and distribution.
-            </p>
-            <p>
-                Our AATB-accredited facilities in Pennsylvania and Texas ensure the highest standards of quality and safety at every step.
-            </p>
-            <a href="tiger-way.html" class="learn-more">
-                Learn More
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- Main Features -->
-<section class="section section-light" id="solutions">
-    <div class="section-container">
-        <div class="section-header">
-            <span class="section-label">Main Features</span>
-            <h2 class="section-title">Adapts to every device with ease</h2>
-        </div>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">📱</div>
-                <h3 class="feature-title">Responsive</h3>
-                <p class="feature-description">Optimized for mobile, tablet, and desktop experiences.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">✨</div>
-                <h3 class="feature-title">Modern</h3>
-                <p class="feature-description">Contemporary design patterns and clean aesthetics.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">🎯</div>
-                <h3 class="feature-title">Engaging</h3>
-                <p class="feature-description">Interactive elements that captivate and inform.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">🎨</div>
-                <h3 class="feature-title">Minimalistic</h3>
-                <p class="feature-description">Clean and purposeful for maximum clarity.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">🔄</div>
-                <h3 class="feature-title">Versatile</h3>
-                <p class="feature-description">Customize each detail to fit your unique vision.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">⚙️</div>
-                <h3 class="feature-title">Intuitive</h3>
-                <p class="feature-description">Navigate and access information seamlessly.</p>
             </div>
         </div>
     </div>
@@ -1269,116 +983,31 @@
 <section class="stats">
     <div class="stats-grid">
         <div>
-            <div class="stat-number">16</div>
+            <div class="stat-number mono">16</div>
             <div class="stat-label">Specialized Divisions</div>
         </div>
         <div>
-            <div class="stat-number">21+</div>
+            <div class="stat-number mono">21+</div>
             <div class="stat-label">Innovative Products</div>
         </div>
         <div>
-            <div class="stat-number">2</div>
+            <div class="stat-number mono">2</div>
             <div class="stat-label">AATB Facilities</div>
         </div>
         <div>
-            <div class="stat-number">5-Year</div>
-            <div class="stat-label">Shelf Stability</div>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials -->
-<section class="testimonials">
-    <div class="section-container">
-        <div class="testimonials-header">
-            <span class="section-label">Testimonials</span>
-            <h2>Happy Healthcare Professionals</h2>
-        </div>
-        
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <p class="testimonial-quote">
-                    "Tiger BioSciences' vertically integrated approach gives me complete confidence in product quality and consistency. The shelf stability is a game-changer for my practice."
-                </p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">Dr</div>
-                    <div class="author-info">
-                        <h5>Dr. Sarah Martinez</h5>
-                        <p>Wound Care Specialist — Houston, TX</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <p class="testimonial-quote">
-                    "The CAMPs technology from Tiger has transformed how I approach complex wounds. Clinical outcomes have been exceptional, and my patients are healing faster."
-                </p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">Dr</div>
-                    <div class="author-info">
-                        <h5>Dr. Michael Chen</h5>
-                        <p>Podiatric Surgeon — San Francisco, CA</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="faq">
-    <div class="faq-container">
-        <div class="faq-header">
-            <span class="section-label">FAQ</span>
-            <h2>You ask, we answer</h2>
-        </div>
-        
-        <div class="faq-item">
-            <h4>What are CAMPs?</h4>
-            <p>CAMPs (Cellular, Acellular, and Matrix-like Products) are advanced tissue technologies derived from placental tissue. They provide a natural scaffold for wound healing and tissue regeneration.</p>
-        </div>
-        
-        <div class="faq-item">
-            <h4>How long are products shelf-stable?</h4>
-            <p>Our CAMPs products are shelf-stable for 2-5 years at room temperature, eliminating the need for refrigeration and simplifying inventory management.</p>
-        </div>
-        
-        <div class="faq-item">
-            <h4>Are your facilities accredited?</h4>
-            <p>Yes. Both our Conshohocken, PA and San Antonio, TX processing facilities are AATB-accredited, meeting the highest standards for tissue banking and processing.</p>
-        </div>
-        
-        <div class="faq-item">
-            <h4>What makes Tiger BioSciences different?</h4>
-            <p>We're the first fully vertically integrated tissue company, controlling every aspect from donor screening to distribution. This ensures unparalleled quality, accountability, and clinical confidence.</p>
+            <div class="stat-number mono">3</div>
+            <div class="stat-label">Countries</div>
         </div>
     </div>
 </section>
 
 <!-- CTA Section -->
 <section class="cta">
-    <h2 class="cta-title">Ready to elevate patient care?</h2>
+    <h2 class="cta-title">Ready to transform patient care?</h2>
     <p class="cta-description">
-        Connect with our clinical team to discover how Tiger BioSciences can transform outcomes in your practice.
+        Connect with our clinical team to discover how Tiger BioSciences can elevate your practice and improve outcomes.
     </p>
     <a href="contact.html" class="btn btn-primary">Get Started</a>
-</section>
-
-<!-- Newsletter -->
-<section class="newsletter">
-    <div class="newsletter-container">
-        <h3 class="newsletter-title">Subscribe for our newsletter</h3>
-        <p class="newsletter-description">
-            Stay updated with the latest innovations in regenerative medicine.
-        </p>
-        <form class="newsletter-form">
-            <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
-            <button type="submit" class="newsletter-submit">Subscribe</button>
-        </form>
-        <p style="font-size: 0.8125rem; color: var(--neutral-600); margin-top: 1rem;">
-            Your information is never disclosed to third parties.
-        </p>
-    </div>
 </section>
 
 <!-- Footer -->
@@ -1392,9 +1021,9 @@
         </div>
         
         <div class="footer-section">
-            <h4>Main Pages</h4>
+            <h4 class="mono">Main Pages</h4>
             <ul class="footer-links">
-                <li><a href="index.html">Homepage</a></li>
+                <li><a href="index-perfect.html">Homepage</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="careers.html">Careers</a></li>
@@ -1402,7 +1031,7 @@
         </div>
         
         <div class="footer-section">
-            <h4>Company</h4>
+            <h4 class="mono">Company</h4>
             <ul class="footer-links">
                 <li><a href="tiger-way.html">The Tiger Way</a></li>
                 <li><a href="facilities.html">Facilities</a></li>
@@ -1412,7 +1041,7 @@
         </div>
         
         <div class="footer-section">
-            <h4>Contact & Other</h4>
+            <h4 class="mono">Contact</h4>
             <ul class="footer-links">
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="legal.html">Legal</a></li>
@@ -1432,7 +1061,7 @@
 </footer>
 
 <script>
-    // Navbar scroll effect
+    // Navbar scroll shadow
     window.addEventListener('scroll', () => {
         const nav = document.getElementById('mainNav');
         if (window.scrollY > 10) {
@@ -1442,19 +1071,14 @@
         }
     });
     
-    // Prevent mega menu close on click inside
+    // Prevent mega menu from closing on click inside
     document.querySelectorAll('.mega-menu').forEach(menu => {
         menu.addEventListener('click', (e) => {
             e.stopPropagation();
         });
     });
-    
-    // Newsletter form
-    document.querySelector('.newsletter-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Thank you for subscribing!');
-    });
 </script>
 
 </body>
 </html>
+

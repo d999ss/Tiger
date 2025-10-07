@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avéli™ - Revolutionary Cellulite Treatment | Modern Design</title>
+    <meta name="description" content="The first and only FDA-cleared treatment to target the primary structural cause of cellulite—in a single, minimally invasive procedure.">
+    <link rel="stylesheet" href="assets/css/modern-tiger.css">
+    <style>
+        :root {
+            --color-aveli-primary: #d946a6;
+            --color-aveli-dark: #a21d6b;
+            --color-aveli-light: #fdf2fa;
+            --color-aveli-accent: #ec4899;
+        }
+        
+        .hero-aveli {
+            background: linear-gradient(135deg, var(--color-aveli-light) 0%, #fef3f9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-aveli::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .accent-aveli {
+            color: var(--color-aveli-primary);
+        }
+        
+        .btn-aveli {
+            background: var(--color-aveli-primary);
+            color: white;
+        }
+        
+        .btn-aveli:hover {
+            background: var(--color-aveli-dark);
+            color: white;
+        }
+        
+        .gradient-aveli {
+            background: linear-gradient(135deg, var(--color-aveli-primary) 0%, var(--color-aveli-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--color-aveli-light);
+            border: 2px solid var(--color-aveli-primary);
+            border-radius: 100px;
+            color: var(--color-aveli-primary);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(217, 70, 166, 0.15);
+        }
+        
+        .before-after-item {
+            position: relative;
+            height: 300px;
+            background: linear-gradient(135deg, #fdf2fa 0%, #fef3f9 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .before-after-label {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            font-size: var(--text-sm);
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav style="background: white; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <div class="container" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+            <div class="flex-between">
+                <div style="font-size: 1.75rem; font-weight: 700; background: linear-gradient(135deg, var(--color-aveli-primary) 0%, var(--color-aveli-dark) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    Avéli™
+                </div>
+                <div style="display: flex; gap: 2rem; align-items: center;">
+                    <a href="#how-it-works" class="link-underline" style="color: var(--color-gray-900);">How It Works</a>
+                    <a href="#results" class="link-underline" style="color: var(--color-gray-900);">Results</a>
+                    <a href="#faq" class="link-underline" style="color: var(--color-gray-900);">FAQ</a>
+                    <a href="#professionals" class="link-underline" style="color: var(--color-gray-900);">For Professionals</a>
+                    <a href="#find-provider" class="btn btn-aveli btn-small">Find a Provider</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-aveli">
+        <div class="container">
+            <div class="hero-content fade-in visible" style="position: relative; z-index: 1;">
+                <div class="badge">FDA-CLEARED TREATMENT</div>
+                <h1 class="hero-title">
+                    Say Goodbye to<br>
+                    <span class="gradient-aveli">Cellulite Dimples</span>
+                </h1>
+                <p class="hero-description">
+                    Avéli™ is the first and only FDA-cleared procedure that targets the primary 
+                    structural cause of cellulite—septa bands—in a single minimally invasive treatment.
+                </p>
+                <div class="hero-actions">
+                    <a href="#find-provider" class="btn btn-aveli btn-large">Find a Provider Near You</a>
+                    <a href="#how-it-works" class="btn btn-secondary btn-large">Watch How It Works</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section style="background: white; padding: 4rem 0;">
+        <div class="container">
+            <div class="grid-3">
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+                    <h3 style="margin-bottom: 1rem; color: var(--color-aveli-primary);">Single Treatment</h3>
+                    <p style="color: var(--color-gray-700);">
+                        See visible results in just one procedure—no ongoing sessions required
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">⏱️</div>
+                    <h3 style="margin-bottom: 1rem; color: var(--color-aveli-primary);">Quick Procedure</h3>
+                    <p style="color: var(--color-gray-700);">
+                        Typically completed in-office in under an hour with minimal downtime
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">✨</div>
+                    <h3 style="margin-bottom: 1rem; color: var(--color-aveli-primary);">Real Results</h3>
+                    <p style="color: var(--color-gray-700);">
+                        FDA-cleared treatment with clinically proven efficacy and safety
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" style="background: var(--color-gray-100);" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label accent-aveli">THE SCIENCE</p>
+                <h2 class="section-title">How Avéli™ Works</h2>
+                <p class="section-description">
+                    Cellulite dimples are caused by fibrous bands (septa) that pull down on the skin. 
+                    Avéli precisely targets and releases these bands for smoother-looking skin.
+                </p>
+            </div>
+
+            <div class="grid-3" style="margin-top: 3rem;">
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1.5rem;">🎯</div>
+                    <h3>1. Identify</h3>
+                    <p>
+                        Your provider identifies the specific septa bands causing your cellulite dimples using advanced visualization.
+                    </p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1.5rem;">✂️</div>
+                    <h3>2. Release</h3>
+                    <p>
+                        The Avéli device precisely releases the identified bands through a minimally invasive procedure.
+                    </p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1.5rem;">💎</div>
+                    <h3>3. Results</h3>
+                    <p>
+                        You can see and feel results right away, with continued improvement as your skin heals and smooths.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Results -->
+    <section class="section" id="results">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label accent-aveli">REAL TRANSFORMATIONS</p>
+                <h2 class="section-title">See the Difference</h2>
+                <p class="section-description">
+                    Actual patient results show visible smoothing of cellulite dimples after a single Avéli treatment.
+                </p>
+            </div>
+
+            <div class="grid-2" style="margin-top: 3rem;">
+                <div class="before-after">
+                    <div class="before-after-item">
+                        <div class="before-after-label">Before</div>
+                        <div style="font-size: 4rem; opacity: 0.3;">📸</div>
+                    </div>
+                    <div class="before-after-item">
+                        <div class="before-after-label" style="background: var(--color-aveli-light); color: var(--color-aveli-primary);">After</div>
+                        <div style="font-size: 4rem; opacity: 0.3;">✨</div>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="margin-bottom: 1.5rem; font-size: var(--text-3xl);">Clinically Proven Results</h3>
+                    <ul class="feature-list">
+                        <li>94% of patients were satisfied with their results</li>
+                        <li>Visible improvement seen immediately</li>
+                        <li>Results continue to improve over 3-6 months</li>
+                        <li>Safe and effective FDA-cleared procedure</li>
+                    </ul>
+                    <p style="font-size: var(--text-sm); color: var(--color-gray-600); margin-top: 2rem;">
+                        *Individual results may vary. Photos shown are actual patients who provided consent for use.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect -->
+    <section class="section" style="background: var(--color-aveli-light);">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-text">
+                    <p class="section-label accent-aveli">TREATMENT EXPERIENCE</p>
+                    <h2>What to Expect</h2>
+                    <p>
+                        The Avéli procedure is performed in-office by a trained provider. Here's what 
+                        you can expect during your treatment journey:
+                    </p>
+                    <ul class="feature-list" style="margin: 2rem 0;">
+                        <li><strong>Consultation:</strong> Discuss your goals and create a personalized treatment plan</li>
+                        <li><strong>Procedure Day:</strong> In-office treatment typically takes 30-60 minutes</li>
+                        <li><strong>Anesthesia:</strong> Local numbing ensures comfort during the procedure</li>
+                        <li><strong>Recovery:</strong> Minimal downtime; most return to normal activities quickly</li>
+                        <li><strong>Results:</strong> Visible immediately with continued improvement</li>
+                    </ul>
+                    <a href="#find-provider" class="btn btn-aveli">Schedule a Consultation</a>
+                </div>
+                <div class="content-image">
+                    <div style="width: 100%; height: 450px; background: linear-gradient(135deg, #fef3f9 0%, #fdf2fa 100%); border-radius: 16px; box-shadow: 0 25px 50px rgba(217, 70, 166, 0.15); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 20%; left: 20%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, transparent 70%); border-radius: 50%;"></div>
+                        <div style="font-size: 8rem; opacity: 0.3;">💆‍♀️</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label accent-aveli">FREQUENTLY ASKED QUESTIONS</p>
+                <h2 class="section-title">Your Questions Answered</h2>
+            </div>
+
+            <div style="max-width: 800px; margin: 3rem auto 0;">
+                <div class="card" style="margin-bottom: 1.5rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--color-aveli-primary);">How is Avéli different from other cellulite treatments?</h3>
+                    <p>
+                        Avéli is the first and only FDA-cleared procedure that directly targets and releases 
+                        the fibrous bands (septa) that cause cellulite dimples. Unlike creams, massages, or other 
+                        treatments that work temporarily on the surface, Avéli addresses the root structural cause.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 1.5rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--color-aveli-primary);">How long does the procedure take?</h3>
+                    <p>
+                        The Avéli procedure typically takes 30-60 minutes, depending on the treatment area and 
+                        number of dimples being addressed. It's performed in-office under local anesthesia.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 1.5rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--color-aveli-primary);">What is the recovery like?</h3>
+                    <p>
+                        Most patients experience minimal downtime and can return to normal activities shortly after 
+                        the procedure. You may have some bruising, swelling, or tenderness that resolves within a few weeks.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 1.5rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--color-aveli-primary);">When will I see results?</h3>
+                    <p>
+                        You can see and feel improvement right away! Results continue to improve over the following 
+                        3-6 months as your skin heals and the area smooths out.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3 style="margin-bottom: 1rem; color: var(--color-aveli-primary);">Is Avéli right for me?</h3>
+                    <p>
+                        Avéli is FDA-cleared for the treatment of cellulite dimples in the buttocks and thighs of 
+                        adult women. A consultation with a trained provider can help determine if you're a good candidate.
+                    </p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#" class="link-underline accent-aveli" style="font-size: var(--text-lg); font-weight: 500;">View All FAQs →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Professionals -->
+    <section class="section" style="background: var(--color-gray-900); color: white;" id="professionals">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-text">
+                    <p class="section-label" style="color: var(--color-aveli-accent);">FOR HEALTHCARE PROFESSIONALS</p>
+                    <h2 style="color: white;">Add Avéli to Your Practice</h2>
+                    <p style="color: rgba(255,255,255,0.9);">
+                        Offer your patients the first FDA-cleared treatment for cellulite dimples with 
+                        proven results and high patient satisfaction.
+                    </p>
+                    <ul class="feature-list" style="margin: 2rem 0;">
+                        <li style="color: rgba(255,255,255,0.9);">Comprehensive training and certification program</li>
+                        <li style="color: rgba(255,255,255,0.9);">Marketing and patient education materials</li>
+                        <li style="color: rgba(255,255,255,0.9);">Ongoing clinical support and resources</li>
+                        <li style="color: rgba(255,255,255,0.9);">Proven business model for practice growth</li>
+                    </ul>
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-large" style="background: white; color: var(--color-gray-900);">Become a Provider</a>
+                        <a href="#" class="btn btn-secondary btn-large" style="color: white; border-color: white;">Request Information</a>
+                    </div>
+                </div>
+                <div class="content-image">
+                    <div style="width: 100%; height: 400px; background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(162, 29, 107, 0.2) 100%); border-radius: 16px; backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.2);">
+                        <div style="font-size: 6rem; opacity: 0.5;">👨‍⚕️</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--color-aveli-primary) 0%, var(--color-aveli-dark) 100%); color: white; text-align: center;">
+        <div class="container">
+            <div style="max-width: 700px; margin: 0 auto;">
+                <h2 style="color: white; margin-bottom: 1.5rem; font-size: var(--text-5xl);">
+                    Ready for Smoother Skin?
+                </h2>
+                <p style="font-size: var(--text-xl); color: rgba(255,255,255,0.95); margin-bottom: 2.5rem;">
+                    Find a certified Avéli provider near you and schedule your consultation today.
+                </p>
+                <a href="#find-provider" class="btn btn-large" style="background: white; color: var(--color-aveli-primary);">Find a Provider</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--color-gray-900); color: var(--color-gray-400); padding: 4rem 0 2rem;">
+        <div class="container">
+            <div class="grid-4" style="margin-bottom: 3rem;">
+                <div>
+                    <div style="font-size: 1.75rem; font-weight: 700; background: linear-gradient(135deg, var(--color-aveli-primary) 0%, var(--color-aveli-dark) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem;">
+                        Avéli™
+                    </div>
+                    <p style="font-size: var(--text-sm); color: var(--color-gray-500);">
+                        The first FDA-cleared cellulite treatment targeting the root cause.
+                    </p>
+                </div>
+                <div>
+                    <h4 style="color: white; font-size: var(--text-base); margin-bottom: 1rem;">For Patients</h4>
+                    <ul style="list-style: none; padding: 0; font-size: var(--text-sm);">
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: var(--color-gray-400);">Find a Provider</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: var(--color-gray-400);">Before & After</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: var(--color-gray-400);">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; font-size: var(--text-base); margin-bottom: 1rem;">For Professionals</h4>
+                    <ul style="list-style: none; padding: 0; font-size: var(--text-sm);">
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: var(--color-gray-400);">Become a Provider</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: var(--color-gray-400);">Clinical Data</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: var(--color-gray-400);">Training</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; font-size: var(--text-base); margin-bottom: 1rem;">Company</h4>
+                    <ul style="list-style: none; padding: 0; font-size: var(--text-sm);">
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: var(--color-gray-400);">About</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: var(--color-gray-400);">Safety Information</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: var(--color-gray-400);">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid var(--color-gray-800); padding-top: 2rem; text-align: center; font-size: var(--text-sm);">
+                <p>&copy; 2025 Avéli™. All rights reserved. | <a href="#" style="color: var(--color-gray-400);">Privacy Policy</a> | <a href="#" style="color: var(--color-gray-400);">Terms of Use</a> | <a href="#" style="color: var(--color-gray-400);">Important Safety Information</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
