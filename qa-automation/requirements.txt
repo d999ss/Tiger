@@ -1,7 +1,7 @@
 # Tiger CMS Visual QA Automation Requirements
 
 # Core dependencies
-terminator>=0.16.0
+terminator>=0.15.0
 
 # Optional: For visual comparison
 Pillow>=10.0.0

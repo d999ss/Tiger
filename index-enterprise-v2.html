@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger BioSciences™ - Global Leader in Regenerative Medicine</title>
+    
+    <style>
+        @font-face {
+            font-family: 'LT Superior Mono';
+            src: url('LTSuperiorMono.otf') format('opentype');
+            font-weight: 500;
+            font-display: swap;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { font-size: 16px; scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'LT Superior Mono', 'Courier New', monospace;
+            font-weight: 500;
+            color: #0f0f0f;
+            background: #fff;
+            overflow-x: hidden;
+        }
+        
+        :root {
+            --primary-700: #991514;
+            --primary-800: #D32F2F;
+            --primary-900: #7f1d1d;
+            --primary-950: #450a0a;
+            --primary-50: #fef2f2;
+            --accent-500: #D8930B;
+            --accent-600: #B8790A;
+            --neutral-50: #fafafa;
+            --neutral-100: #f5f5f5;
+            --neutral-200: #e5e5e5;
+            --neutral-300: #d4d4d4;
+            --neutral-600: #525252;
+            --neutral-700: #404040;
+            --neutral-800: #262626;
+            --neutral-900: #171717;
+            --neutral-950: #0a0a0a;
+        }
+        
+        /* Utility Bar - Top of site */
+        .utility-bar {
+            background: var(--neutral-950);
+            color: rgba(255,255,255,0.8);
+            font-size: 0.75rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            z-index: 1001;
+        }
+        
+        .utility-content {
+            max-width: 90rem;
+            margin: 0 auto;
+            padding: 0.625rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .utility-left {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .utility-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+        
+        .utility-link:hover { color: #fff; }
+        
+        .utility-right {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .lang-selector {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .lang-selector:hover {
+            border-color: rgba(255,255,255,0.4);
+            background: rgba(255,255,255,0.05);
+        }
+        
+        /* Announcement Bar */
+        .announcement-bar {
+            background: var(--primary-700);
+            color: #fff;
+            padding: 0.875rem 1.5rem;
+            font-size: 0.6875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 500;
+            position: relative;
+            z-index: 1000;
+        }
+        
+        .announcement-bar a {
+            color: #fff;
+            text-decoration: underline;
+            margin-left: 0.75rem;
+            text-underline-offset: 0.25rem;
+            transition: opacity 0.2s;
+        }
+        
+        .announcement-bar a:hover { opacity: 0.8; }
+        
+        /* Main Navigation - Enterprise Grade */
+        .main-nav {
+            background: #fff;
+            border-bottom: 1px solid var(--neutral-200);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: box-shadow 0.3s;
+        }
+        
+        .main-nav.scrolled {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        
+        .nav-container {
+            max-width: 90rem;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 5.5rem;
+        }
+        
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--primary-700);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: color 0.2s;
+        }
+        
+        .nav-logo:hover { color: var(--primary-800); }
+        
+        .nav-menu {
+            display: flex;
+            gap: 0.25rem;
+            list-style: none;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .nav-item {
+            position: relative;
+            height: 100%;
+        }
+        
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+            height: 100%;
+            padding: 0 1.25rem;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--neutral-700);
+            text-decoration: none;
+            transition: all 0.2s;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-700);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-item:hover .nav-link {
+            color: var(--primary-700);
+        }
+        
+        .nav-item:hover .nav-link::after {
+            transform: scaleX(1);
+        }
+        
+        .nav-link svg {
+            width: 0.875rem;
+            height: 0.875rem;
+            transition: transform 0.3s;
+        }
+        
+        .nav-item:hover .nav-link svg {
+            transform: rotate(180deg);
+        }
+        
+        /* Mega Menu - Premium Design */
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-10px);
+            background: #fff;
+            border: 1px solid var(--neutral-200);
+            border-radius: 1rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            padding: 3rem;
+            min-width: 62rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 100;
+        }
+        
+        .nav-item:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+        
+        .mega-menu-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+        
+        .mega-menu-left {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+        
+        .mega-menu-section h4 {
+            font-size: 0.6875rem;
+            font-weight: 500;
+            color: var(--accent-600);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--neutral-100);
+        }
+        
+        .mega-menu-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .mega-menu-links a {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            padding: 0.625rem 0.75rem;
+            font-size: 0.875rem;
+            color: var(--neutral-700);
+            text-decoration: none;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+        
+        .mega-menu-links a::before {
+            content: '→';
+            font-size: 0.875rem;
+            color: var(--primary-700);
+            opacity: 0;
+            transform: translateX(-5px);
+            transition: all 0.2s;
+        }
+        
+        .mega-menu-links a:hover {
+            background: var(--neutral-50);
+            color: var(--primary-700);
+            padding-left: 1rem;
+        }
+        
+        .mega-menu-links a:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Featured Section in Mega Menu */
+        .mega-menu-featured {
+            background: linear-gradient(135deg, var(--primary-950), var(--primary-800));
+            border-radius: 0.75rem;
+            padding: 2rem;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 20rem;
+        }
+        
+        .featured-badge {
+            display: inline-block;
+            padding: 0.375rem 0.875rem;
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 624.9375rem;
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            backdrop-filter: blur(10px);
+            margin-bottom: 1.5rem;
+            align-self: flex-start;
+        }
+        
+        .mega-menu-featured h5 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        .mega-menu-featured p {
+            font-size: 0.875rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .featured-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #fff;
+            color: var(--primary-700);
+            text-decoration: none;
+            border-radius: 624.9375rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            align-self: flex-start;
+        }
+        
+        .featured-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        
+        .featured-link svg {
+            width: 0.875rem;
+            height: 0.875rem;
+        }
+        
+        /* Nav Actions */
+        .nav-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .search-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.625rem 1.25rem;
+            background: var(--neutral-50);
+            border: 1px solid var(--neutral-200);
+            border-radius: 624.9375rem;
+            color: var(--neutral-600);
+            font-size: 0.875rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .search-btn:hover {
+            background: var(--neutral-100);
+            border-color: var(--neutral-300);
+        }
+        
+        .search-btn svg {
+            width: 1rem;
+            height: 1rem;
+        }
+        
+        .search-kbd {
+            padding: 0.125rem 0.375rem;
+            background: #fff;
+            border: 1px solid var(--neutral-200);
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            color: var(--neutral-600);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 0.375rem;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+        
+        .mobile-menu-btn span {
+            width: 1.5rem;
+            height: 2px;
+            background: var(--neutral-700);
+            transition: all 0.3s;
+        }
+        
+        /* Search Modal */
+        .search-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: none;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 15vh;
+            animation: fadeIn 0.2s;
+        }
+        
+        .search-modal.active { display: flex; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .search-container {
+            background: #fff;
+            border-radius: 1rem;
+            width: 90%;
+            max-width: 45rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .search-input-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--neutral-200);
+        }
+        
+        .search-input-wrapper svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--neutral-400);
+        }
+        
+        .search-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 1.25rem;
+            font-family: inherit;
+            color: var(--neutral-900);
+        }
+        
+        .search-input::placeholder {
+            color: var(--neutral-400);
+        }
+        
+        .search-close {
+            background: var(--neutral-100);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+            font-family: inherit;
+            cursor: pointer;
+            color: var(--neutral-600);
+        }
+        
+        .search-suggestions {
+            padding: 1.5rem 2rem;
+        }
+        
+        .search-suggestions h6 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--neutral-500);
+            margin-bottom: 1rem;
+        }
+        
+        .suggestion-list {
+            list-style: none;
+        }
+        
+        .suggestion-item {
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .suggestion-item:hover {
+            background: var(--neutral-50);
+        }
+        
+        .suggestion-item a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--neutral-700);
+            font-size: 0.9375rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background-image: url('https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=2400');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(69, 10, 10, 0.9) 0%, rgba(211, 47, 47, 0.8) 50%, rgba(153, 21, 20, 0.75) 100%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 90rem;
+            margin: 0 auto;
+            padding: 0 3rem;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-left {
+            color: #fff;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 624.9375rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            backdrop-filter: blur(10px);
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 0.6s 0.2s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-title {
+            font-size: 6.5rem;
+            font-weight: 500;
+            line-height: 1.05;
+            margin-bottom: 0;
+            animation: fadeInUp 0.6s 0.3s both;
+        }
+        
+        .hero-right {
+            color: #fff;
+            animation: fadeInUp 0.6s 0.4s both;
+        }
+        
+        .hero-description {
+            font-size: 1.375rem;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1.125rem 2.75rem;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 624.9375rem;
+            text-decoration: none;
+            font-family: inherit;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: #fff;
+            color: var(--primary-700);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.7);
+        }
+        
+        .btn-outline:hover {
+            border-color: #fff;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+        
+        .scroll-indicator svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .nav-menu { display: none; }
+            .mobile-menu-btn { display: flex; }
+            .hero-content { grid-template-columns: 1fr; }
+            .hero-title { font-size: 4.5rem; }
+            .mega-menu { min-width: 90vw; }
+            .mega-menu-content { grid-template-columns: 1fr; }
+            .mega-menu-left { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 768px) {
+            .utility-left { gap: 1rem; }
+            .utility-link { font-size: 0.625rem; }
+            .nav-container { padding: 0 1.5rem; height: 4.5rem; }
+            .nav-logo { font-size: 1.25rem; }
+            .hero-title { font-size: 3rem; }
+            .hero-description { font-size: 1.125rem; }
+            .hero-buttons { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Utility Bar -->
+<div class="utility-bar">
+    <div class="utility-content">
+        <div class="utility-left">
+            <a href="investors.html" class="utility-link">Investors</a>
+            <a href="careers.html" class="utility-link">Careers</a>
+            <a href="news.html" class="utility-link">Newsroom</a>
+            <a href="contact.html" class="utility-link">Contact</a>
+        </div>
+        <div class="utility-right">
+            <select class="lang-selector">
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+                <option value="pl">Polski</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+    🚀 NOW LIVE: TIGER BIOSCIENCES COMPREHENSIVE SOLUTIONS PORTFOLIO
+    <a href="#featured">EXPLORE NOW</a>
+</div>
+
+<!-- Main Navigation -->
+<nav class="main-nav" id="mainNav">
+    <div class="nav-container">
+        <a href="index-enterprise-v2.html" class="nav-logo">TIGER BIOSCIENCES™</a>
+        
+        <ul class="nav-menu">
+            <!-- Our Science Mega Menu -->
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    Our Science
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </a>
+                <div class="mega-menu">
+                    <div class="mega-menu-content">
+                        <div class="mega-menu-left">
+                            <div class="mega-menu-section">
+                                <h4>Research Areas</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="wound-care.html">Wound Care</a></li>
+                                    <li><a href="tissue-reconstruction.html">Tissue Reconstruction</a></li>
+                                    <li><a href="aesthetic-medicine.html">Aesthetic Medicine</a></li>
+                                    <li><a href="regenerative-medicine.html">Regenerative Medicine</a></li>
+                                    <li><a href="orthopedic-applications.html">Orthopedic Applications</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mega-menu-section">
+                                <h4>Innovation & Technology</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="research-pipeline.html">Research Pipeline</a></li>
+                                    <li><a href="clinical-trials.html">Clinical Trials</a></li>
+                                    <li><a href="publications.html">Scientific Publications</a></li>
+                                    <li><a href="technology-platform.html">CAMPs Technology</a></li>
+                                    <li><a href="patents.html">Patents & IP</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mega-menu-section">
+                                <h4>Quality & Compliance</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="tiger-way.html">The Tiger Way</a></li>
+                                    <li><a href="vertical-integration.html">Vertical Integration</a></li>
+                                    <li><a href="quality-assurance.html">Quality Assurance</a></li>
+                                    <li><a href="regulatory.html">Regulatory Affairs</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mega-menu-section">
+                                <h4>Collaborations</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="academic-partnerships.html">Academic Partnerships</a></li>
+                                    <li><a href="research-grants.html">Research Grants</a></li>
+                                    <li><a href="investigator-portal.html">Investigator Portal</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mega-menu-featured">
+                            <div>
+                                <span class="featured-badge">LATEST BREAKTHROUGH</span>
+                                <h5>Phase III Trial Results Exceed Expectations</h5>
+                                <p>Our caregraFT™ Plus technology demonstrated 87% complete wound closure at 12 weeks in chronic venous leg ulcers.</p>
+                            </div>
+                            <a href="research-pipeline.html" class="featured-link">
+                                View Full Results
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <!-- Products Mega Menu -->
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    Products
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </a>
+                <div class="mega-menu">
+                    <div class="mega-menu-content">
+                        <div class="mega-menu-left">
+                            <div class="mega-menu-section">
+                                <h4>CAMPs Products</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="alloply.html">alloPLY™ - Dual Layer Amniotic</a></li>
+                                    <li><a href="caregraft.html">caregraFT™ - Full Thickness</a></li>
+                                    <li><a href="acapatch.html">ACAPatch™ - ACA Configuration</a></li>
+                                    <li><a href="healpack.html">HealPACK™ - Wound Dressings</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mega-menu-section">
+                                <h4>Aesthetic Products</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="aveli.html">Avéli™ - Cellulite Treatment</a></li>
+                                    <li><a href="bellafill.html">Bellafill® - Dermal Filler</a></li>
+                                    <li><a href="breast-products.html">Breast Implants & Expanders</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mega-menu-section">
+                                <h4>By Specialty</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="podiatry.html">Podiatry</a></li>
+                                    <li><a href="plastic-surgery.html">Plastic Surgery</a></li>
+                                    <li><a href="general-surgery.html">General Surgery</a></li>
+                                    <li><a href="wound-care-centers.html">Wound Care Centers</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mega-menu-section">
+                                <h4>Resources</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="product-catalog.html">Product Catalog (PDF)</a></li>
+                                    <li><a href="ordering.html">Ordering Information</a></li>
+                                    <li><a href="product-training.html">Product Training</a></li>
+                                    <li><a href="reimbursement.html">Reimbursement Support</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mega-menu-featured">
+                            <div>
+                                <span class="featured-badge">PRODUCT HIGHLIGHT</span>
+                                <h5>caregraFT™ Plus Now Available</h5>
+                                <p>FDA-cleared next-generation CAMPs technology with 7-year shelf stability and enhanced biomechanical properties.</p>
+                            </div>
+                            <a href="caregraft.html" class="featured-link">
+                                Learn More
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <!-- Solutions Mega Menu -->
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    Solutions
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </a>
+                <div class="mega-menu">
+                    <div class="mega-menu-content">
+                        <div class="mega-menu-left">
+                            <div class="mega-menu-section">
+                                <h4>For Healthcare Professionals</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="healthcare-professionals.html">HCP Portal</a></li>
+                                    <li><a href="clinical-evidence.html">Clinical Evidence</a></li>
+                                    <li><a href="case-studies.html">Case Studies</a></li>
+                                    <li><a href="cme-courses.html">CME/CE Courses</a></li>
+                                    <li><a href="clinical-support.html">Clinical Support</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mega-menu-section">
+                                <h4>For Patients</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="patients.html">Patient Resources</a></li>
+                                    <li><a href="treatment-options.html">Treatment Options</a></li>
+                                    <li><a href="find-doctor.html">Find a Doctor</a></li>
+                                    <li><a href="patient-stories.html">Patient Stories</a></li>
+                                    <li><a href="insurance.html">Insurance Coverage</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mega-menu-section">
+                                <h4>Digital Tools</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="wound-assessment.html">Wound Assessment Tool</a></li>
+                                    <li><a href="product-selector.html">Product Selector</a></li>
+                                    <li><a href="dosage-calculator.html">Dosage Calculator</a></li>
+                                    <li><a href="mobile-app.html">Mobile App</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mega-menu-section">
+                                <h4>Support Services</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="reimbursement-support.html">Reimbursement Support</a></li>
+                                    <li><a href="patient-assistance.html">Patient Assistance Programs</a></li>
+                                    <li><a href="training-programs.html">Training Programs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mega-menu-featured">
+                            <div>
+                                <span class="featured-badge">NEW TOOL</span>
+                                <h5>AI-Powered Wound Assessment</h5>
+                                <p>Leverage machine learning to optimize treatment plans and predict healing outcomes with our new digital platform.</p>
+                            </div>
+                            <a href="wound-assessment.html" class="featured-link">
+                                Try Now
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <!-- About Mega Menu -->
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    About Us
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </a>
+                <div class="mega-menu">
+                    <div class="mega-menu-content">
+                        <div class="mega-menu-left">
+                            <div class="mega-menu-section">
+                                <h4>Company</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="about.html">Our Story</a></li>
+                                    <li><a href="leadership.html">Leadership Team</a></li>
+                                    <li><a href="board-directors.html">Board of Directors</a></li>
+                                    <li><a href="facilities.html">Our Facilities</a></li>
+                                    <li><a href="timeline.html">Company Timeline</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mega-menu-section">
+                                <h4>Responsibility</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="sustainability.html">Sustainability</a></li>
+                                    <li><a href="esg.html">ESG Report</a></li>
+                                    <li><a href="ethics.html">Ethics & Compliance</a></li>
+                                    <li><a href="donor-program.html">Donor Program</a></li>
+                                    <li><a href="community.html">Community Impact</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mega-menu-section">
+                                <h4>News & Media</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="news.html">Press Releases</a></li>
+                                    <li><a href="blog.html">Company Blog</a></li>
+                                    <li><a href="events.html">Events & Conferences</a></li>
+                                    <li><a href="media-kit.html">Media Kit</a></li>
+                                    <li><a href="media-contact.html">Media Contact</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mega-menu-section">
+                                <h4>Recognition</h4>
+                                <ul class="mega-menu-links">
+                                    <li><a href="awards.html">Awards & Recognition</a></li>
+                                    <li><a href="certifications.html">Certifications</a></li>
+                                    <li><a href="testimonials.html">Testimonials</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mega-menu-featured">
+                            <div>
+                                <span class="featured-badge">LATEST NEWS</span>
+                                <h5>$12.3B Market Cap Milestone</h5>
+                                <p>Tiger BioSciences reaches record market capitalization following strong Q4 2024 earnings and expanded international presence.</p>
+                            </div>
+                            <a href="news.html" class="featured-link">
+                                Read More
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <!-- Careers Link -->
+            <li class="nav-item">
+                <a href="careers.html" class="nav-link">Careers</a>
+            </li>
+        </ul>
+        
+        <div class="nav-actions">
+            <button class="search-btn" onclick="document.getElementById('searchModal').classList.add('active')">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <span>Search</span>
+                <span class="search-kbd">⌘K</span>
+            </button>
+            
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Search Modal -->
+<div id="searchModal" class="search-modal" onclick="if(event.target===this) this.classList.remove('active')">
+    <div class="search-container">
+        <div class="search-input-wrapper">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input type="text" class="search-input" placeholder="Search Tiger BioSciences..." autofocus>
+            <button class="search-close" onclick="document.getElementById('searchModal').classList.remove('active')">ESC</button>
+        </div>
+        
+        <div class="search-suggestions">
+            <h6>Quick Links</h6>
+            <ul class="suggestion-list">
+                <li class="suggestion-item"><a href="products.html">🔹 View All Products</a></li>
+                <li class="suggestion-item"><a href="clinical-trials.html">🔹 Active Clinical Trials</a></li>
+                <li class="suggestion-item"><a href="investors.html">🔹 Investor Relations</a></li>
+                <li class="suggestion-item"><a href="careers.html">🔹 Career Opportunities</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-left">
+            <div class="hero-badge">TIGER BIOSCIENCES™</div>
+            <h1 class="hero-title">The First of Its Kind</h1>
+        </div>
+        <div class="hero-right">
+            <p class="hero-description">
+                A global leader in medical technology delivering cutting-edge cellular, acellular, and matrix-like products (CAMPs) for wound care, soft tissue reconstruction, and aesthetics. Vertically integrated from recovery to recipient.
+            </p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-primary">Explore Solutions</a>
+                <a href="about.html" class="btn btn-outline">Our Story</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="scroll-indicator">
+        Scroll to Explore
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+    </div>
+</section>
+
+<script>
+    // Navbar scroll shadow effect
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('mainNav');
+        if (window.scrollY > 10) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+    
+    // Search modal keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+        // Close on ESC
+        if (e.key === 'Escape') {
+            document.getElementById('searchModal').classList.remove('active');
+        }
+        
+        // Open on Cmd/Ctrl + K
+        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+            e.preventDefault();
+            document.getElementById('searchModal').classList.add('active');
+        }
+    });
+    
+    // Prevent mega menu from closing when clicking inside
+    document.querySelectorAll('.mega-menu').forEach(menu => {
+        menu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    });
+</script>
+
+</body>
+</html>
+

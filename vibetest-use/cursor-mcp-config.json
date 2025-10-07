@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "vibetest": {
+      "command": "/Users/donnysmith/Desktop/Tiger CMS/vibetest-use/.venv/bin/vibetest-mcp",
+      "env": {
+        "GOOGLE_API_KEY": "AIzaSyCi87ln5-ipFemcgjES06zFec5uMIGHKXU"
+      }
+    }
+  }
+}
+
