@@ -1,0 +1,28 @@
+{
+  "name": "Tiger BioSciences",
+  "short_name": "Tiger Bio",
+  "description": "Global leader in medical technology specializing in CAMPs for advanced wound care and tissue reconstruction",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#991514",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["medical", "healthcare", "business"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
+

@@ -4,15 +4,16 @@
    Version: 2.1.0 - Perfection Edition
    ========================================================================== */
 
-/* Fonts: Sophisticated typography system */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+/* Fonts: Sophisticated typography system - Optimized for performance */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap&subset=latin&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap&subset=latin');
 
 @font-face {
     font-family: 'Neuropa';
     src: url('../fonts/Neuropa-Medium.otf') format('opentype');
     font-weight: 500;
     font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
@@ -20,6 +21,7 @@
     src: url('../fonts/LTSuperiorMono.otf') format('opentype');
     font-weight: 500;
     font-display: swap;
+    font-style: normal;
 }
 
 * { 
@@ -50,6 +52,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     font-feature-settings: "kern" 1, "liga" 1;
+    /* Performance optimizations */
+    contain: layout style paint;
+    content-visibility: auto;
 }
 
 /* Sophisticated typography hierarchy */
@@ -688,6 +693,10 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.5s var(--ease-elegant);
     position: relative;
     overflow: hidden;
+    /* GPU acceleration */
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .feature-card::before {
@@ -1275,6 +1284,57 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Loading States & Skeleton Screens */
+.loading-skeleton {
+    background: linear-gradient(90deg, var(--neutral-100) 25%, var(--neutral-200) 50%, var(--neutral-100) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 0.5rem;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.content-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s var(--ease-elegant) forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Skip to main content link (accessibility) */
+.skip-to-main {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1rem 2rem;
+    background: var(--neutral-900);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+.skip-to-main:focus {
+    left: 50%;
+    top: 1rem;
+    transform: translateX(-50%);
+}
+
 /* Print styles */
 @media print {
     .navbar,
@@ -1291,5 +1351,9 @@ h1, h2, h3, h4, h5, h6 {
     
     .section {
         page-break-inside: avoid;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
     }
 }
