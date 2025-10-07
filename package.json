@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/d999ss/Tiger/issues"
   },
-  "homepage": "https://github.com/d999ss/Tiger#readme"
+  "homepage": "https://github.com/d999ss/Tiger#readme",
+  "dependencies": {
+    "@sanity/client": "^7.12.0"
+  }
 }
