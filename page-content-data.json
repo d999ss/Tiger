@@ -1,7 +1,7 @@
 {
   "pages": {
     "contact.html": {
-      "title": "Contact Us - Tiger BioSciences™",
+      "title": "Contact Us - Tiger BioSciences\u2122",
       "meta_description": "Get in touch with Tiger BioSciences. Call 1-888-665-5005 or contact us for product information, clinical support, and partnership opportunities.",
       "hero_title": "Contact Tiger BioSciences",
       "hero_subtitle": "We're here to help. Whether you need product information, clinical support, or partnership opportunities, our team is ready to assist.",
@@ -27,163 +27,351 @@
       ]
     },
     "products.html": {
-      "title": "Products - Tiger BioSciences™",
+      "title": "Products - Tiger BioSciences\u2122",
       "meta_description": "Explore Tiger BioSciences' comprehensive portfolio of CAMPs, tissue products, and medical devices for wound care, aesthetics, and surgical applications.",
       "hero_title": "Innovative Products for Better Outcomes",
       "hero_subtitle": "From advanced wound care to aesthetic solutions, our vertically integrated approach ensures the highest quality products for healthcare professionals worldwide.",
       "categories": [
         {
           "name": "Wound Care Solutions",
-          "products": ["HealPack", "CarGraft", "AlloPly", "AcaPatch"]
+          "products": [
+            "HealPack",
+            "CarGraft",
+            "AlloPly",
+            "AcaPatch"
+          ]
         },
         {
           "name": "Aesthetic Products",
-          "products": ["Bellafill", "Aveli", "Breast Solutions"]
+          "products": [
+            "Bellafill",
+            "Aveli",
+            "Breast Solutions"
+          ]
         },
         {
           "name": "Surgical Applications",
-          "products": ["General Surgery", "Orthopedic", "Podiatry", "Tissue Reconstruction"]
+          "products": [
+            "General Surgery",
+            "Orthopedic",
+            "Podiatry",
+            "Tissue Reconstruction"
+          ]
         }
       ]
     },
     "science.html": {
-      "title": "Our Science - Tiger BioSciences™",
+      "title": "Our Science - Tiger BioSciences\u2122",
       "meta_description": "Discover the science behind Tiger BioSciences' CAMPs technology, research pipeline, clinical trials, and innovations in regenerative medicine.",
       "hero_title": "Science Driven Innovation",
       "hero_subtitle": "Our research teams combine decades of tissue science expertise with cutting-edge biotechnology to develop next-generation regenerative medicine solutions."
     },
     "wound-care.html": {
-      "title": "Wound Care Solutions - Tiger BioSciences™",
+      "title": "Wound Care Solutions - Tiger BioSciences\u2122",
       "meta_description": "Advanced wound care solutions using CAMPs technology for chronic wounds, diabetic ulcers, and complex wound management.",
       "hero_title": "Advanced Wound Care Solutions",
       "hero_subtitle": "Clinically proven CAMPs technology for faster healing and better patient outcomes in chronic and complex wound management."
     },
     "tissue-reconstruction.html": {
-      "title": "Tissue Reconstruction - Tiger BioSciences™",
+      "title": "Tissue Reconstruction - Tiger BioSciences\u2122",
       "meta_description": "Tissue reconstruction solutions for soft tissue repair, surgical reconstruction, and regenerative applications.",
       "hero_title": "Tissue Reconstruction Excellence",
       "hero_subtitle": "Comprehensive tissue matrices and scaffolds for complex reconstructive procedures and soft tissue repair."
     },
     "aesthetic-medicine.html": {
-      "title": "Aesthetic Medicine - Tiger BioSciences™",
+      "title": "Aesthetic Medicine - Tiger BioSciences\u2122",
       "meta_description": "Aesthetic medicine solutions including dermal fillers, cellulite treatment, and regenerative aesthetics from Tiger BioSciences.",
       "hero_title": "Aesthetic Medicine Innovation",
       "hero_subtitle": "Advanced aesthetic solutions combining regenerative science with cosmetic excellence for natural, lasting results."
     },
     "regenerative-medicine.html": {
-      "title": "Regenerative Medicine - Tiger BioSciences™",
+      "title": "Regenerative Medicine - Tiger BioSciences\u2122",
       "meta_description": "Regenerative medicine solutions leveraging tissue engineering and CAMPs technology for healing and restoration.",
       "hero_title": "The Future of Regenerative Medicine",
       "hero_subtitle": "Harnessing the body's natural healing capabilities through advanced tissue engineering and biomaterial science."
     },
     "orthopedic.html": {
-      "title": "Orthopedic Applications - Tiger BioSciences™",
+      "title": "Orthopedic Applications - Tiger BioSciences\u2122",
       "meta_description": "Orthopedic tissue products for bone and joint repair, sports medicine, and musculoskeletal applications.",
       "hero_title": "Orthopedic Solutions",
       "hero_subtitle": "Specialized tissue products for orthopedic surgery, sports medicine, and musculoskeletal healing."
     },
     "research-pipeline.html": {
-      "title": "Research Pipeline - Tiger BioSciences™",
+      "title": "Research Pipeline - Tiger BioSciences\u2122",
       "meta_description": "Explore Tiger BioSciences' research pipeline including ongoing studies, future innovations, and breakthrough technologies in development.",
       "hero_title": "Research & Development Pipeline",
       "hero_subtitle": "Our robust R&D pipeline features multiple projects advancing the next generation of tissue technology and regenerative medicine solutions."
     },
     "clinical-trials.html": {
-      "title": "Clinical Trials - Tiger BioSciences™",
+      "title": "Clinical Trials - Tiger BioSciences\u2122",
       "meta_description": "Information about Tiger BioSciences clinical trials, study participation, and evidence-based research demonstrating product efficacy.",
       "hero_title": "Clinical Trials & Research",
       "hero_subtitle": "Rigorous clinical research demonstrating safety, efficacy, and superior outcomes across our product portfolio."
     },
     "publications.html": {
-      "title": "Scientific Publications - Tiger BioSciences™",
+      "title": "Scientific Publications - Tiger BioSciences\u2122",
       "meta_description": "Access peer-reviewed publications, clinical data, and research papers about Tiger BioSciences products and CAMPs technology.",
       "hero_title": "Publications & Clinical Evidence",
       "hero_subtitle": "Peer-reviewed publications and clinical evidence supporting the efficacy of our products and technologies."
     },
     "camps-technology.html": {
-      "title": "CAMPs Technology - Tiger BioSciences™",
+      "title": "CAMPs Technology - Tiger BioSciences\u2122",
       "meta_description": "Learn about proprietary CAMPs (Cellular, Acellular, and Matrix-like Products) technology revolutionizing tissue engineering.",
       "hero_title": "Revolutionary CAMPs Technology",
       "hero_subtitle": "Our proprietary CAMPs technology represents a breakthrough in tissue engineering, combining cellular components with advanced matrix structures for superior healing."
     },
     "patents.html": {
-      "title": "Patents & Intellectual Property - Tiger BioSciences™",
+      "title": "Patents & Intellectual Property - Tiger BioSciences\u2122",
       "meta_description": "Tiger BioSciences' patent portfolio protecting innovative tissue technology, processing methods, and medical devices.",
       "hero_title": "Protecting Innovation",
       "hero_subtitle": "Extensive patent portfolio covering our proprietary technologies, processing methods, and product innovations."
     },
     "quality-assurance.html": {
-      "title": "Quality Assurance - Tiger BioSciences™",
+      "title": "Quality Assurance - Tiger BioSciences\u2122",
       "meta_description": "Tiger BioSciences quality assurance processes, AATB accreditation, and commitment to the highest standards.",
       "hero_title": "Uncompromising Quality Standards",
       "hero_subtitle": "Every product undergoes rigorous quality testing and verification to ensure safety, efficacy, and reliability."
     },
     "regulatory.html": {
-      "title": "Regulatory Compliance - Tiger BioSciences™",
+      "title": "Regulatory Compliance - Tiger BioSciences\u2122",
       "meta_description": "FDA compliance, AATB accreditation, and regulatory excellence at Tiger BioSciences tissue processing facilities.",
       "hero_title": "Regulatory Excellence",
       "hero_subtitle": "Full compliance with FDA regulations, AATB standards, and international quality requirements."
     },
     "training.html": {
-      "title": "Training Programs - Tiger BioSciences™",
+      "title": "Training Programs - Tiger BioSciences\u2122",
       "meta_description": "Comprehensive training programs for healthcare professionals on Tiger BioSciences products and applications.",
       "hero_title": "Professional Training & Education",
       "hero_subtitle": "Comprehensive training programs ensuring proper product handling, application, and optimal patient outcomes."
     },
     "faq.html": {
-      "title": "FAQ - Tiger BioSciences™",
+      "title": "FAQ - Tiger BioSciences\u2122",
       "meta_description": "Frequently asked questions about Tiger BioSciences products, ordering, reimbursement, and clinical applications.",
       "hero_title": "Frequently Asked Questions",
       "hero_subtitle": "Find answers to common questions about our products, processes, and services."
     },
     "healpack.html": {
-      "title": "HealPack™ - Tiger BioSciences™",
+      "title": "HealPack\u2122 - Tiger BioSciences\u2122",
       "meta_description": "HealPack advanced wound dressings using CAMPs technology for chronic wound management and accelerated healing.",
-      "hero_title": "HealPack™ Advanced Wound Dressings",
+      "hero_title": "HealPack\u2122 Advanced Wound Dressings",
       "hero_subtitle": "Bioengineered wound dressings providing optimal healing environment for chronic and acute wounds."
     },
     "caregraft.html": {
-      "title": "CarGraft™ - Tiger BioSciences™",
+      "title": "CarGraft\u2122 - Tiger BioSciences\u2122",
       "meta_description": "CarGraft full-thickness human skin substitute for complex wound reconstruction and surgical applications.",
-      "hero_title": "CarGraft™ Full-Thickness Human Skin",
+      "hero_title": "CarGraft\u2122 Full-Thickness Human Skin",
       "hero_subtitle": "Advanced human skin allograft for complex wound reconstruction, burns, and surgical defects."
     },
     "alloply.html": {
-      "title": "AlloPly™ - Tiger BioSciences™",
+      "title": "AlloPly\u2122 - Tiger BioSciences\u2122",
       "meta_description": "AlloPly dual-layer placental tissue matrix for wound care and soft tissue reconstruction applications.",
-      "hero_title": "AlloPly™ Dual-Layer Tissue Matrix",
+      "hero_title": "AlloPly\u2122 Dual-Layer Tissue Matrix",
       "hero_subtitle": "Innovative placental tissue allograft combining two layers for enhanced wound healing and tissue repair."
     },
     "acapatch.html": {
-      "title": "AcaPatch™ - Tiger BioSciences™",
+      "title": "AcaPatch\u2122 - Tiger BioSciences\u2122",
       "meta_description": "AcaPatch acellular collagen matrix for wound coverage and soft tissue support in surgical procedures.",
-      "hero_title": "AcaPatch™ Acellular Matrix",
+      "hero_title": "AcaPatch\u2122 Acellular Matrix",
       "hero_subtitle": "Acellular collagen matrix providing structural support for wound coverage and tissue regeneration."
     },
     "bellafill.html": {
-      "title": "Bellafill® - Tiger BioSciences™",
+      "title": "Bellafill\u00ae - Tiger BioSciences\u2122",
       "meta_description": "Bellafill FDA-approved dermal filler for wrinkles and acne scars with lasting, natural results.",
-      "hero_title": "Bellafill® Dermal Filler",
+      "hero_title": "Bellafill\u00ae Dermal Filler",
       "hero_subtitle": "The only FDA-approved filler proven to last up to 5 years for wrinkles and acne scars."
     },
     "aveli.html": {
-      "title": "Avéli™ - Tiger BioSciences™",
-      "meta_description": "Avéli cellulite treatment device providing immediate, lasting results through innovative fibrous septae release technology.",
-      "hero_title": "Avéli™ Cellulite Treatment",
+      "title": "Av\u00e9li\u2122 - Tiger BioSciences\u2122",
+      "meta_description": "Av\u00e9li cellulite treatment device providing immediate, lasting results through innovative fibrous septae release technology.",
+      "hero_title": "Av\u00e9li\u2122 Cellulite Treatment",
       "hero_subtitle": "Revolutionary single-treatment cellulite reduction with clinically proven, lasting results."
     },
     "breast.html": {
-      "title": "Breast Solutions - Tiger BioSciences™",
+      "title": "Breast Solutions - Tiger BioSciences\u2122",
       "meta_description": "Comprehensive breast reconstruction and augmentation products including implants and tissue matrices.",
       "hero_title": "Breast Reconstruction Solutions",
       "hero_subtitle": "Advanced breast implants, tissue expanders, and reconstructive solutions for cosmetic and reconstructive surgery."
     },
     "careers.html": {
-      "title": "Careers - Tiger BioSciences™",
+      "title": "Careers - Tiger BioSciences\u2122",
       "meta_description": "Join Tiger BioSciences and help revolutionize regenerative medicine. Explore career opportunities across our global organization.",
       "hero_title": "Join Our Team",
       "hero_subtitle": "Be part of a team revolutionizing healthcare through innovation, science, and unwavering commitment to quality."
+    },
+    "manufacturing.html": {
+      "title": "Manufacturing Excellence - Tiger BioSciences\u2122",
+      "meta_description": "State-of-the-art manufacturing facilities with cGMP compliance, AATB accreditation, and ISO certification.",
+      "hero_title": "Manufacturing Excellence",
+      "hero_subtitle": "State-of-the-art facilities combining advanced technology with rigorous quality standards.",
+      "badge": "Quality"
+    },
+    "certifications.html": {
+      "title": "Certifications & Standards - Tiger BioSciences\u2122",
+      "meta_description": "AATB accreditation, FDA compliance, ISO certification, and cGMP standards at Tiger BioSciences.",
+      "hero_title": "Certifications & Accreditations",
+      "hero_subtitle": "Meeting and exceeding the highest industry standards for quality and safety.",
+      "badge": "Quality"
+    },
+    "support.html": {
+      "title": "Customer Support - Tiger BioSciences\u2122",
+      "meta_description": "24/7 customer support, technical assistance, and clinical resources for healthcare professionals.",
+      "hero_title": "Comprehensive Customer Support",
+      "hero_subtitle": "Expert support whenever you need it, from product information to clinical guidance.",
+      "badge": "Support"
+    },
+    "hospitals.html": {
+      "title": "Hospital Solutions - Tiger BioSciences\u2122",
+      "meta_description": "Comprehensive tissue technology solutions for hospitals including training, support, and integrated supply chain.",
+      "hero_title": "Hospital Solutions",
+      "hero_subtitle": "Tailored solutions for hospital systems ensuring optimal patient outcomes and operational efficiency.",
+      "badge": "Solutions"
+    },
+    "clinical-support.html": {
+      "title": "Clinical Support Services - Tiger BioSciences\u2122",
+      "meta_description": "Expert clinical support including case consultation, product selection guidance, and ongoing education.",
+      "hero_title": "Clinical Support Services",
+      "hero_subtitle": "Expert clinical guidance and support for optimal product selection and patient outcomes.",
+      "badge": "Support"
+    },
+    "solutions.html": {
+      "title": "Healthcare Solutions - Tiger BioSciences\u2122",
+      "meta_description": "Comprehensive healthcare solutions for hospitals, wound centers, and healthcare professionals.",
+      "hero_title": "Comprehensive Healthcare Solutions",
+      "hero_subtitle": "End-to-end solutions supporting healthcare excellence from clinical research to patient care.",
+      "badge": "Solutions"
+    },
+    "general-surgery.html": {
+      "title": "General Surgery Products - Tiger BioSciences\u2122",
+      "meta_description": "Advanced tissue products for general surgical procedures including soft tissue repair and reconstruction.",
+      "hero_title": "General Surgery Solutions",
+      "hero_subtitle": "Advanced tissue matrices and biomaterials for general surgical applications.",
+      "badge": "Products"
+    },
+    "plastic-surgery.html": {
+      "title": "Plastic Surgery Solutions - Tiger BioSciences\u2122",
+      "meta_description": "Comprehensive tissue products for plastic and reconstructive surgery procedures.",
+      "hero_title": "Plastic Surgery Solutions",
+      "hero_subtitle": "Advanced solutions for cosmetic and reconstructive plastic surgery.",
+      "badge": "Products"
+    },
+    "podiatry.html": {
+      "title": "Podiatry Solutions - Tiger BioSciences\u2122",
+      "meta_description": "Specialized tissue products for foot and ankle wound care and surgical applications.",
+      "hero_title": "Podiatry Solutions",
+      "hero_subtitle": "Specialized products for foot and ankle wound management and surgical repair.",
+      "badge": "Products"
+    },
+    "wound-centers.html": {
+      "title": "Wound Center Solutions - Tiger BioSciences\u2122",
+      "meta_description": "Comprehensive wound care solutions for wound centers including products, training, and support.",
+      "hero_title": "Wound Center Solutions",
+      "hero_subtitle": "Complete solutions for wound care centers delivering exceptional patient outcomes.",
+      "badge": "Solutions"
+    },
+    "facilities.html": {
+      "title": "Our Facilities - Tiger BioSciences\u2122",
+      "meta_description": "AATB-accredited facilities in Conshohocken, PA and San Antonio, TX with state-of-the-art processing capabilities.",
+      "hero_title": "World-Class Facilities",
+      "hero_subtitle": "State-of-the-art processing centers maintaining the highest standards of quality and safety.",
+      "badge": "Company"
+    },
+    "healthcare-professionals.html": {
+      "title": "For Healthcare Professionals - Tiger BioSciences\u2122",
+      "meta_description": "Resources, training, and support for healthcare professionals using Tiger BioSciences products.",
+      "hero_title": "Healthcare Professional Resources",
+      "hero_subtitle": "Comprehensive resources and support for clinicians dedicated to patient care excellence.",
+      "badge": "Resources"
+    },
+    "investigator.html": {
+      "title": "Investigator Portal - Tiger BioSciences\u2122",
+      "meta_description": "Research collaboration opportunities and investigator resources for clinical studies.",
+      "hero_title": "Investigator Portal",
+      "hero_subtitle": "Partner with us in advancing the science of tissue technology and regenerative medicine.",
+      "badge": "Research"
+    },
+    "partnerships.html": {
+      "title": "Partnerships - Tiger BioSciences\u2122",
+      "meta_description": "Strategic partnership opportunities with Tiger BioSciences for research, distribution, and innovation.",
+      "hero_title": "Strategic Partnerships",
+      "hero_subtitle": "Collaborate with us to bring innovative tissue technology solutions to more patients.",
+      "badge": "Partnerships"
+    },
+    "catalog.html": {
+      "title": "Product Catalog - Tiger BioSciences\u2122",
+      "meta_description": "Complete catalog of Tiger BioSciences products including CAMPs, tissue matrices, and medical devices.",
+      "hero_title": "Product Catalog",
+      "hero_subtitle": "Comprehensive catalog of our innovative tissue technology products and solutions.",
+      "badge": "Products"
+    },
+    "news.html": {
+      "title": "News & Updates - Tiger BioSciences\u2122",
+      "meta_description": "Latest news, press releases, and updates from Tiger BioSciences.",
+      "hero_title": "News & Updates",
+      "hero_subtitle": "Stay informed about the latest developments, innovations, and milestones at Tiger BioSciences.",
+      "badge": "News"
+    },
+    "grants.html": {
+      "title": "Grants & Funding - Tiger BioSciences\u2122",
+      "meta_description": "Research grants and funding opportunities for tissue technology and regenerative medicine studies.",
+      "hero_title": "Grants & Funding Opportunities",
+      "hero_subtitle": "Supporting groundbreaking research in tissue technology and regenerative medicine.",
+      "badge": "Research"
+    },
+    "investors.html": {
+      "title": "Investor Relations - Tiger BioSciences\u2122",
+      "meta_description": "Investor information, financial reports, and corporate governance for Tiger BioSciences.",
+      "hero_title": "Investor Relations",
+      "hero_subtitle": "Investing in the future of regenerative medicine and healthcare innovation.",
+      "badge": "Investors"
+    },
+    "legal.html": {
+      "title": "Legal Information - Tiger BioSciences\u2122",
+      "meta_description": "Legal information, disclaimers, and regulatory notices for Tiger BioSciences products and services.",
+      "hero_title": "Legal Information",
+      "hero_subtitle": "Important legal information and regulatory disclosures.",
+      "badge": "Legal"
+    },
+    "privacy.html": {
+      "title": "Privacy Policy - Tiger BioSciences\u2122",
+      "meta_description": "Tiger BioSciences privacy policy detailing how we collect, use, and protect your information.",
+      "hero_title": "Privacy Policy",
+      "hero_subtitle": "Your privacy is important to us. Learn how we protect and use your information.",
+      "badge": "Legal"
+    },
+    "terms.html": {
+      "title": "Terms & Conditions - Tiger BioSciences\u2122",
+      "meta_description": "Terms and conditions for using Tiger BioSciences website and products.",
+      "hero_title": "Terms & Conditions",
+      "hero_subtitle": "Please review these terms governing your use of our website and services.",
+      "badge": "Legal"
+    },
+    "tiger-way.html": {
+      "title": "The Tiger Way - Tiger BioSciences\u2122",
+      "meta_description": "The Tiger Way philosophy of vertical integration, quality excellence, and patient-focused innovation.",
+      "hero_title": "The Tiger Way",
+      "hero_subtitle": "Our philosophy of vertical integration, uncompromising quality, and innovation drives everything we do.",
+      "badge": "Philosophy"
+    },
+    "vertical-integration.html": {
+      "title": "Vertical Integration - Tiger BioSciences\u2122",
+      "meta_description": "How Tiger BioSciences' vertical integration ensures superior quality from donor screening to distribution.",
+      "hero_title": "The Power of Vertical Integration",
+      "hero_subtitle": "Complete control of every step ensures unparalleled quality, safety, and innovation.",
+      "badge": "Company"
+    },
+    "ordering.html": {
+      "title": "Ordering - Tiger BioSciences\u2122",
+      "meta_description": "How to order Tiger BioSciences products including account setup, ordering process, and delivery information.",
+      "hero_title": "Product Ordering",
+      "hero_subtitle": "Simple, efficient ordering process ensuring your products arrive when you need them.",
+      "badge": "Support"
+    },
+    "reimbursement.html": {
+      "title": "Reimbursement Support - Tiger BioSciences\u2122",
+      "meta_description": "Reimbursement guidance, coding information, and insurance support for Tiger BioSciences products.",
+      "hero_title": "Reimbursement Support",
+      "hero_subtitle": "Comprehensive reimbursement assistance ensuring coverage for your patients.",
+      "badge": "Support"
     }
   }
 }
-

@@ -1,0 +1,180 @@
+{
+  "missing_pages": {
+    "manufacturing.html": {
+      "title": "Manufacturing Excellence - Tiger BioSciences™",
+      "meta_description": "State-of-the-art manufacturing facilities with cGMP compliance, AATB accreditation, and ISO certification.",
+      "hero_title": "Manufacturing Excellence",
+      "hero_subtitle": "State-of-the-art facilities combining advanced technology with rigorous quality standards.",
+      "badge": "Quality"
+    },
+    "certifications.html": {
+      "title": "Certifications & Standards - Tiger BioSciences™",
+      "meta_description": "AATB accreditation, FDA compliance, ISO certification, and cGMP standards at Tiger BioSciences.",
+      "hero_title": "Certifications & Accreditations",
+      "hero_subtitle": "Meeting and exceeding the highest industry standards for quality and safety.",
+      "badge": "Quality"
+    },
+    "support.html": {
+      "title": "Customer Support - Tiger BioSciences™",
+      "meta_description": "24/7 customer support, technical assistance, and clinical resources for healthcare professionals.",
+      "hero_title": "Comprehensive Customer Support",
+      "hero_subtitle": "Expert support whenever you need it, from product information to clinical guidance.",
+      "badge": "Support"
+    },
+    "hospitals.html": {
+      "title": "Hospital Solutions - Tiger BioSciences™",
+      "meta_description": "Comprehensive tissue technology solutions for hospitals including training, support, and integrated supply chain.",
+      "hero_title": "Hospital Solutions",
+      "hero_subtitle": "Tailored solutions for hospital systems ensuring optimal patient outcomes and operational efficiency.",
+      "badge": "Solutions"
+    },
+    "clinical-support.html": {
+      "title": "Clinical Support Services - Tiger BioSciences™",
+      "meta_description": "Expert clinical support including case consultation, product selection guidance, and ongoing education.",
+      "hero_title": "Clinical Support Services",
+      "hero_subtitle": "Expert clinical guidance and support for optimal product selection and patient outcomes.",
+      "badge": "Support"
+    },
+    "solutions.html": {
+      "title": "Healthcare Solutions - Tiger BioSciences™",
+      "meta_description": "Comprehensive healthcare solutions for hospitals, wound centers, and healthcare professionals.",
+      "hero_title": "Comprehensive Healthcare Solutions",
+      "hero_subtitle": "End-to-end solutions supporting healthcare excellence from clinical research to patient care.",
+      "badge": "Solutions"
+    },
+    "general-surgery.html": {
+      "title": "General Surgery Products - Tiger BioSciences™",
+      "meta_description": "Advanced tissue products for general surgical procedures including soft tissue repair and reconstruction.",
+      "hero_title": "General Surgery Solutions",
+      "hero_subtitle": "Advanced tissue matrices and biomaterials for general surgical applications.",
+      "badge": "Products"
+    },
+    "plastic-surgery.html": {
+      "title": "Plastic Surgery Solutions - Tiger BioSciences™",
+      "meta_description": "Comprehensive tissue products for plastic and reconstructive surgery procedures.",
+      "hero_title": "Plastic Surgery Solutions",
+      "hero_subtitle": "Advanced solutions for cosmetic and reconstructive plastic surgery.",
+      "badge": "Products"
+    },
+    "podiatry.html": {
+      "title": "Podiatry Solutions - Tiger BioSciences™",
+      "meta_description": "Specialized tissue products for foot and ankle wound care and surgical applications.",
+      "hero_title": "Podiatry Solutions",
+      "hero_subtitle": "Specialized products for foot and ankle wound management and surgical repair.",
+      "badge": "Products"
+    },
+    "wound-centers.html": {
+      "title": "Wound Center Solutions - Tiger BioSciences™",
+      "meta_description": "Comprehensive wound care solutions for wound centers including products, training, and support.",
+      "hero_title": "Wound Center Solutions",
+      "hero_subtitle": "Complete solutions for wound care centers delivering exceptional patient outcomes.",
+      "badge": "Solutions"
+    },
+    "facilities.html": {
+      "title": "Our Facilities - Tiger BioSciences™",
+      "meta_description": "AATB-accredited facilities in Conshohocken, PA and San Antonio, TX with state-of-the-art processing capabilities.",
+      "hero_title": "World-Class Facilities",
+      "hero_subtitle": "State-of-the-art processing centers maintaining the highest standards of quality and safety.",
+      "badge": "Company"
+    },
+    "healthcare-professionals.html": {
+      "title": "For Healthcare Professionals - Tiger BioSciences™",
+      "meta_description": "Resources, training, and support for healthcare professionals using Tiger BioSciences products.",
+      "hero_title": "Healthcare Professional Resources",
+      "hero_subtitle": "Comprehensive resources and support for clinicians dedicated to patient care excellence.",
+      "badge": "Resources"
+    },
+    "investigator.html": {
+      "title": "Investigator Portal - Tiger BioSciences™",
+      "meta_description": "Research collaboration opportunities and investigator resources for clinical studies.",
+      "hero_title": "Investigator Portal",
+      "hero_subtitle": "Partner with us in advancing the science of tissue technology and regenerative medicine.",
+      "badge": "Research"
+    },
+    "partnerships.html": {
+      "title": "Partnerships - Tiger BioSciences™",
+      "meta_description": "Strategic partnership opportunities with Tiger BioSciences for research, distribution, and innovation.",
+      "hero_title": "Strategic Partnerships",
+      "hero_subtitle": "Collaborate with us to bring innovative tissue technology solutions to more patients.",
+      "badge": "Partnerships"
+    },
+    "catalog.html": {
+      "title": "Product Catalog - Tiger BioSciences™",
+      "meta_description": "Complete catalog of Tiger BioSciences products including CAMPs, tissue matrices, and medical devices.",
+      "hero_title": "Product Catalog",
+      "hero_subtitle": "Comprehensive catalog of our innovative tissue technology products and solutions.",
+      "badge": "Products"
+    },
+    "news.html": {
+      "title": "News & Updates - Tiger BioSciences™",
+      "meta_description": "Latest news, press releases, and updates from Tiger BioSciences.",
+      "hero_title": "News & Updates",
+      "hero_subtitle": "Stay informed about the latest developments, innovations, and milestones at Tiger BioSciences.",
+      "badge": "News"
+    },
+    "grants.html": {
+      "title": "Grants & Funding - Tiger BioSciences™",
+      "meta_description": "Research grants and funding opportunities for tissue technology and regenerative medicine studies.",
+      "hero_title": "Grants & Funding Opportunities",
+      "hero_subtitle": "Supporting groundbreaking research in tissue technology and regenerative medicine.",
+      "badge": "Research"
+    },
+    "investors.html": {
+      "title": "Investor Relations - Tiger BioSciences™",
+      "meta_description": "Investor information, financial reports, and corporate governance for Tiger BioSciences.",
+      "hero_title": "Investor Relations",
+      "hero_subtitle": "Investing in the future of regenerative medicine and healthcare innovation.",
+      "badge": "Investors"
+    },
+    "legal.html": {
+      "title": "Legal Information - Tiger BioSciences™",
+      "meta_description": "Legal information, disclaimers, and regulatory notices for Tiger BioSciences products and services.",
+      "hero_title": "Legal Information",
+      "hero_subtitle": "Important legal information and regulatory disclosures.",
+      "badge": "Legal"
+    },
+    "privacy.html": {
+      "title": "Privacy Policy - Tiger BioSciences™",
+      "meta_description": "Tiger BioSciences privacy policy detailing how we collect, use, and protect your information.",
+      "hero_title": "Privacy Policy",
+      "hero_subtitle": "Your privacy is important to us. Learn how we protect and use your information.",
+      "badge": "Legal"
+    },
+    "terms.html": {
+      "title": "Terms & Conditions - Tiger BioSciences™",
+      "meta_description": "Terms and conditions for using Tiger BioSciences website and products.",
+      "hero_title": "Terms & Conditions",
+      "hero_subtitle": "Please review these terms governing your use of our website and services.",
+      "badge": "Legal"
+    },
+    "tiger-way.html": {
+      "title": "The Tiger Way - Tiger BioSciences™",
+      "meta_description": "The Tiger Way philosophy of vertical integration, quality excellence, and patient-focused innovation.",
+      "hero_title": "The Tiger Way",
+      "hero_subtitle": "Our philosophy of vertical integration, uncompromising quality, and innovation drives everything we do.",
+      "badge": "Philosophy"
+    },
+    "vertical-integration.html": {
+      "title": "Vertical Integration - Tiger BioSciences™",
+      "meta_description": "How Tiger BioSciences' vertical integration ensures superior quality from donor screening to distribution.",
+      "hero_title": "The Power of Vertical Integration",
+      "hero_subtitle": "Complete control of every step ensures unparalleled quality, safety, and innovation.",
+      "badge": "Company"
+    },
+    "ordering.html": {
+      "title": "Ordering - Tiger BioSciences™",
+      "meta_description": "How to order Tiger BioSciences products including account setup, ordering process, and delivery information.",
+      "hero_title": "Product Ordering",
+      "hero_subtitle": "Simple, efficient ordering process ensuring your products arrive when you need them.",
+      "badge": "Support"
+    },
+    "reimbursement.html": {
+      "title": "Reimbursement Support - Tiger BioSciences™",
+      "meta_description": "Reimbursement guidance, coding information, and insurance support for Tiger BioSciences products.",
+      "hero_title": "Reimbursement Support",
+      "hero_subtitle": "Comprehensive reimbursement assistance ensuring coverage for your patients.",
+      "badge": "Support"
+    }
+  }
+}
+
