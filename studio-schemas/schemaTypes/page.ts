@@ -35,33 +35,20 @@ export default defineType({
       rows: 3,
     }),
     defineField({
-      name: 'content',
-      title: 'Page Content',
+      name: 'sections',
+      title: 'Page Sections',
       type: 'array',
+      description: 'Add, remove, and reorder sections to build your page',
       of: [
-        {
-          type: 'block',
-          styles: [
-            {title: 'Normal', value: 'normal'},
-            {title: 'H2', value: 'h2'},
-            {title: 'H3', value: 'h3'},
-            {title: 'H4', value: 'h4'},
-            {title: 'Quote', value: 'blockquote'},
-          ],
-        },
-        {
-          type: 'image',
-          options: {
-            hotspot: true,
-          },
-          fields: [
-            {
-              name: 'alt',
-              type: 'string',
-              title: 'Alternative text',
-            },
-          ],
-        },
+        {type: 'heroSection'},
+        {type: 'featureGrid'},
+        {type: 'statsSection'},
+        {type: 'testimonialSection'},
+        {type: 'faqSection'},
+        {type: 'imageContentSection'},
+        {type: 'ctaSection'},
+        {type: 'richTextSection'},
+        {type: 'endorsedSection'},
       ],
     }),
     defineField({

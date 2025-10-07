@@ -1,29 +1,38 @@
-<!DOCTYPE html>
+#!/usr/bin/env node
+/**
+ * Update all HTML pages to use dynamic content from Sanity
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+// Page template with dynamic content loading
+const PAGE_TEMPLATE = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
     <!-- Primary Meta Tags -->
-    <title>Clinical Support Services - Tiger BioSciences™</title>
-    <meta name="title" content="Clinical Support Services - Tiger BioSciences™">
-    <meta name="description" content="Expert clinical support including case consultation, product selection guidance, and ongoing education.">
-    <meta name="keywords" content="Tiger BioSciences, clinical-support, CAMPs, tissue technology">
+    <title>{{TITLE}}</title>
+    <meta name="title" content="{{TITLE}}">
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <meta name="keywords" content="{{KEYWORDS}}">
     <meta name="author" content="Tiger BioSciences">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tigerbiosciences.com/clinical-support.html">
-    <meta property="og:title" content="Clinical Support Services - Tiger BioSciences™">
-    <meta property="og:description" content="Expert clinical support including case consultation, product selection guidance, and ongoing education.">
-    <meta property="og:image" content="https://tigerbiosciences.com/assets/images/og-clinical-support.jpg">
+    <meta property="og:url" content="https://tigerbiosciences.com/{{FILENAME}}">
+    <meta property="og:title" content="{{TITLE}}">
+    <meta property="og:description" content="{{META_DESCRIPTION}}">
+    <meta property="og:image" content="https://tigerbiosciences.com/assets/images/og-{{SLUG}}.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tigerbiosciences.com/clinical-support.html">
-    <meta property="twitter:title" content="Clinical Support Services - Tiger BioSciences™">
-    <meta property="twitter:description" content="Expert clinical support including case consultation, product selection guidance, and ongoing education.">
+    <meta property="twitter:url" content="https://tigerbiosciences.com/{{FILENAME}}">
+    <meta property="twitter:title" content="{{TITLE}}">
+    <meta property="twitter:description" content="{{META_DESCRIPTION}}">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -42,9 +51,9 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Clinical Support Services - Tiger BioSciences™",
-      "description": "Expert clinical support including case consultation, product selection guidance, and ongoing education.",
-      "url": "https://tigerbiosciences.com/clinical-support.html"
+      "name": "{{TITLE}}",
+      "description": "{{META_DESCRIPTION}}",
+      "url": "https://tigerbiosciences.com/{{FILENAME}}"
     }
     </script>
 </head>
@@ -137,4 +146,51 @@
 <script src="assets/js/sanity-client.js"></script>
 
 </body>
-</html>
+</html>`;
+
+/**
+ * Update a page to use dynamic content
+ */
+function updatePage(filename, data) {
+  const slug = filename.replace('.html', '');
+  
+  let html = PAGE_TEMPLATE
+    .replace(/{{FILENAME}}/g, filename)
+    .replace(/{{SLUG}}/g, slug)
+    .replace(/{{TITLE}}/g, data.title || `${slug} - Tiger BioSciences™`)
+    .replace(/{{META_DESCRIPTION}}/g, data.meta_description || 'Tiger BioSciences - Advanced tissue technology')
+    .replace(/{{KEYWORDS}}/g, `Tiger BioSciences, ${slug}, CAMPs, tissue technology`);
+  
+  return html;
+}
+
+/**
+ * Main execution
+ */
+async function main() {
+  console.log('🔄 Updating all pages to use dynamic Sanity content...');
+  console.log('='.repeat(60));
+  
+  // Load page data
+  const pageData = JSON.parse(fs.readFileSync('./page-content-data.json', 'utf8'));
+  
+  let updated = 0;
+  
+  for (const [filename, data] of Object.entries(pageData.pages)) {
+    try {
+      const html = updatePage(filename, data);
+      fs.writeFileSync(filename, html, 'utf8');
+      console.log(`✓ ${filename}`);
+      updated++;
+    } catch (error) {
+      console.error(`❌ Error updating ${filename}:`, error.message);
+    }
+  }
+  
+  console.log('='.repeat(60));
+  console.log(`✅ Updated ${updated} pages to use Sanity CMS`);
+  console.log('\n📋 All pages now load content dynamically from Sanity!');
+}
+
+main();
+
